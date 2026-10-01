@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TalentVerse Global — Speaker Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #fbf8ff; /* page background (very light purple tint) */
+      --header-bg: #ffffff; /* header background (pure white) */
+      --ink2: #f7f7fb;
+      --paper: #f5f2eb;
+      --accent: #7C3AED;
+      --accent2: #F97316;
+      --white: #0a0a0a; /* main text (dark) */
+      --text-color: #0a0a0a;
+      --muted: rgba(10,10,10,0.55);
+      --border: rgba(10,10,10,0.09);
+      --text-on-accent: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--ink); color: var(--text-color); overflow-x: hidden; }
+
+    /* ── UTILITIES ── */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500;
+    }
+    .eyebrow::before { content: ''; display: block; width: 24px; height: 1.5px; background: var(--accent); }
+    .display { font-family: 'Syne', sans-serif; font-weight: 800; line-height: 0.96; letter-spacing: -0.025em; }
+    .accent-text { color: var(--accent); }
+    .muted { color: var(--muted); }
+
+    .btn-primary {
+      display: inline-block; background: var(--accent); color: var(--text-on-accent);
+      border: none; padding: 0.85rem 2rem; font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; cursor: pointer; text-decoration: none;
+      transition: background 0.2s; white-space: nowrap;
+    }
+    .btn-primary:hover { background: var(--accent2); }
+    .btn-ghost {
+      display: inline-block; background: transparent; color: var(--text-color);
+      border: 1px solid rgba(10,10,10,0.12); padding: 0.85rem 2rem;
+      font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+      text-decoration: none; transition: border-color 0.2s; white-space: nowrap;
+    }
+    .btn-ghost:hover { border-color: var(--accent); }
+
+   /* ── NAV ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 2rem;
+  border-bottom: 0.5px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--header-bg);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-logo {
+  height: 56px;     /* controls logo size */
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.85rem; letter-spacing: 0.04em; color: var(--muted);
+  text-decoration: none; cursor: pointer; transition: color 0.2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+.nav-cta {
+  font-size: 0.82rem !important;
+  padding: 0.55rem 1.2rem !important;
+}
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--accent); padding: 0.6rem 0; overflow: hidden;
+      display: flex; white-space: nowrap;
+    }
+    .ticker-track { display: flex; animation: ticker 28s linear infinite; }
+    .ticker-item {
+      font-family: 'Syne', sans-serif; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-on-accent);
+      padding: 0 2rem; flex-shrink: 0;
+    }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── PAGE SYSTEM ── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ══════════════════════════════
+       HOME PAGE
+    ══════════════════════════════ */
+    .hero {
+      min-height: 90vh; display: grid; grid-template-columns: 1.1fr 0.9fr;
+      align-items: center; padding: 5rem 3.5rem 4rem; gap: 4rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::after {
+      content: ''; position: absolute; top: -100px; right: -60px;
+      width: 560px; height: 560px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero h1 { font-size: clamp(3.4rem, 5.8vw, 5.8rem); margin: 1.2rem 0 1.8rem; }
+    .hero-sub { font-size: 1.05rem; line-height: 1.7; color: var(--muted); max-width: 440px; margin-bottom: 2.5rem; font-weight: 300; }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-right { display: flex; flex-direction: column; gap: 0; }
+    .stat-block { padding: 2rem 0 2rem 2.5rem; border-left: 1px solid var(--border); }
+    .stat-block + .stat-block { border-top: 1px solid var(--border); }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 3.8rem; font-weight: 800; line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 0.3rem; }
+
+    /* Speakers section */
+    .section { padding: 6rem 3.5rem; }
+    .section-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; }
+    .section-head h2 { font-size: clamp(2rem, 3.5vw, 3rem); margin-top: 0.6rem; }
+    .link-arrow {
+      font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; border-bottom: 1px solid rgba(10,10,10,0.12);
+      padding-bottom: 2px; transition: color 0.2s; cursor: pointer; white-space: nowrap;
+    }
+    .link-arrow:hover { color: var(--accent); }
+
+    .speaker-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+    .speaker-card {
+      position: relative; overflow: hidden; background: var(--ink2); cursor: pointer;
+      aspect-ratio: 3/4;
+    }
+    .speaker-card.featured { grid-column: span 2; aspect-ratio: unset; min-height: 540px; }
+    .card-bg {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 10rem;
+      color: rgba(10,10,10,0.04); transition: transform 0.55s ease; user-select: none;
+    }
+    .speaker-card:hover .card-bg { transform: scale(1.06); }
+    .card-photo {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 20%; transition: transform 0.55s ease;
+    }
+    .speaker-card:hover .card-photo { transform: scale(1.04); }
+    .card-photo ~ .card-overlay { background: linear-gradient(to top, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 55%, transparent 100%); padding-top: 4rem; }
+    .slc-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 15%; }
+    .card-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 100%);
+      padding: 2.5rem 1.6rem 1.6rem;
+    }
+    .card-topic { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; font-weight: 500; }
+    .card-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.2rem; line-height: 1.1; margin-bottom: 0.3rem; }
+    .speaker-card.featured .card-name { font-size: 1.9rem; }
+    .card-bio { font-size: 0.8rem; color: rgba(10,10,10,0.7); line-height: 1.55; }
+
+    /* How it works */
+    .how-section { padding: 6rem 3.5rem; background: var(--ink2); }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 3rem; }
+    .step { padding: 2.5rem 2.5rem 2.5rem 0; border-right: 1px solid var(--border); }
+    .step:not(:first-child) { padding-left: 2.5rem; }
+    .step:last-child { border-right: none; }
+    .step-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 4.5rem; line-height: 1; color: rgba(10,10,10,0.03); margin-bottom: 1.2rem; }
+    .step-icon { width: 38px; height: 38px; background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.28); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .step-icon svg { width: 17px; height: 17px; stroke: var(--accent); fill: none; stroke-width: 1.6; }
+    .step h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; margin-bottom: 0.7rem; }
+    .step p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; font-weight: 300; }
+
+    /* CTA Banner */
+    .cta-banner { margin: 0 3.5rem 4rem; border: 1px solid var(--border); padding: 4rem 3.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .cta-banner h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); }
+
+    /* ══════════════════════════════
+       SPEAKERS PAGE
+    ══════════════════════════════ */
+    .page-hero { padding: 5rem 3.5rem 3rem; border-bottom: 1px solid var(--border); }
+    .page-hero h1 { font-size: clamp(2.8rem, 5vw, 5rem); margin: 1rem 0 1.2rem; }
+    .page-hero p { font-size: 1rem; color: var(--muted); max-width: 500px; line-height: 1.7; font-weight: 300; }
+
+    .filters { padding: 1.8rem 3.5rem; border-bottom: 1px solid var(--border); display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+    .filter-label { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 0.5rem; }
+    .filter-btn {
+      font-size: 0.76rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500;
+      padding: 0.45rem 1rem; border: 1px solid var(--border); color: var(--muted);
+      background: transparent; cursor: pointer; font-family: 'DM Sans', sans-serif;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); }
+
+    .speakers-list { padding: 3rem 3.5rem; }
+    .speakers-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .speaker-list-card {
+      background: var(--ink2); padding: 2rem; cursor: pointer;
+      border: 1px solid transparent; transition: border-color 0.2s;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .speaker-list-card:hover { border-color: var(--accent); }
+    .slc-avatar {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(124,58,237,0.12); border: 1px solid rgba(124,58,237,0.25);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem;
+      color: var(--accent); margin-bottom: 0.5rem;
+    }
+    .slc-topic { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+    .slc-name { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; }
+    .slc-role { font-size: 0.85rem; color: var(--muted); }
+    .slc-bio { font-size: 0.85rem; color: rgba(10,10,10,0.65); line-height: 1.65; font-weight: 300; margin-top: 0.3rem; }
+    .slc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+    .tag {
+      font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500;
+      padding: 0.25rem 0.6rem; border: 1px solid var(--border); color: var(--muted);
+    }
+    .slc-book {
+      margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border);
+      font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent); font-weight: 500; display: flex; align-items: center; gap: 0.4rem;
+    }
+
+    /* ══════════════════════════════
+       ABOUT PAGE
+    ══════════════════════════════ */
+    .about-hero { padding: 5rem 3.5rem 0; }
+    .about-hero h1 { font-size: clamp(3rem, 6vw, 6rem); margin: 1rem 0; }
+    .about-lead { font-size: 1.25rem; line-height: 1.7; max-width: 680px; color: rgba(10,10,10,0.7); font-weight: 300; padding: 2.5rem 0; border-top: 1px solid var(--border); margin-top: 2rem; }
+
+    .about-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 5rem 3.5rem; align-items: start; }
+    .about-split h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); margin: 0.8rem 0 1.5rem; }
+    .about-split p { font-size: 0.95rem; color: var(--muted); line-height: 1.8; font-weight: 300; margin-bottom: 1.2rem; }
+
+    .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .value-card { background: var(--ink2); padding: 2rem; }
+    .value-num { font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800; color: rgba(124,58,237,0.25); line-height: 1; margin-bottom: 0.8rem; }
+    .value-card h4 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .value-card p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+    .team-section { padding: 5rem 3.5rem; background: var(--ink2); }
+    .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 3rem; }
+    .team-card { background: var(--ink); padding: 1.8rem; }
+    .team-avatar {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: rgba(124,58,237,0.1); border: 1px solid rgba(124,58,237,0.22);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem;
+      color: var(--accent); margin-bottom: 1rem;
+    }
+    .team-card h4 { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.2rem; }
+    .team-card span { font-size: 0.8rem; color: var(--muted); }
+
+    /* ══════════════════════════════
+       BLOG PAGE
+    ══════════════════════════════ */
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 3rem 3.5rem; }
+    .blog-card { background: var(--ink2); overflow: hidden; cursor: pointer; border: 1px solid transparent; transition: border-color 0.2s; }
+    .blog-card:hover { border-color: var(--accent); }
+    .blog-card.featured { grid-column: span 3; display: grid; grid-template-columns: 1fr 1fr; }
+    .blog-thumb { aspect-ratio: 16/9; background: #f0eff6; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 5rem; font-weight: 800; color: rgba(10,10,10,0.04); }
+    .blog-card.featured .blog-thumb { aspect-ratio: unset; min-height: 300px; font-size: 9rem; }
+    .blog-content { padding: 1.8rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .blog-cat { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+    .blog-title { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 800; line-height: 1.2; }
+    .blog-card.featured .blog-title { font-size: 1.8rem; }
+    .blog-excerpt { font-size: 0.85rem; color: var(--muted); line-height: 1.7; font-weight: 300; margin-top: 0.3rem; }
+    .blog-meta { font-size: 0.75rem; color: rgba(10,10,10,0.3); margin-top: 0.5rem; letter-spacing: 0.04em; }
+
+    /* ══════════════════════════════
+       CONTACT PAGE
+    ══════════════════════════════ */
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; min-height: 85vh; }
+    .contact-left { padding: 5rem 3.5rem; border-right: 1px solid var(--border); }
+    .contact-left h1 { font-size: clamp(2.5rem, 4vw, 4rem); margin: 1rem 0 1.5rem; }
+    .contact-left p { font-size: 0.95rem; color: var(--muted); line-height: 1.8; font-weight: 300; max-width: 380px; margin-bottom: 3rem; }
+    .contact-detail { display: flex; flex-direction: column; gap: 1.5rem; }
+    .cd-item h4 { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; font-weight: 500; }
+    .cd-item p { font-size: 0.9rem; color: rgba(10,10,10,0.7); }
+
+    .contact-right { padding: 5rem 3.5rem; }
+    .contact-right h2 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 2.5rem; }
+    .form-group { margin-bottom: 1.6rem; }
+    .form-group label { display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; font-weight: 500; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; background: var(--ink2); border: 1px solid var(--border);
+      color: var(--white); padding: 0.85rem 1rem; font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem; font-weight: 300; outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-group select option { background: var(--ink); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-success { display: none; text-align: center; padding: 3rem; }
+    .form-success h3 { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 0.8rem; }
+    .form-success p { color: var(--muted); }
+
+    /* ── DIVIDER ── */
+    .hr { border: none; border-top: 1px solid var(--border); margin: 0 3.5rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3rem 3.5rem; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    footer .site-logo { height: 44px; }
+    footer p { font-size: 0.90rem; color: rgba(10,10,10,0.25); }
+    .footer-links { display: flex; gap: 2rem; }
+    .footer-links a { font-size: 0.90rem; color: rgba(10,10,10,0.45); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; cursor: pointer; }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── ANIMATIONS ── */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeUp 0.65s ease forwards; }
+    .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.15s; } .d3 { animation-delay: 0.27s; } .d4 { animation-delay: 0.4s; }
+    @keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+    @media (max-width: 900px) {
+      nav { padding: 0.6rem 1.5rem; }
+      .site-logo { height: 44px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem; min-height: auto; }
+      .hero-right { flex-direction: row; }
+      .stat-block { padding: 1rem 1.5rem; border-left: none; border-top: 1px solid var(--border); }
+      .section, .how-section, .speakers-list { padding: 4rem 1.5rem; }
+      .speaker-grid { grid-template-columns: 1fr 1fr; }
+      .speaker-card.featured { grid-column: span 2; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .step { border-right: none; border-bottom: 1px solid var(--border); padding: 2rem 0; }
+      .cta-banner { margin: 0 1.5rem 3rem; padding: 2.5rem 2rem; }
+      .contact-layout { grid-template-columns: 1fr; }
+      .contact-left { border-right: none; border-bottom: 1px solid var(--border); padding: 3rem 1.5rem; }
+      .contact-right { padding: 3rem 1.5rem; }
+      .speakers-full-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .blog-grid { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+      .blog-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+      .about-split { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
+      .page-hero { padding: 3rem 1.5rem; }
+      .filters { padding: 1.2rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .speakers-full-grid { grid-template-columns: 1fr; }
+      .hero-right { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav>
+    <a class="nav-logo" href="#home"><img src="Images/logo.webp" alt="TalentVerse Global" class="site-logo"></a>
+    <ul class="nav-links">
+      <li><a href="#speakers" data-page="speakers">Speakers</a></li>
+      <li><a href="#about" data-page="about">About</a></li>
+      <li><a href="#blog" data-page="blog">Journal</a></li>
+      <li><a href="#contact" data-page="contact">Contact</a></li>
+    </ul>
+    <a class="btn-primary nav-cta" href="mailto:unlock@talentverseglobal.com">Book Talent</a>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HOME
+  ══════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow fade-in d1">Global Representation for Exceptional Talent</div>
+        <h1 class="display fade-in d2">Where <span class="accent-text">Ideas</span><br>Command<br>the Stage</h1>
+        <p class="hero-sub fade-in d3">We connect visionary organisations with the world's most compelling voices from Nobel laureates to tech founders to cultural trailblazers.</p>
+        <div class="hero-btns fade-in d4">
+          <button class="btn-primary" onclick="showPage('speakers')">Find a Speaker</button>
+          <button class="btn-ghost" onclick="showPage('speakers')">View Roster →</button>
+        </div>
+      </div>
+      <div class="hero-right fade-in d3">
+        <div class="stat-block">
+          <div class="stat-num"><span class="accent-text">600</span>+</div>
+          <div class="stat-label">World-Class Speakers</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-num"><span class="accent-text">94</span>%</div>
+          <div class="stat-label">Client Satisfaction Rate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span class="ticker-item">Technology</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Leadership</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Innovation</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Climate</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Diversity &amp; Inclusion</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">AI &amp; The Future</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Entrepreneurship</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Wellbeing</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Technology</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Leadership</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Innovation</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Climate</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Diversity &amp; Inclusion</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">AI &amp; The Future</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Entrepreneurship</span><span class="ticker-item">✦</span>
+        <span class="ticker-item">Wellbeing</span><span class="ticker-item">✦</span>
+      </div>
+    </div>
+
+    <!-- Featured Speakers -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Our Roster</div>
+          <h2 class="display">Featured Speakers</h2>
+        </div>
+        <a class="link-arrow" href="#speakers">View All Speakers →</a>
+      </div>
+      <div class="speaker-grid">
+        <div class="speaker-card featured" onclick="showPage('speakers')">
+          <img class="card-photo" src="Images/navtej-sarna.jpg" alt="Navtej Sarna" />
+          <div class="card-overlay">
+            <div class="card-topic">Government &amp; Policy</div>
+            <div class="card-name">Navtej Sarna</div>
+            <div class="card-bio">Former Indian Ambassador to the United States and Author.</div>
+          </div>
+        </div>
+        <div class="speaker-card" onclick="showPage('speakers')">
+          <div class="card-bg">M</div>
+          <div class="card-overlay">
+            <div class="card-topic">Leadership</div>
+            <div class="card-name">Marcus Hale</div>
+            <div class="card-bio">CEO coach &amp; strategist.</div>
+          </div>
+        </div>
+        <div class="speaker-card" onclick="showPage('speakers')">
+          <div class="card-bg">S</div>
+          <div class="card-overlay">
+            <div class="card-topic">Climate</div>
+            <div class="card-name">Sofia Reyes</div>
+            <div class="card-bio">Clean-energy entrepreneur.</div>
+          </div>
+        </div>
+        <div class="speaker-card" onclick="showPage('speakers')">
+          <div class="card-bg">J</div>
+          <div class="card-overlay">
+            <div class="card-topic">Entrepreneurship</div>
+            <div class="card-name">James Kato</div>
+            <div class="card-bio">3x founder, venture capitalist.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="hr" />
+
+    <!-- How it works -->
+    <section class="how-section">
+      <div style="padding: 0 0 0 0">
+        <div class="eyebrow">Our Process</div>
+        <h2 class="display" style="font-size:clamp(2rem,3.5vw,3rem);margin-top:0.7rem;">Seamless from Brief<br>to Standing Ovation</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <h3>Tell Us Your Vision</h3>
+          <p>Share your event brief, audience profile, and goals. Our team listens closely to understand exactly what you need.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>We Curate &amp; Match</h3>
+          <p>From our roster of 600+ speakers, we handpick a shortlist tailored to your theme, budget, and the transformation you want to create.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3>Unforgettable Delivery</h3>
+          <p>We manage every logistics detail end-to-end. Your speaker arrives prepared, briefed, and ready to deliver a moment audiences won't forget.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h2 class="display">Ready to find your<br>next <span class="accent-text">headline speaker?</span></h2>
+      <a class="btn-primary" href="mailto:unlock@talentverseglobal.com" style="font-size:0.9rem;padding:1rem 2.4rem;">Start Your Search →</a>
+    </div>
+
+    <section class="section" style="background: var(--ink2); border-radius: 24px; padding: 3.5rem; margin: 0 3.5rem 3rem;">
+      <div class="section-head" style="margin-bottom: 2rem;">
+        <div>
+          <div class="eyebrow">Book Your Event</div>
+          <h2 class="display" style="font-size: clamp(2rem, 3.5vw, 3rem);">Start your booking enquiry</h2>
+        </div>
+      </div>
+      <form id="home-cta-form">
+        <div id="home-form-success" style="display:none; background:#d4edda; color:#155724; padding:1.5rem; border-radius:8px; margin-bottom:1.5rem; font-weight:500;">
+          ✓ Thank you! Your enquiry has been received. We'll be in touch within 24 hours.
+        </div>
+        <div id="home-form-error" style="display:none; background:#f8d7da; color:#721c24; padding:1.5rem; border-radius:8px; margin-bottom:1.5rem; font-weight:500;">
+          ✗ Something went wrong. Please try again or contact us directly at unlock@talentverseglobal.com
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="first_name" placeholder="Your first name" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="last_name" placeholder="Your last name" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-group">
+          <label>Contact Number</label>
+          <input type="tel" name="contact_number" placeholder="+91 00000 00000" required />
+        </div>
+        <div class="form-group">
+          <label>Organisation</label>
+          <input type="text" name="organisation" placeholder="Your company or event" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Event Date</label>
+            <input type="date" name="event_date" required />
+          </div>
+          <div class="form-group">
+            <label>Expected Audience Size</label>
+            <select name="audience_size" required>
+              <option value="">Select range</option>
+              <option>Under 100</option>
+              <option>100–500</option>
+              <option>500–1,000</option>
+              <option>1,000–5,000</option>
+              <option>5,000+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Topic / Theme</label>
+            <select name="topic" required>
+              <option value="">Select a topic area</option>
+              <option>Technology &amp; AI</option>
+              <option>Leadership &amp; Culture</option>
+              <option>Climate &amp; Sustainability</option>
+              <option>Entrepreneurship</option>
+              <option>Wellbeing &amp; Performance</option>
+              <option>Diversity &amp; Inclusion</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Event Budget</label>
+            <input type="text" name="budget" placeholder="e.g. INR 50,000" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Event Details / Speaker Requirements</label>
+          <textarea name="event_details" placeholder="What do you want your audience to feel, think, or do differently after the speech?" rows="5" required></textarea>
+        </div>
+        <button class="btn-primary" type="submit" style="width:100%;padding:1rem;font-size:0.9rem;letter-spacing:0.08em;">Submit Enquiry →</button>
+      </form>
+    </section>
+
+
+  </div><!-- /home -->
+
+
+  <!-- ══════════════════════════════
+       SPEAKERS
+  ══════════════════════════════ -->
+  <div id="page-speakers" class="page">
+    <div class="page-hero">
+      <div class="eyebrow">Our Roster</div>
+      <h1 class="display">600+ World-Class<br><span class="accent-text">Speakers</span></h1>
+      <p>From tech visionaries and climate champions to culture-shapers and coaches find the perfect voice for your event.</p>
+    </div>
+
+    <div class="filters">
+      <span class="filter-label">Topic:</span>
+      <button class="filter-btn active" onclick="filterSpeakers(this, 'all')">All</button>
+      <button class="filter-btn" onclick="filterSpeakers(this, 'policy')">Government &amp; Policy</button>
+      <button class="filter-btn" onclick="filterSpeakers(this, 'technology')">Technology</button>
+      <button class="filter-btn" onclick="filterSpeakers(this, 'leadership')">Leadership</button>
+      <button class="filter-btn" onclick="filterSpeakers(this, 'climate')">Climate</button>
+      <button class="filter-btn" onclick="filterSpeakers(this, 'entrepreneurship')">Entrepreneurship</button>
+      <button class="filter-btn" onclick="filterSpeakers(this, 'wellbeing')">Wellbeing</button>
+    </div>
+
+    <div class="speakers-list">
+      <div class="speakers-full-grid" id="speakers-grid">
+
+        <div class="speaker-list-card" data-topic="policy">
+          <div class="slc-avatar"><img src="Images/navtej-sarna.jpg" alt="Navtej Sarna" /></div>
+          <div class="slc-topic">Government &amp; Policy</div>
+          <div class="slc-name">Navtej Sarna</div>
+          <div class="slc-role">Former Indian Ambassador to the United States and Author</div>
+          <div class="slc-bio">A distinguished diplomat, acclaimed author, and former Indian Ambassador to the United States (2016–2018). A member of the Indian Foreign Service from 1980, he also served as India's High Commissioner to the UK, Ambassador to Israel, and Secretary in the Ministry of External Affairs. He was India's longest-serving official spokesperson for the Ministry of External Affairs. An award-winning writer, his novel Crimson Spring received the Sahitya Akademi Award (2025) and the KLF Best Fiction Award (2022). Sarna has authored several acclaimed novels, non-fiction works, translations, and continues to write extensively on foreign policy, history, and literature.</div>
+          <div class="slc-tags">
+            <span class="tag">Politics</span><span class="tag">Policy</span><span class="tag">Innovation</span>
+          </div>
+          <a class="slc-book" href="mailto:unlock@talentverseglobal.com">Book Navtej →</a>
+        </div>
+
+        <div class="speaker-list-card" data-topic="leadership">
+          <div class="slc-avatar">MH</div>
+          <div class="slc-topic">Leadership</div>
+          <div class="slc-name">Marcus Hale</div>
+          <div class="slc-role">Executive Coach · Leadership Strategist</div>
+          <div class="slc-bio">Trusted by Fortune 500 CEOs across four continents, Marcus transforms leadership teams through radical clarity, resilience frameworks, and high-stakes decision making.</div>
+          <div class="slc-tags">
+            <span class="tag">Leadership</span><span class="tag">Culture</span><span class="tag">Resilience</span>
+          </div>
+          <a class="slc-book" href="mailto:unlock@talentverseglobal.com">Book Marcus →</a>
+        </div>
+
+        <div class="speaker-list-card" data-topic="climate">
+          <div class="slc-avatar">SR</div>
+          <div class="slc-topic">Climate &amp; Innovation</div>
+          <div class="slc-name">Sofia Reyes</div>
+          <div class="slc-role">Clean Energy Founder · UN Climate Advisor</div>
+          <div class="slc-bio">Founder of three clean-energy startups and an advisor to the UN Climate Programme. Sofia delivers a rare blend of scientific rigour and entrepreneurial storytelling.</div>
+          <div class="slc-tags">
+            <span class="tag">Sustainability</span><span class="tag">Innovation</span><span class="tag">Policy</span>
+          </div>
+          <a class="slc-book" href="mailto:unlock@talentverseglobal.com">Book Sofia →</a>
+        </div>
+
+        <div class="speaker-list-card" data-topic="entrepreneurship">
+          <div class="slc-avatar">JK</div>
+          <div class="slc-topic">Entrepreneurship</div>
+          <div class="slc-name">James Kato</div>
+          <div class="slc-role">3× Founder · Venture Capitalist</div>
+          <div class="slc-bio">From garage startup to billion-dollar exit, James speaks candidly on the real journey of building — the failures, pivots, and the decisions that changed everything.</div>
+          <div class="slc-tags">
+            <span class="tag">Startups</span><span class="tag">Fundraising</span><span class="tag">Scale</span>
+          </div>
+          <a class="slc-book" href="mailto:unlock@talentverseglobal.com">Book James →</a>
+        </div>
+
+        <div class="speaker-list-card" data-topic="wellbeing">
+          <div class="slc-avatar">NP</div>
+          <div class="slc-topic">Wellbeing &amp; Performance</div>
+          <div class="slc-name">Dr. Nadia Park</div>
+          <div class="slc-role">Neuroscientist · Performance Coach</div>
+          <div class="slc-bio">Dr. Park translates cutting-edge neuroscience into practical tools for sustained high performance — without burning out. Her talks leave audiences transformed.</div>
+          <div class="slc-tags">
+            <span class="tag">Neuroscience</span><span class="tag">Mindset</span><span class="tag">Burnout</span>
+          </div>
+          <a class="slc-book" href="mailto:unlock@talentverseglobal.com">Book Dr. Park →</a>
+        </div>
+
+        <div class="speaker-list-card" data-topic="technology">
+          <div class="slc-avatar">RB</div>
+          <div class="slc-topic">Technology &amp; Future</div>
+          <div class="slc-name">Ravi Bhatt</div>
+          <div class="slc-role">Futurist · Former CTO, Google X</div>
+          <div class="slc-bio">Ravi has spent 20 years at the frontier of emerging technology. He helps organisations see around corners — making sense of quantum computing, biotech, and what comes next.</div>
+          <div class="slc-tags">
+            <span class="tag">Futurism</span><span class="tag">Tech</span><span class="tag">Strategy</span>
+          </div>
+          <a class="slc-book" href="mailto:unlock@talentverseglobal.com">Book Ravi →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <h2 class="display">Can't find what<br>you're looking for?</h2>
+      <a class="btn-primary" href="mailto:unlock@talentverseglobal.com" style="font-size:0.9rem;padding:1rem 2.4rem;">Talk to Our Team →</a>
+    </div>
+  </div><!-- /speakers -->
+
+
+  <!-- ══════════════════════════════
+       ABOUT
+  ══════════════════════════════ -->
+  <div id="page-about" class="page">
+    <div class="about-hero section" style="padding-bottom:0;">
+      <div class="eyebrow">About TalentVerse Global</div>
+      <h1 class="display">We Don't Just<br>Book Speakers.<br>We <span class="accent-text">Curate</span> Moments.</h1>
+      <p class="about-lead">For over a decade, TalentVerse Global has been the agency that the world's most ambitious organisations turn to when a speech must do more than inform — when it must move, inspire, and change things.</p>
+    </div>
+
+    <div class="about-split">
+      <div>
+        <div class="eyebrow">Our Story</div>
+        <h2 class="display">Born from a<br>Belief in Ideas</h2>
+        <p>TalentVerse Global was founded in 2013 by two event producers who were tired of the transactional nature of speaker booking. They believed there had to be a better way — one built on deep relationships with both clients and speakers.</p>
+        <p>Today we represent over 600 speakers across every discipline, serving clients from Mumbai to Manchester, Singapore to São Paulo. Our team of specialist consultants matches the right voice to every stage.</p>
+        <button class="btn-ghost" onclick="showPage('contact')" style="margin-top:1rem;">Work With Us →</button>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-num">01</div>
+          <h4>Curation Over Volume</h4>
+          <p>We say no to speakers who don't meet our standard. Quality of impact always beats size of roster.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">02</div>
+          <h4>Deep Listening</h4>
+          <p>We spend time understanding your audience before we ever suggest a name. The right speaker changes the room.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">03</div>
+          <h4>Full Service</h4>
+          <p>From brief to backstage, we manage every detail so you can focus on your event.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">04</div>
+          <h4>Long-Term Partnership</h4>
+          <p>85% of our clients return. We measure success in relationships, not transactions.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="team-section">
+      <div class="eyebrow">Our Team</div>
+      <h2 class="display" style="font-size:clamp(1.8rem,3vw,2.8rem);margin-top:0.7rem;">The People<br>Behind the Stage</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">LS</div>
+          <h4>Layla Singh</h4>
+          <span>Founder &amp; CEO</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">TM</div>
+          <h4>Tom Marsh</h4>
+          <span>Co-Founder &amp; Head of Talent</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">CW</div>
+          <h4>Clara Wells</h4>
+          <span>Head of Client Relations</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">AK</div>
+          <h4>Arjun Kapoor</h4>
+          <span>Senior Booking Consultant</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-banner">
+      <h2 class="display">Let's create your<br>next <span class="accent-text">defining moment.</span></h2>
+      <a class="btn-primary" href="mailto:unlock@talentverseglobal.com" style="font-size:0.9rem;padding:1rem 2.4rem;">Get in Touch →</a>
+    </div>
+  </div><!-- /about -->
+
+
+  <!-- ══════════════════════════════
+       BLOG / JOURNAL
+  ══════════════════════════════ -->
+  <div id="page-blog" class="page">
+    <div class="page-hero">
+      <div class="eyebrow">The TalentVerse Global Journal</div>
+      <h1 class="display">Ideas Worth<br><span class="accent-text">Spreading</span></h1>
+      <p>Insights on event strategy, speaker selection, and the ideas shaping our world — from the TalentVerse Global team and our speaker community.</p>
+    </div>
+
+    <div class="blog-grid">
+      <div class="blog-card featured">
+        <div class="blog-thumb" style="font-size:12rem;">✦</div>
+        <div class="blog-content" style="justify-content:center;">
+          <div class="blog-cat">Featured Essay</div>
+          <div class="blog-title">The 10-Minute Rule: Why the Best Speakers Do Less and Land More</div>
+          <div class="blog-excerpt">After booking thousands of speeches across 40 countries, we've noticed one counterintuitive pattern: the talks that audiences remember are almost never the ones that tried to say everything.</div>
+          <div class="blog-meta">By Layla Singh · 8 min read · March 2026</div>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-thumb">AI</div>
+        <div class="blog-content">
+          <div class="blog-cat">Technology</div>
+          <div class="blog-title">What AI Means for the Live Event Industry</div>
+          <div class="blog-excerpt">From personalised content to real-time translation, here's how artificial intelligence is reshaping how we gather and share ideas.</div>
+          <div class="blog-meta">Tom Marsh · 5 min read</div>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-thumb">EV</div>
+        <div class="blog-content">
+          <div class="blog-cat">Event Strategy</div>
+          <div class="blog-title">How to Brief a Speaker (And Why Most Clients Get It Wrong)</div>
+          <div class="blog-excerpt">The briefing call is the most underrated part of event planning. We share our proven framework for getting the best out of every speaker.</div>
+          <div class="blog-meta">Clara Wells · 6 min read</div>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-thumb">LD</div>
+        <div class="blog-content">
+          <div class="blog-cat">Leadership</div>
+          <div class="blog-title">Five Leadership Speakers Who Changed the Way We Think</div>
+          <div class="blog-excerpt">A curated shortlist of the voices redefining what great leadership looks and sounds like — from the boardroom to the conference stage.</div>
+          <div class="blog-meta">Arjun Kapoor · 4 min read</div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /blog -->
+
+
+  <!-- ══════════════════════════════
+       CONTACT
+  ══════════════════════════════ -->
+  <div id="page-contact" class="page">
+    <div class="contact-layout">
+      <div class="contact-left">
+        <div class="eyebrow">Get in Touch</div>
+        <h1 class="display">Let's Find<br>Your <span class="accent-text">Speaker.</span></h1>
+        <p>Tell us about your event and we'll come back to you within one business day with a curated shortlist.</p>
+        <div class="contact-detail">
+          <div class="cd-item">
+            <h4>Email</h4>
+            <p><a href="mailto:unlock@talentverseglobal.com">unlock@talentverseglobal.com</a></p>
+          </div>
+          <div class="cd-item">
+            <h4>Phone</h4>
+            <p><a href="tel:+919820984063">+91 9820984063</a></p>
+          </div>
+          <div class="cd-item">
+            <h4>Office</h4>
+            <p>Mumbai · London · New York</p>
+          </div>
+          <div class="cd-item">
+            <h4>Response Time</h4>
+            <p>Within 1 business day</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <h2>Booking Enquiry</h2>
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="first_name" placeholder="Your first name" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="last_name" placeholder="Your last name" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-group">
+            <label>Organisation</label>
+            <input type="text" name="organisation" placeholder="Your company or event" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Event Date</label>
+              <input type="date" name="event_date" />
+            </div>
+            <div class="form-group">
+              <label>Expected Audience Size</label>
+              <select name="audience_size">
+                <option value="">Select range</option>
+                <option>Under 100</option>
+                <option>100–500</option>
+                <option>500–1,000</option>
+                <option>1,000–5,000</option>
+                <option>5,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Topic / Theme</label>
+            <select name="topic">
+              <option value="">Select a topic area</option>
+              <option>Technology &amp; AI</option>
+              <option>Leadership &amp; Culture</option>
+              <option>Climate &amp; Sustainability</option>
+              <option>Entrepreneurship</option>
+              <option>Wellbeing &amp; Performance</option>
+              <option>Diversity &amp; Inclusion</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tell Us About Your Event</label>
+            <textarea name="event_details" placeholder="What do you want your audience to feel, think, or do differently after the speech?" required></textarea>
+          </div>
+          <button class="btn-primary" type="submit" style="width:100%;padding:1rem;font-size:0.9rem;letter-spacing:0.08em;">Submit Enquiry →</button>
+        </form>
+        <div class="form-success" id="contact-form-success" style="display:none;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">✦</div>
+          <h3>Enquiry Received</h3>
+          <p>Thank you! Our team will be in touch within one business day with a curated shortlist for your event.</p>
+        </div>
+        <div id="contact-form-error" style="display:none; background:#f8d7da; color:#721c24; padding:1rem; border-radius:6px; margin-top:1rem; font-weight:500;">
+          ✗ Something went wrong sending your enquiry. Please try again or contact unlock@talentverseglobal.com
+        </div>
+      </div>
+    </div>
+  </div><!-- /contact -->
+
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <a class="nav-logo" href="#home" style="cursor:pointer;"><img src="Images/logo.webp" alt="TalentVerse Global" class="site-logo"></a>
+    <p>© 2026 TalentVerse Global. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#speakers">Speakers</a>
+      <a href="#about">About</a>
+      <a href="#blog">Journal</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('data-page') === name);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function filterSpeakers(btn, topic) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.speaker-list-card').forEach(card => {
+        card.style.display = (topic === 'all' || card.dataset.topic === topic) ? 'flex' : 'none';
+      });
+    }
+
+    function showPageFromHash() {
+      const name = location.hash.slice(1);
+      if (name && document.getElementById('page-' + name)) showPage(name);
+    }
+    document.addEventListener('DOMContentLoaded', showPageFromHash);
+    window.addEventListener('hashchange', showPageFromHash);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof emailjs === 'undefined') {
+        console.error('EmailJS library is not loaded.');
+        return;
+      }
+
+      emailjs.init('a8mGjNCj3LBmTKjI3');
+
+      function bindEmailForm(formId, successId, errorId) {
+        const form = document.getElementById(formId);
+        if (!form) return;
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const data = {};
+          new FormData(form).forEach((value, key) => {
+            data[key] = value;
+          });
+
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalText = submitBtn ? submitBtn.textContent : 'Submit';
+          if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+
+          console.log('EmailJS sending', formId, data);
+
+          emailjs.send('service_0fo61ij', 'template_4clx5wl', data)
+            .then(function(response) {
+              if (errorId) document.getElementById(errorId).style.display = 'none';
+              if (successId) document.getElementById(successId).style.display = 'block';
+              form.reset();
+              if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+              if (successId) setTimeout(() => { document.getElementById(successId).style.display = 'none'; }, 5000);
+            })
+            .catch(function(error) {
+              console.error('EmailJS error:', error);
+              if (successId) document.getElementById(successId).style.display = 'none';
+              if (errorId) document.getElementById(errorId).style.display = 'block';
+              if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+            });
+        });
+      }
+
+      bindEmailForm('home-cta-form', 'home-form-success', 'home-form-error');
+      bindEmailForm('contact-form', 'contact-form-success', 'contact-form-error');
+    });
+  </script>
+</body>
+</html>
+
