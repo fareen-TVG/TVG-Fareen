@@ -6,7 +6,7 @@ Static site — no build step. Upload the whole folder to any static host.
 | --- | --- |
 | Home | `index.html` |
 | Speakers | `speakers.html` |
-| Speaker profile | `navtej-sarna.html` |
+| Speaker directory, profiles, topic pages | generated — see below |
 | About | `about.html` |
 | Journal | `journal.html` |
 | Contact / enquiry form | `contact.html` |
@@ -21,6 +21,14 @@ Shared styles live in `css/styles.css`, shared scripts (mobile menu, speaker fil
 4. **Google Business Profile** — create one with the same name, phone (+91 98209 84063) and email as the site footer.
 5. **EmailJS template** — forms send `first_name`, `last_name`, `email`, `contact_number`, `organisation`, `event_date`, `audience_size`, `topic`, `budget`, `event_details` and `page`. Make sure the template includes the ones you want in the email.
 
-## Adding a speaker profile page
+## Speakers (generated)
 
-Copy `navtej-sarna.html`, change the title, description, canonical URL, JSON-LD, photo and text, link to it from `speakers.html`, and add it to `sitemap.xml`.
+The speaker directory (`speakers.html`), one profile per speaker (`speakers/<name>.html`), topic pages (`topics/<category>.html`) and `sitemap.xml` are generated from `data/speakers.json`:
+
+```
+python3 tools/build_speakers.py
+```
+
+To add or edit a speaker, change `data/speakers.json` (name, slug, category, title, bio, photo), put the photo in `Images/speakers/<slug>.jpg` (portrait, about 600×800), and re-run the script. The header and footer are copied from `about.html`.
+
+Fees and locations from the internal roster sheet are deliberately **not** stored or published.

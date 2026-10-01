@@ -9,7 +9,23 @@
   });
 })();
 
-// Speaker topic filter (speakers page)
+// Speaker directory: topic filter + name search (speakers page)
+var activeTopic = 'all';
+function applySpeakerFilters() {
+  var search = document.getElementById('speaker-search');
+  var term = search ? search.value.trim().toLowerCase() : '';
+  var shown = 0;
+  document.querySelectorAll('#speakers-grid .roster-card').forEach(function (card) {
+    var matchTopic = activeTopic === 'all' || card.dataset.topic === activeTopic;
+    var matchText = !term || card.textContent.toLowerCase().indexOf(term) !== -1;
+    card.hidden = !(matchTopic && matchText);
+    if (!card.hidden) shown++;
+  });
+  var count = document.getElementById('roster-count');
+  if (count) count.textContent = shown + (shown === 1 ? ' speaker' : ' speakers');
+  var empty = document.getElementById('roster-empty');
+  if (empty) empty.hidden = shown !== 0;
+}
 function filterSpeakers(btn, topic) {
   document.querySelectorAll('.filter-btn').forEach(function (b) {
     b.classList.remove('active');
@@ -17,10 +33,13 @@ function filterSpeakers(btn, topic) {
   });
   btn.classList.add('active');
   btn.setAttribute('aria-pressed', 'true');
-  document.querySelectorAll('.speaker-list-card').forEach(function (card) {
-    card.style.display = (topic === 'all' || card.dataset.topic === topic) ? 'flex' : 'none';
-  });
+  activeTopic = topic;
+  applySpeakerFilters();
 }
+(function () {
+  var search = document.getElementById('speaker-search');
+  if (search) search.addEventListener('input', applySpeakerFilters);
+})();
 
 // Pre-fill the enquiry form when arriving from a "Book <speaker>" link
 (function () {
