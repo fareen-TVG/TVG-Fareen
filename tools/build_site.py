@@ -341,7 +341,7 @@ home = f"""    <section class="hero">
           <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs — tell us about your event and get a shortlist within one business day.</p>
           <form class="hero-search" action="speakers.html" role="search">
             <label class="visually-hidden" for="hero-q">Search speakers</label>
-            <input id="hero-q" type="search" name="q" placeholder="Search a name or topic, e.g. leadership" />
+            <input id="hero-q" type="search" name="q" placeholder="Search a name or topic" />
             <button class="btn btn-primary" type="submit">Search</button>
           </form>
           <div class="hero-chips">
