@@ -6,10 +6,11 @@
   toggle.addEventListener('click', function () {
     var open = links.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
 })();
 
-// Speaker directory: topic filter + name search (speakers page)
+// Speaker directory: topic filter + search (speakers page)
 var activeTopic = 'all';
 function applySpeakerFilters() {
   var search = document.getElementById('speaker-search');
@@ -38,19 +39,25 @@ function filterSpeakers(btn, topic) {
 }
 (function () {
   var search = document.getElementById('speaker-search');
-  if (search) search.addEventListener('input', applySpeakerFilters);
+  if (!search) return;
+  search.addEventListener('input', applySpeakerFilters);
+  var params = new URLSearchParams(location.search);
+  if (params.get('q')) search.value = params.get('q');
+  var topic = params.get('topic');
+  var btn = topic && document.querySelector('.filter-btn[data-topic="' + topic + '"]');
+  if (btn) filterSpeakers(btn, topic); else if (search.value) applySpeakerFilters();
 })();
 
-// Pre-fill the enquiry form when arriving from a "Book <speaker>" link
+// Pre-fill the speaker field when arriving from an "Enquire about <speaker>" link
 (function () {
   var speaker = new URLSearchParams(location.search).get('speaker');
-  var details = document.querySelector('#contact-form textarea[name="event_details"]');
-  if (speaker && details && !details.value) {
-    details.value = 'I am interested in booking ' + speaker + '.\n\n';
-  }
+  var field = document.querySelector('form[data-enquiry] [name="speaker"]');
+  if (speaker && field && !field.value) field.value = speaker;
 })();
 
-// Enquiry forms → EmailJS
+// Forms → EmailJS, then the thank-you page.
+// Field names match the existing EmailJS template; extra fields (speaker,
+// expertise, profile link) are folded into event_details so nothing is lost.
 document.addEventListener('DOMContentLoaded', function () {
   var forms = document.querySelectorAll('form[data-enquiry]');
   if (!forms.length) return;
@@ -61,41 +68,37 @@ document.addEventListener('DOMContentLoaded', function () {
   emailjs.init('a8mGjNCj3LBmTKjI3');
 
   forms.forEach(function (form) {
-    var success = document.getElementById(form.dataset.success);
-    var error = document.getElementById(form.dataset.error);
+    var error = form.querySelector('.form-error');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-
-      // Honeypot: real visitors never fill this hidden field
-      if (form.querySelector('[name="website"]').value) return;
+      if (form.querySelector('[name="website"]').value) return; // spam honeypot
 
       var data = {};
       new FormData(form).forEach(function (value, key) {
         if (key !== 'website') data[key] = value;
       });
+      var extra = [];
+      if (data.speaker) extra.push('Speaker of interest: ' + data.speaker);
+      if (data.expertise) extra.push('Speaking topics: ' + data.expertise);
+      if (data.profile_link) extra.push('Profile / showreel: ' + data.profile_link);
+      if (extra.length) data.event_details = extra.join('\n') + '\n\n' + (data.event_details || '');
       data.page = location.pathname;
 
       var submitBtn = form.querySelector('button[type="submit"]');
       var originalText = submitBtn.textContent;
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+      submitBtn.textContent = 'Sending…';
 
       emailjs.send('service_0fo61ij', 'template_4clx5wl', data)
         .then(function () {
-          if (error) error.style.display = 'none';
-          if (success) success.style.display = 'block';
-          form.reset();
-          // Conversion tracking, if Google Analytics / Tag Manager is installed
           if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_id: form.id });
           if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead', form_id: form.id });
+          location.href = form.dataset.redirect || 'thank-you.html';
         })
         .catch(function (err) {
           console.error('EmailJS error:', err);
-          if (success) success.style.display = 'none';
           if (error) error.style.display = 'block';
-        })
-        .finally(function () {
           submitBtn.disabled = false;
           submitBtn.textContent = originalText;
         });
