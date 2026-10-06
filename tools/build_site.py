@@ -41,8 +41,8 @@ TOPIC_INTROS = {
     'comedians': 'Stand-up comedians who bring clean, relatable humour to corporate events and celebrations.',
     'chefs': 'Celebrity and Michelin-starred chefs who speak on creativity, entrepreneurship and food culture.',
 }
-FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'vineeta-singh', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'aman-gupta']
-HERO_PHOTOS = ['anupam-kher', 'vineeta-singh', 'anil-kumble']
+FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'shashi-tharoor', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'aman-gupta']
+HERO_PHOTOS = ['anupam-kher', 'shashi-tharoor', 'anil-kumble']
 
 ORG = {
     "@context": "https://schema.org", "@type": "Organization", "@id": SITE + "/#organization",
@@ -331,7 +331,14 @@ def topic_tiles():
 
 # ── HOME ──
 PRIORITY = ' fetchpriority="high"'
-hero_imgs = '\n'.join(f'            <img src="{BY_SLUG[s]["photo"]}" alt="{esc(BY_SLUG[s]["name"])}"{PRIORITY if i == 0 else ""} />' for i, s in enumerate(HERO_PHOTOS))
+def hero_img(i, s):
+    # Speakers without a photo yet show an initials tile in the same slot.
+    if s['photo']:
+        return f'            <img src="{s["photo"]}" alt="{esc(s["name"])}"{PRIORITY if i == 0 else ""} />'
+    return f'            <div class="initials" role="img" aria-label="{esc(s["name"])}">{esc(initials(s["name"]))}</div>'
+
+
+hero_imgs = '\n'.join(hero_img(i, BY_SLUG[slug]) for i, slug in enumerate(HERO_PHOTOS))
 chips = '\n'.join(f'            <a class="chip" href="topics/{c}.html">{esc(CATS[c])}</a>' for c in ['business-leadership', 'sports', 'celebrities', 'comedians', 'government-policy'])
 home = f"""    <section class="hero">
       <div class="wrap">

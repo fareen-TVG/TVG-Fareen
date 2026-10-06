@@ -105,6 +105,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero-card { position: relative; background: linear-gradient(140deg, var(--purple-light), var(--purple)); border-radius: 28px; padding: 1.2rem; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; transform: rotate(-3deg); }
 .hero-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 20%; border-radius: 16px; }
 .hero-card img:first-child { grid-row: span 2; height: 100%; aspect-ratio: auto; }
+.hero-card .initials { aspect-ratio: 3 / 4; border-radius: 16px; background: var(--orange); color: var(--ink); }
 .hero-note { position: absolute; left: 0; bottom: 0.5rem; background: #fff; border-radius: 18px; padding: 0.8rem 1.1rem; box-shadow: var(--shadow); font-weight: 700; font-size: 0.92rem; max-width: 250px; }
 .hero-note::after { content: ''; position: absolute; left: 26px; top: -7px; width: 14px; height: 14px; background: #fff; transform: rotate(45deg); }
 .hero-note span { display: block; color: var(--muted); font-weight: 500; font-size: 0.82rem; }
