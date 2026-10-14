@@ -492,11 +492,44 @@ for c, n in CATS.items():
          f'Book {n.lower()} speakers for corporate events, conferences and summits. {TOPIC_INTROS[c]}',
          body, ld=[crumbs(('Home', ''), ('Topics', 'topics.html'), (n, f'topics/{c}.html'))], active='topics.html')
 
+# What each category's speakers are booked for, and popular talk themes (profile pages).
+TALK_KINDS = {
+    'government-policy': ('public policy and international affairs', ['Geopolitics and India’s role in the world', 'Democracy, governance and public policy', 'The economy, reforms and growth', 'Diplomacy and global leadership']),
+    'business-leadership': ('business and leadership', ['Leadership and building high-performing teams', 'Entrepreneurship and scaling a business', 'Innovation, strategy and disruption', 'Building a brand and winning customers']),
+    'sports': ('sports and motivational', ['Leadership and captaincy under pressure', 'Resilience, discipline and the winning mindset', 'Teamwork and high performance', 'Comebacks, setbacks and staying motivated']),
+    'defence': ('leadership and national security', ['Leadership lessons from the armed forces', 'Courage and decision-making under pressure', 'Teamwork, discipline and duty', 'National security and strategic affairs']),
+    'authors': ('ideas and storytelling', ['Storytelling and the power of ideas', 'History, culture and mythology', 'Creativity and the writing life', 'Society, media and current affairs']),
+    'health-wellbeing': ('health and wellness', ['Workplace wellness and preventing burnout', 'Nutrition, fitness and healthy habits', 'Mental health and resilience', 'Performance, energy and longevity']),
+    'spiritual': ('spiritual and mindfulness', ['Purpose, values and meaningful work', 'Managing stress and finding inner balance', 'Mindfulness and emotional wellbeing', 'Leadership with compassion']),
+    'celebrities': ('celebrity and inspirational', ['Personal journeys and lessons from the spotlight', 'Resilience, reinvention and success', 'Creativity and storytelling', 'Inspiring teams and audiences']),
+    'digital-creators': ('digital and creator-economy', ['The creator economy and personal branding', 'Personal finance and money habits', 'Building an audience online', 'Content, social media and marketing']),
+    'comedians': ('comedy and entertainment', ['Clean stand-up for corporate audiences', 'Humour for award nights and celebrations', 'Hosting and emceeing events', 'Light-hearted sessions for team offsites']),
+    'chefs': ('food and entrepreneurship', ['Creativity and innovation in the kitchen', 'Building a food business and brand', 'Indian food culture and heritage', 'Live cooking sessions and masterclasses']),
+}
+EVENT_TYPES = 'keynote speeches, corporate conferences, leadership summits, team offsites, award nights, product launches, college festivals and private events'
+
+
+def speaker_faqs(n):
+    return [
+        (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and come back within one business day.'),
+        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we’ll send {n}’s availability and an exact quote within one business day.'),
+        (f'Is {n} available for virtual or hybrid events?', f'Many speakers on our roster present virtually as well as in person. Tell us your format and we’ll confirm the options with {n}’s team.'),
+        (f'What kinds of events can {n} speak at?', f'{n} can be booked for {EVENT_TYPES}.'),
+    ]
+
+
 # ── SPEAKER PROFILES ──
 for s in SPEAKERS:
     cat = CATS[s['category']]
     q = s['name'].replace(' ', '%20')
     related = [r for r in BY_CAT[s['category']] if r['slug'] != s['slug']]
+    kind, themes = TALK_KINDS[s['category']]
+    theme_items = '\n'.join(f'          <li>{esc(t)}</li>' for t in themes)
+    faqs = speaker_faqs(s['name'])
+    faq_html = '\n'.join(f"""        <details class="more-details">
+          <summary>{esc(q_)}</summary>
+          <p>{esc(a)}</p>
+        </details>""" for q_, a in faqs)
     related = sorted(related, key=lambda r: r['photo'] is None)[:4]
     body = f"""    <section class="section">
       <div class="wrap">
@@ -512,13 +545,30 @@ for s in SPEAKERS:
             <h2 class="profile-sub">Topics covered</h2>
 {tag_list(s['topics'], 'topic-tags')}
             <div class="btn-row">
-              <a class="btn btn-book" href="contact.html?speaker={q}">Enquire about {esc(s['name'])}</a>
+              <a class="btn btn-book" href="contact.html?speaker={q}">Book {esc(s['name'])}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
             </div>
             <p class="reply-note">We’ll confirm availability and fees within one business day.</p>
           </div>
         </div>
       </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <div class="wrap"><div class="prose">
+        <h2>Book {esc(s['name'])} for your event</h2>
+        <p>Looking to book {esc(s['name'])} as a speaker? TalentVerse Global arranges {kind} talks by {esc(s['name'])} for {EVENT_TYPES}. Sessions can be in person anywhere in India or abroad, or virtual, subject to availability.</p>
+        <h2>Popular {esc(cat)} talk themes</h2>
+        <ul>
+{theme_items}
+        </ul>
+        <p>Every talk is tailored to your audience and event goals. Tell us what you want people to take away and we’ll brief {esc(s['name'])}’s team.</p>
+        <h2>Frequently asked questions</h2>
+{faq_html}
+        <div class="btn-row" style="margin-top:1.5rem">
+          <a class="btn btn-book" href="contact.html?speaker={q}">Book {esc(s['name'])}</a>
+          <a class="btn btn-outline" href="tel:{PHONE}">Call {PHONE_DISPLAY}</a>
+        </div>
+      </div></div>
     </section>"""
     if related:
         body += f"""
@@ -531,10 +581,12 @@ for s in SPEAKERS:
     person = {"@type": "Person", "name": s['name'], "jobTitle": s['title'], "description": s['bio'], "knowsAbout": s['topics']}
     if s['photo']:
         person['image'] = SITE + '/' + s['photo']
-    page(f"speakers/{s['slug']}.html", f"Book {s['name']} as a Speaker | TalentVerse Global",
-         f"Book {s['name']} — {s['title']} — for your next event. {first_sentence(s['bio'], 100)}"[:300], body,
+    page(f"speakers/{s['slug']}.html", f"Book {s['name']} as a Speaker | Fees & Availability | TalentVerse Global",
+         f"Book {s['name']}, {s['title']}, for keynotes, corporate events and conferences. Check availability and speaker fees with TalentVerse Global.", body,
          ld=[crumbs(('Home', ''), ('Speakers', 'speakers.html'), (cat, f"topics/{s['category']}.html"), (s['name'], f"speakers/{s['slug']}.html")),
-             {"@context": "https://schema.org", "@type": "ProfilePage", "url": f"{SITE}/speakers/{s['slug']}.html", "mainEntity": person}],
+             {"@context": "https://schema.org", "@type": "ProfilePage", "url": f"{SITE}/speakers/{s['slug']}.html", "mainEntity": person},
+             {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                 {"@type": "Question", "name": q_, "acceptedAnswer": {"@type": "Answer", "text": a}} for q_, a in faqs]}],
          og_image=s['photo'] or 'Images/og-image.jpg', active='speakers.html')
 
 # ── HOW IT WORKS ──
