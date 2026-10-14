@@ -319,7 +319,7 @@ def cta_band(title, text):
 
 STEPS = """      <div class="steps">
         <div class="step"><h3>Tell us about your event</h3><p>Share the date, audience and what you want people to take away — or the speaker you already have in mind.</p></div>
-        <div class="step"><h3>Get a shortlist</h3><p>Within one business day we send speakers who fit your theme, audience and budget, with availability and fees.</p></div>
+        <div class="step"><h3>Get a shortlist</h3><p>We aim to send speakers who fit your theme, audience and budget within one business day, with availability and fees where we can confirm them.</p></div>
         <div class="step"><h3>We handle the rest</h3><p>Contracts, briefing, travel and on-the-day support — so your speaker arrives prepared and your event runs smoothly.</p></div>
       </div>"""
 
@@ -511,8 +511,8 @@ EVENT_TYPES = 'keynote speeches, corporate conferences, leadership summits, team
 
 def speaker_faqs(n):
     return [
-        (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and come back within one business day.'),
-        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we’ll send {n}’s availability and an exact quote within one business day.'),
+        (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and aim to come back to you within one business day.'),
+        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we’ll check {n}’s availability and aim to send a quote within one business day.'),
         (f'Is {n} available for virtual or hybrid events?', f'Many speakers on our roster present virtually as well as in person. Tell us your format and we’ll confirm the options with {n}’s team.'),
         (f'What kinds of events can {n} speak at?', f'{n} can be booked for {EVENT_TYPES}.'),
     ]
@@ -548,7 +548,7 @@ for s in SPEAKERS:
               <a class="btn btn-book" href="contact.html?speaker={q}">Book {esc(s['name'])}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
             </div>
-            <p class="reply-note">We’ll confirm availability and fees within one business day.</p>
+            <p class="reply-note">We aim to get back to you on availability and fees within one business day.</p>
           </div>
         </div>
       </div>
@@ -628,7 +628,7 @@ contact = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">Book a speaker</span>
         <h1>Tell us about your event</h1>
-        <p>We’ll reply within one business day with speakers who fit — including availability and fees.</p>
+        <p>We aim to reply within one business day with speakers who fit, and availability and fees where we can confirm them.</p>
       </div>
     </section>
     <section class="section">
