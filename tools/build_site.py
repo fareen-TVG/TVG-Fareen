@@ -212,8 +212,15 @@ def card(s):
             <span class="roster-topic">{esc(CATS[s['category']])}</span>
             <h3 class="roster-name">{esc(s['name'])}</h3>
             <p class="roster-title">{esc(s['title'])}</p>
+            <p class="roster-bio">{esc(s['bio'])}</p>
+{tag_list(s['topics'][:3], 'roster-tags')}
+            <span class="roster-more">View profile →</span>
           </div>
         </a>"""
+
+
+def tag_list(topics, cls):
+    return f'            <ul class="{cls}">' + ''.join(f'<li>{esc(t)}</li>' for t in topics) + '</ul>'
 
 
 def grid(speakers, grid_id=None):
@@ -500,7 +507,10 @@ for s in SPEAKERS:
             <span class="bubble">{esc(cat)}</span>
             <h1>{esc(s['name'])}</h1>
             <p class="profile-role">{esc(s['title'])}</p>
+            <h2 class="profile-sub">About</h2>
             <p class="profile-bio">{esc(s['bio'])}</p>
+            <h2 class="profile-sub">Topics covered</h2>
+{tag_list(s['topics'], 'topic-tags')}
             <div class="btn-row">
               <a class="btn btn-book" href="contact.html?speaker={q}">Enquire about {esc(s['name'])}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
@@ -518,7 +528,7 @@ for s in SPEAKERS:
 {grid(related)}
       </div>
     </section>"""
-    person = {"@type": "Person", "name": s['name'], "jobTitle": s['title'], "description": s['bio']}
+    person = {"@type": "Person", "name": s['name'], "jobTitle": s['title'], "description": s['bio'], "knowsAbout": s['topics']}
     if s['photo']:
         person['image'] = SITE + '/' + s['photo']
     page(f"speakers/{s['slug']}.html", f"Book {s['name']} as a Speaker | TalentVerse Global",
