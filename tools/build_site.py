@@ -272,7 +272,7 @@ def enquiry_form(form_id, heading, intro, short=False):
             {field(p + '-date', 'Event date', 'event_date', 'date')}
             {topic}
           </div>
-          {field(p + '-speaker', 'Speaker you have in mind', 'speaker', required=False, placeholder='e.g. Anil Kumble — or leave blank for a shortlist')}
+          {field(p + '-speaker', 'Speaker you have in mind', 'speaker', required=False, placeholder='Anyone, listed or not — or leave blank')}
           <details class="more-details">
             <summary>Add more details (optional)</summary>
             <div class="form-row">
@@ -324,7 +324,7 @@ STEPS = """      <div class="steps">
       </div>"""
 
 STATS = """      <div class="stats">
-        <div class="stat"><div class="stat-num">600+</div><div class="stat-label">Speakers on our roster</div></div>
+        <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Speakers on our roster</div></div>
         <div class="stat"><div class="stat-num">94%</div><div class="stat-label">Client satisfaction</div></div>
         <div class="stat"><div class="stat-num">85%</div><div class="stat-label">Clients who book with us again</div></div>
       </div>"""
@@ -431,9 +431,9 @@ filters = '\n'.join(
     [f'        <button type="button" class="filter-btn" aria-pressed="false" data-topic="{c}" onclick="filterSpeakers(this, \'{c}\')">{esc(n)}</button>' for c, n in CATS.items()])
 directory = f"""    <section class="page-header">
       <div class="wrap">
-        <span class="bubble">600+ speakers</span>
+        <span class="bubble">100+ speakers</span>
         <h1>Find a speaker</h1>
-        <p>Search by name or topic, or browse by category. Every speaker page has an enquiry button — we’ll confirm availability and fees.</p>
+        <p>Search by name or topic, or browse by category. Don’t see who you want? Name any speaker and we’ll approach them for you.</p>
       </div>
     </section>
 
@@ -445,12 +445,12 @@ directory = f"""    <section class="page-header">
         </div>
         <p class="roster-count" id="roster-count" aria-live="polite">{len(SPEAKERS)} speakers</p>
 {grid(sorted(SPEAKERS, key=lambda x: x['photo'] is None), 'speakers-grid')}
-        <p class="roster-empty" id="roster-empty" hidden>No speakers match that search. <a href="contact.html">Tell us what you need</a> and we’ll find the right person.</p>
+        <p class="roster-empty" id="roster-empty" hidden>No speakers match that search. <a href="contact.html">Tell us who you have in mind</a> and we’ll approach them for you.</p>
       </div>
     </section>
 
-{cta_band('Can’t find who you’re looking for?', 'Our roster is bigger than this page. Tell us your brief and we’ll suggest the right people.')}"""
-page('speakers.html', 'Find a Speaker | 600+ Keynote Speakers in India | TalentVerse Global',
+{cta_band('Have someone else in mind?', 'Name the speaker you want, even if they’re not listed here, and we’ll approach them for you.')}"""
+page('speakers.html', 'Find a Speaker | 100+ Keynote Speakers in India | TalentVerse Global',
      'Search keynote speakers, celebrities, sports legends, comedians, authors and chefs to book for your event in India. Enquire for availability and fees.',
      directory, ld=[crumbs(('Home', ''), ('Speakers', 'speakers.html'))], active='speakers.html')
 
