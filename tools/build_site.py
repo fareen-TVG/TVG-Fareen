@@ -233,7 +233,7 @@ def topic_options():
 
 
 HONEYPOT = '<div class="hp-field" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>'
-FORM_ERROR = f'<div class="form-error" role="alert">Sorry, that didn’t send. Please try again, or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</div>'
+FORM_ERROR = f'<div class="form-error" role="alert">Sorry, that did not send. Please try again, or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</div>'
 
 
 def field(fid, label, name, kind='text', required=True, placeholder='', autocomplete=''):
@@ -409,7 +409,7 @@ home = f"""    <section class="hero">
         <div class="cta-band"><div class="cta-inner">
           <div>
             <h2>Tell us about your event</h2>
-            <p>Share a few details and we’ll come back within one business day with speakers who fit your audience, theme and budget.</p>
+            <p>Share a few details and we will come back within one business day with speakers who fit your audience, theme and budget.</p>
             <div class="btn-row" style="margin-top:1.5rem">
               <a class="btn btn-outline" href="tel:{PHONE}">Call {PHONE_DISPLAY}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
@@ -433,7 +433,7 @@ directory = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">100+ speakers</span>
         <h1>Find a speaker</h1>
-        <p>Search by name or topic, or browse by category. Don’t see who you want? Name any speaker and we’ll approach them for you.</p>
+        <p>Search by name or topic, or browse by category. Do not see who you want? Name any speaker and we will approach them for you.</p>
       </div>
     </section>
 
@@ -445,11 +445,11 @@ directory = f"""    <section class="page-header">
         </div>
         <p class="roster-count" id="roster-count" aria-live="polite">{len(SPEAKERS)} speakers</p>
 {grid(sorted(SPEAKERS, key=lambda x: x['photo'] is None), 'speakers-grid')}
-        <p class="roster-empty" id="roster-empty" hidden>No speakers match that search. <a href="contact.html">Tell us who you have in mind</a> and we’ll approach them for you.</p>
+        <p class="roster-empty" id="roster-empty" hidden>No speakers match that search. <a href="contact.html">Tell us who you have in mind</a> and we will approach them for you.</p>
       </div>
     </section>
 
-{cta_band('Have someone else in mind?', 'Name the speaker you want, even if they’re not listed here, and we’ll approach them for you.')}"""
+{cta_band('Have someone else in mind?', 'Name the speaker you want, even if they are not listed here, and we will approach them for you.')}"""
 page('speakers.html', 'Find a Speaker | 100+ Keynote Speakers in India | TalentVerse Global',
      'Search keynote speakers, celebrities, sports legends, comedians, authors and chefs to book for your event in India. Enquire for availability and fees.',
      directory, ld=[crumbs(('Home', ''), ('Speakers', 'speakers.html'))], active='speakers.html')
@@ -459,7 +459,7 @@ topics_body = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">Topics</span>
         <h1>Speakers by topic</h1>
-        <p>Pick a theme for your event and see who fits. Not sure? Send us your brief and we’ll recommend.</p>
+        <p>Pick a theme for your event and see who fits. Not sure? Send us your brief and we will recommend.</p>
       </div>
     </section>
     <section class="section">
@@ -467,7 +467,7 @@ topics_body = f"""    <section class="page-header">
 {topic_tiles()}
       </div>
     </section>
-{cta_band('Need help choosing?', 'Tell us about your audience and goals — we’ll send a shortlist within one business day.')}"""
+{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send a shortlist within one business day.')}"""
 page('topics.html', 'Speakers by Topic | TalentVerse Global',
      'Browse speakers by topic: business and leadership, sports, celebrities, comedians, government and policy, health and wellbeing, chefs and more.',
      topics_body, ld=[crumbs(('Home', ''), ('Topics', 'topics.html'))], active='topics.html')
@@ -487,7 +487,7 @@ for c, n in CATS.items():
 {grid(BY_CAT[c])}
       </div>
     </section>
-{cta_band('Need help choosing?', 'Tell us about your audience and goals — we’ll send a shortlist within one business day.')}"""
+{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send a shortlist within one business day.')}"""
     page(f'topics/{c}.html', f'{n} Speakers to Book in India | TalentVerse Global',
          f'Book {n.lower()} speakers for corporate events, conferences and summits. {TOPIC_INTROS[c]}',
          body, ld=[crumbs(('Home', ''), ('Topics', 'topics.html'), (n, f'topics/{c}.html'))], active='topics.html')
@@ -512,8 +512,8 @@ EVENT_TYPES = 'keynote speeches, corporate conferences, leadership summits, team
 def speaker_faqs(n):
     return [
         (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and aim to come back to you within one business day.'),
-        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we’ll check {n}’s availability and aim to send a quote within one business day.'),
-        (f'Is {n} available for virtual or hybrid events?', f'Many speakers on our roster present virtually as well as in person. Tell us your format and we’ll confirm the options with {n}’s team.'),
+        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we will check {n}’s availability and aim to send a quote within one business day.'),
+        (f'Is {n} available for virtual or hybrid events?', f'Many speakers on our roster present virtually as well as in person. Tell us your format and we will confirm the options with {n}’s team.'),
         (f'What kinds of events can {n} speak at?', f'{n} can be booked for {EVENT_TYPES}.'),
     ]
 
@@ -561,7 +561,7 @@ for s in SPEAKERS:
         <ul>
 {theme_items}
         </ul>
-        <p>Every talk is tailored to your audience and event goals. Tell us what you want people to take away and we’ll brief {esc(s['name'])}’s team.</p>
+        <p>Every talk is tailored to your audience and event goals. Tell us what you want people to take away and we will brief {esc(s['name'])}’s team.</p>
         <h2>Frequently asked questions</h2>
 {faq_html}
         <div class="btn-row" style="margin-top:1.5rem">
@@ -657,7 +657,7 @@ join = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">For speakers</span>
         <h1>Join our roster</h1>
-        <p>Speak on stages across India with event organisers who value great talks. Tell us about yourself and we’ll be in touch if there’s a fit.</p>
+        <p>Speak on stages across India with event organisers who value great talks. Tell us about yourself and we will be in touch if there is a fit.</p>
       </div>
     </section>
     <section class="section">
@@ -691,8 +691,8 @@ page('join.html', 'Join Our Speaker Roster | TalentVerse Global',
 thanks = f"""    <section class="section">
       <div class="wrap prose" style="text-align:center;margin:0 auto">
         <span class="bubble">Received</span>
-        <h1>Thank you — we’ve got it</h1>
-        <p style="font-size:1.15rem;margin:1rem 0 2rem">We’ll reply within one business day. If your event is urgent, call or WhatsApp us on <a href="tel:{PHONE}">{PHONE_DISPLAY}</a>.</p>
+        <h1>Thank you, we have received your enquiry</h1>
+        <p style="font-size:1.15rem;margin:1rem 0 2rem">We will reply within one business day. If your event is urgent, call or WhatsApp us on <a href="tel:{PHONE}">{PHONE_DISPLAY}</a>.</p>
         <div class="btn-row" style="justify-content:center">
           <a class="btn btn-primary" href="speakers.html">Keep browsing speakers</a>
           <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
@@ -718,11 +718,11 @@ privacy = f"""    <section class="page-header">
           <li>To reply to your enquiry or application and arrange bookings you ask us to.</li>
           <li>To understand which pages are useful and improve the site.</li>
         </ul>
-        <p>We don’t sell your information or use it for unrelated marketing.</p>
+        <p>We do not sell your information or use it for unrelated marketing.</p>
         <h2>Who processes it</h2>
         <p>Form submissions are delivered to our inbox by EmailJS. If analytics is enabled, Google Analytics processes usage data. When you book a speaker, we share the event details needed with that speaker and their team.</p>
         <h2>How long we keep it</h2>
-        <p>We keep enquiry details for as long as needed to handle your request and any resulting booking, then delete them unless we’re required to keep records.</p>
+        <p>We keep enquiry details for as long as needed to handle your request and any resulting booking, then delete them unless we are required to keep records.</p>
         <h2>Your choices</h2>
         <p>You can ask us to see, correct or delete the information we hold about you by emailing <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
       </div>
