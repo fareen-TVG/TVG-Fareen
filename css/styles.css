@@ -220,6 +220,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .prose h2 { font-size: 1.4rem; margin: 2rem 0 0.6rem; }
 .prose p, .prose li { color: var(--ink); line-height: 1.75; }
 .prose ul { padding-left: 1.3rem; margin: 0.5rem 0 1rem; }
+.prose p { margin: 0 0 0.9rem; }
 
 /* ── FOOTER ── */
 .site-footer { background: var(--surface); border-top: 1px solid var(--border); padding: 3rem 0 6rem; margin-top: clamp(56px, 8vw, 96px); }
@@ -279,3 +280,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .cta-inner .form-card p { color: var(--muted); }
 .cta-inner .btn-outline { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
 .cta-inner .btn-outline:hover { background: rgba(255,255,255,0.12); }
+mark.todo { background: #FFE58F; color: #3a2a00; padding: 0 0.25em; border-radius: 3px; font-weight: 600; }
