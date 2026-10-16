@@ -327,7 +327,8 @@ STATS = """      <div class="stats">
         <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Speakers on our roster</div></div>
         <div class="stat"><div class="stat-num">94%</div><div class="stat-label">Client satisfaction</div></div>
         <div class="stat"><div class="stat-num">85%</div><div class="stat-label">Clients who book with us again</div></div>
-      </div>"""
+      </div>
+      <p class="stats-note">And growing each day.</p>"""
 
 
 def topic_tiles():
