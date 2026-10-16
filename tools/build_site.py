@@ -658,7 +658,7 @@ join = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">For speakers</span>
         <h1>Join our roster</h1>
-        <p>Speak on stages across India with event organisers who value great talks. Tell us about yourself and we will be in touch if there is a fit.</p>
+        <p>Speak on stages globally with event organisers who value great talks. Tell us about yourself and we will be in touch if there is a fit.</p>
       </div>
     </section>
     <section class="section">
@@ -685,7 +685,7 @@ join = f"""    <section class="page-header">
       </div>
     </section>"""
 page('join.html', 'Join Our Speaker Roster | TalentVerse Global',
-     'Are you a speaker? Apply to join the TalentVerse Global roster and speak at corporate events, conferences and summits across India.',
+     'Are you a speaker? Apply to join the TalentVerse Global roster and speak at corporate events, conferences and summits globally.',
      join, ld=[crumbs(('Home', ''), ('Join our roster', 'join.html'))], forms=True)
 
 # ── THANK YOU ──
