@@ -756,7 +756,7 @@ privacy = f"""    <section class="page-header">
         <p>We do not send newsletters or promotional messages at present. If we start, we will only send them to people who have agreed to receive them, and every message will tell you how to stop. You can opt out at any time by replying “unsubscribe” or emailing us.</p>
 
         <h2>6. Speaker profiles</h2>
-        <p>If you are a speaker on our roster, we publish your name, photo, title, bio and topics to promote you. They appear on your profile page and in our speaker listings, and we include them in the shortlists and proposals we send to event organisers.</p>
+        <p>If you are a speaker on our roster, we publish your name, photo, title, bio and topics to promote you. These details appear on your profile page and in our speaker listings, and we include them in the shortlists and proposals we send to event organisers.</p>
         <p>You or your management can ask us to update or remove your profile at any time by emailing <a href="mailto:{EMAIL}">{EMAIL}</a>, and we will make the change promptly.</p>
 
         <h2>7. Who we share it with</h2>
