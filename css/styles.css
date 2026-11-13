@@ -122,7 +122,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .topic-tile { display: flex; flex-direction: column; justify-content: space-between; gap: 0.6rem; min-height: 120px; padding: 1.2rem 1.3rem; border-radius: var(--radius); background: #fff; border: 1px solid var(--border); text-decoration: none; color: var(--ink); box-shadow: var(--shadow-sm); transition: border-color 0.2s, transform 0.2s; }
 .topic-tile:hover { border-color: var(--purple); transform: translateY(-2px); }
 .topic-tile strong { font-family: 'Nunito', sans-serif; font-size: 1.15rem; font-weight: 800; }
-.topic-tile span { color: var(--muted); font-size: 0.88rem; }
+.topic-tile span { color: var(--purple); font-weight: 700; font-size: 0.88rem; }
+.topic-tile em { font-style: normal; color: var(--muted); font-size: 0.85rem; line-height: 1.35; margin-top: -0.35rem; }
+.topic-faces { display: flex; margin-bottom: 0.2rem; }
+.topic-faces img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center 15%; border: 3px solid #fff; background: var(--purple-tint); box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+.topic-faces img + img { margin-left: -12px; }
+
+/* ── LOAD MORE ── */
+.load-more-row { display: flex; justify-content: center; margin-top: 2rem; }
+.load-more-row:has(#load-more[hidden]) { display: none; }
 
 /* ── STEPS ── */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; counter-reset: step; }

@@ -12,16 +12,26 @@
 
 // Speaker directory: topic filter + search (speakers page)
 var activeTopic = 'all';
-function applySpeakerFilters() {
+var PAGE_SIZE = 24;
+var visibleLimit = PAGE_SIZE;
+function applySpeakerFilters(keepLimit) {
+  if (keepLimit !== true) visibleLimit = PAGE_SIZE;
   var search = document.getElementById('speaker-search');
   var term = search ? search.value.trim().toLowerCase() : '';
   var shown = 0;
   document.querySelectorAll('#speakers-grid .roster-card').forEach(function (card) {
     var matchTopic = activeTopic === 'all' || card.dataset.topic === activeTopic;
     var matchText = !term || card.textContent.toLowerCase().indexOf(term) !== -1;
-    card.hidden = !(matchTopic && matchText);
-    if (!card.hidden) shown++;
+    var match = matchTopic && matchText;
+    if (match) shown++;
+    card.hidden = !match || shown > visibleLimit;
   });
+  var more = document.getElementById('load-more');
+  if (more) {
+    var left = shown - visibleLimit;
+    more.hidden = left <= 0;
+    more.textContent = 'Show more speakers (' + left + ' more)';
+  }
   var count = document.getElementById('roster-count');
   if (count) count.textContent = shown + (shown === 1 ? ' speaker' : ' speakers');
   var empty = document.getElementById('roster-empty');
@@ -41,11 +51,16 @@ function filterSpeakers(btn, topic) {
   var search = document.getElementById('speaker-search');
   if (!search) return;
   search.addEventListener('input', applySpeakerFilters);
+  var more = document.getElementById('load-more');
+  if (more) more.addEventListener('click', function () {
+    visibleLimit += PAGE_SIZE;
+    applySpeakerFilters(true);
+  });
   var params = new URLSearchParams(location.search);
   if (params.get('q')) search.value = params.get('q');
   var topic = params.get('topic');
   var btn = topic && document.querySelector('.filter-btn[data-topic="' + topic + '"]');
-  if (btn) filterSpeakers(btn, topic); else if (search.value) applySpeakerFilters();
+  if (btn) filterSpeakers(btn, topic); else applySpeakerFilters();
 })();
 
 // Pre-fill the speaker field when arriving from an "Enquire about <speaker>" link

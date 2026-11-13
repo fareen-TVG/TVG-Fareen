@@ -298,7 +298,7 @@ def enquiry_form(form_id, heading, intro, short=False):
           {HONEYPOT}
           <button class="btn btn-book btn-block" type="submit">Send enquiry →</button>
           {FORM_ERROR}
-          <p class="form-note">We reply within one business day. We only use your details to respond to this enquiry — see our <a href="privacy.html">privacy policy</a>.</p>
+          <p class="form-note">We usually reply within 24 hours. We only use your details to respond to this enquiry — see our <a href="privacy.html">privacy policy</a>.</p>
         </form>
       </div>"""
 
@@ -319,7 +319,7 @@ def cta_band(title, text):
 
 STEPS = """      <div class="steps">
         <div class="step"><h3>Tell us about your event</h3><p>Share the date, audience and what you want people to take away — or the speaker you already have in mind.</p></div>
-        <div class="step"><h3>Get a shortlist</h3><p>We aim to send speakers who fit your theme, audience and budget within one business day, with availability and fees where we can confirm them.</p></div>
+        <div class="step"><h3>Get a shortlist</h3><p>We send a tailored list of speakers who fit your theme, audience and budget, usually within 24 hours, with availability and fees where we can confirm them.</p></div>
         <div class="step"><h3>We handle the rest</h3><p>Contracts, briefing, travel and on-the-day support — so your speaker arrives prepared and your event runs smoothly.</p></div>
       </div>"""
 
@@ -331,10 +331,21 @@ STATS = """      <div class="stats">
       <p class="stats-note">Our network reaches well beyond our roster. If the speaker you want is not listed, <a href="contact.html">tell us who you have in mind</a> and we will reach out on your behalf.</p>"""
 
 
+def topic_faces(c, k=3):
+    # Featured speakers first, then anyone with a photo.
+    pool = sorted([x for x in BY_CAT[c] if x['photo']], key=lambda x: x['slug'] not in FEATURED + HERO_PHOTOS)
+    return pool[:k]
+
+
 def topic_tiles():
-    return '      <div class="topic-grid">\n' + '\n'.join(
-        f'        <a class="topic-tile" href="topics/{c}.html"><strong>{esc(n)}</strong><span>{len(BY_CAT[c])} speakers →</span></a>'
-        for c, n in CATS.items()) + '\n      </div>'
+    tiles = []
+    for c, n in CATS.items():
+        faces = topic_faces(c)
+        imgs = ''.join(f'<img src="{x["photo"]}" alt="" loading="lazy" />' for x in faces)
+        names = ', '.join(esc(x['name']) for x in faces[:2])
+        tiles.append(f'        <a class="topic-tile" href="topics/{c}.html"><div class="topic-faces" aria-hidden="true">{imgs}</div>'
+                     f'<strong>{esc(n)}</strong><em>{names} and more</em><span>{len(BY_CAT[c])} speakers →</span></a>')
+    return '      <div class="topic-grid">\n' + '\n'.join(tiles) + '\n      </div>'
 
 
 # ── HOME ──
@@ -352,7 +363,7 @@ home = f"""    <section class="hero">
       <div class="wrap">
         <div>
           <h1>India’s <span class="accent">speakers</span>, booked for your stage — anywhere in the world</h1>
-          <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs — tell us about your event and get a shortlist within one business day.</p>
+          <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs — tell us about your event and we will send you a free shortlist within 24 hours.</p>
           <form class="hero-search" action="speakers.html" role="search">
             <label class="visually-hidden" for="hero-q">Search speakers</label>
             <input id="hero-q" type="search" name="q" placeholder="Search a name or topic" />
@@ -366,7 +377,7 @@ home = f"""    <section class="hero">
           <div class="hero-card">
 {hero_imgs}
           </div>
-          <div class="hero-note">Free shortlist in 1 business day<span>No obligation — just tell us your brief.</span></div>
+          <div class="hero-note">Free shortlist within 24 hours<span>No obligation — just tell us your brief.</span></div>
         </div>
       </div>
     </section>
@@ -410,7 +421,7 @@ home = f"""    <section class="hero">
         <div class="cta-band"><div class="cta-inner">
           <div>
             <h2>Tell us about your event</h2>
-            <p>Share a few details and we will come back within one business day with speakers who fit your audience, theme and budget.</p>
+            <p>Share a few details and we will come back to you, usually within 24 hours, with speakers who fit your audience, theme and budget.</p>
             <div class="btn-row" style="margin-top:1.5rem">
               <a class="btn btn-outline" href="tel:{PHONE}">Call {PHONE_DISPLAY}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
@@ -421,7 +432,7 @@ home = f"""    <section class="hero">
       </div>
     </section>"""
 page('index.html', 'Book Keynote Speakers in India | TalentVerse Global Speaker Bureau',
-     'Book keynote speakers, celebrities, sports legends, comedians and chefs for corporate events in India. Get a free shortlist from TalentVerse Global within one business day.',
+     'Book keynote speakers, celebrities, sports legends, comedians and chefs for corporate events in India. Get a free speaker shortlist from TalentVerse Global within 24 hours.',
      home, ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "TalentVerse Global", "url": SITE + "/",
                 "potentialAction": {"@type": "SearchAction", "target": SITE + "/speakers.html?q={search_term_string}", "query-input": "required name=search_term_string"}}],
      forms=True)
@@ -446,6 +457,7 @@ directory = f"""    <section class="page-header">
         </div>
         <p class="roster-count" id="roster-count" aria-live="polite">{len(SPEAKERS)} speakers</p>
 {grid(sorted(SPEAKERS, key=lambda x: x['photo'] is None), 'speakers-grid')}
+        <div class="load-more-row"><button type="button" class="btn btn-outline" id="load-more" hidden>Show more speakers</button></div>
         <p class="roster-empty" id="roster-empty" hidden>No speakers match that search. <a href="contact.html">Tell us who you have in mind</a> and we will approach them for you.</p>
       </div>
     </section>
@@ -468,7 +480,7 @@ topics_body = f"""    <section class="page-header">
 {topic_tiles()}
       </div>
     </section>
-{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send a shortlist within one business day.')}"""
+{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send you a tailored shortlist.')}"""
 page('topics.html', 'Speakers by Topic | TalentVerse Global',
      'Browse speakers by topic: business and leadership, sports, celebrities, comedians, government and policy, health and wellbeing, chefs and more.',
      topics_body, ld=[crumbs(('Home', ''), ('Topics', 'topics.html'))], active='topics.html')
@@ -488,7 +500,7 @@ for c, n in CATS.items():
 {grid(BY_CAT[c])}
       </div>
     </section>
-{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send a shortlist within one business day.')}"""
+{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send you a tailored shortlist.')}"""
     page(f'topics/{c}.html', f'{n} Speakers to Book in India | TalentVerse Global',
          f'Book {n.lower()} speakers for corporate events, conferences and summits. {TOPIC_INTROS[c]}',
          body, ld=[crumbs(('Home', ''), ('Topics', 'topics.html'), (n, f'topics/{c}.html'))], active='topics.html')
@@ -512,8 +524,8 @@ EVENT_TYPES = 'keynote speeches, corporate conferences, leadership summits, team
 
 def speaker_faqs(n):
     return [
-        (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and aim to come back to you within one business day.'),
-        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we will check {n}’s availability and aim to send a quote within one business day.'),
+        (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and come back to you, usually within 24 hours.'),
+        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we will check {n}’s availability and send you a quote, usually within 24 hours.'),
         (f'Is {n} available for virtual or hybrid events?', f'Many speakers on our roster present virtually as well as in person. Tell us your format and we will confirm the options with {n}’s team.'),
         (f'What kinds of events can {n} speak at?', f'{n} can be booked for {EVENT_TYPES}.'),
     ]
@@ -549,7 +561,7 @@ for s in SPEAKERS:
               <a class="btn btn-book" href="contact.html?speaker={q}">Book {esc(s['name'])}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
             </div>
-            <p class="reply-note">We aim to get back to you on availability and fees within one business day.</p>
+            <p class="reply-note">We usually get back to you on availability and fees within 24 hours.</p>
           </div>
         </div>
       </div>
@@ -619,9 +631,9 @@ hiw = f"""    <section class="page-header">
 {STATS}
       </div>
     </section>
-{cta_band('Ready to find your speaker?', 'Send your brief and get a free, no-obligation shortlist within one business day.')}"""
+{cta_band('Ready to find your speaker?', 'Send your brief and get a free, no-obligation shortlist.')}"""
 page('how-it-works.html', 'How It Works | Book a Speaker with TalentVerse Global',
-     'How booking a speaker with TalentVerse Global works: share your brief, get a shortlist within one business day, and we handle contracts, briefing and travel.',
+     'How booking a speaker with TalentVerse Global works: share your brief, get a free shortlist, and we handle contracts, briefing and travel.',
      hiw, ld=[crumbs(('Home', ''), ('How it works', 'how-it-works.html'))], active='how-it-works.html')
 
 # ── CONTACT ──
@@ -629,7 +641,7 @@ contact = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">Book a speaker</span>
         <h1>Tell us about your event</h1>
-        <p>We aim to reply within one business day with speakers who fit, and availability and fees where we can confirm them.</p>
+        <p>We usually reply within 24 hours with speakers who fit, and availability and fees where we can confirm them.</p>
       </div>
     </section>
     <section class="section">
@@ -640,7 +652,7 @@ contact = f"""    <section class="page-header">
             <li><strong>Call</strong><a href="tel:{PHONE}">{PHONE_DISPLAY}</a></li>
             <li><strong>WhatsApp</strong><a href="{WHATSAPP}" rel="noopener">Message us on WhatsApp</a></li>
             <li><strong>Email</strong><a href="mailto:{EMAIL}">{EMAIL}</a></li>
-            <li><strong>Response time</strong>Within one business day</li>
+            <li><strong>Response time</strong>Usually within 24 hours</li>
           </ul>
           <p>Are you a speaker? <a href="join.html">Apply to join our roster</a>.</p>
         </div>
@@ -648,7 +660,7 @@ contact = f"""    <section class="page-header">
       </div>
     </section>"""
 page('contact.html', 'Book a Speaker – Enquiry | TalentVerse Global',
-     f'Book a speaker for your event. Call or WhatsApp {PHONE_DISPLAY}, email {EMAIL}, or send an enquiry and get a shortlist within one business day.',
+     f'Book a speaker for your event. Call or WhatsApp {PHONE_DISPLAY}, email {EMAIL}, or send an enquiry for a free speaker shortlist.',
      contact, ld=[crumbs(('Home', ''), ('Contact', 'contact.html')),
                   {"@context": "https://schema.org", "@type": "ContactPage", "name": "Book a speaker", "url": SITE + "/contact.html"}],
      active='contact.html', forms=True)
@@ -693,14 +705,14 @@ thanks = f"""    <section class="section">
       <div class="wrap prose" style="text-align:center;margin:0 auto">
         <span class="bubble">Received</span>
         <h1>Thank you, we have received your enquiry</h1>
-        <p style="font-size:1.15rem;margin:1rem 0 2rem">We will reply within one business day. If your event is urgent, call or WhatsApp us on <a href="tel:{PHONE}">{PHONE_DISPLAY}</a>.</p>
+        <p style="font-size:1.15rem;margin:1rem 0 2rem">We will be in touch, usually within 24 hours. If your event is urgent, call or WhatsApp us on <a href="tel:{PHONE}">{PHONE_DISPLAY}</a>.</p>
         <div class="btn-row" style="justify-content:center">
           <a class="btn btn-primary" href="speakers.html">Keep browsing speakers</a>
           <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
         </div>
       </div>
     </section>"""
-page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry — TalentVerse Global will reply within one business day.', thanks, index=False)
+page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry — TalentVerse Global will be in touch, usually within 24 hours.', thanks, index=False)
 
 # ── PRIVACY ──
 OWNER = '<mark class="todo">[OWNER NAME(S)]</mark>'
