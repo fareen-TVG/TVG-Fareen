@@ -362,8 +362,8 @@ chips = '\n'.join(f'            <a class="chip" href="topics/{c}.html">{esc(CATS
 home = f"""    <section class="hero">
       <div class="wrap">
         <div>
-          <h1>India’s <span class="accent">speakers</span>, booked for your stage — anywhere in the world</h1>
-          <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs — tell us about your event and we will send you a free shortlist within 24 hours.</p>
+          <h1>India’s <span class="accent">speakers</span>, booked for your stage, anywhere in the world</h1>
+          <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs. Tell us about your event and we will send you a free shortlist within 24 hours.</p>
           <form class="hero-search" action="speakers.html" role="search">
             <label class="visually-hidden" for="hero-q">Search speakers</label>
             <input id="hero-q" type="search" name="q" placeholder="Search a name or topic" />
