@@ -659,7 +659,7 @@ contact = f"""    <section class="page-header">
         {enquiry_form('contact-form', 'Booking enquiry', 'Only the essentials are required. Add more detail if you have it.')}
       </div>
     </section>"""
-page('contact.html', 'Book a Speaker Enquiry | TalentVerse Global',
+page('contact.html', 'Book a Speaker – Enquiry | TalentVerse Global',
      f'Book a speaker for your event. Call or WhatsApp {PHONE_DISPLAY}, email {EMAIL}, or send an enquiry for a free speaker shortlist.',
      contact, ld=[crumbs(('Home', ''), ('Contact', 'contact.html')),
                   {"@context": "https://schema.org", "@type": "ContactPage", "name": "Book a speaker", "url": SITE + "/contact.html"}],
