@@ -42,7 +42,7 @@ TOPIC_INTROS = {
     'chefs': 'Celebrity and Michelin-starred chefs who speak on creativity, entrepreneurship and food culture.',
 }
 FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'shashi-tharoor', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'aman-gupta']
-HERO_PHOTOS = ['raghav-chadha', 'dia-mirza', 'anil-kumble', 'karan-johar']
+HERO_PHOTOS = ['shashi-tharoor', 'dia-mirza', 'radhika-gupta', 'karan-johar']
 
 ORG = {
     "@context": "https://schema.org", "@type": "Organization", "@id": SITE + "/#organization",
