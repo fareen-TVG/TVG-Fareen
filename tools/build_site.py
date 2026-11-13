@@ -113,7 +113,7 @@ def footer(forms):
       <div class="footer-grid">
         <div>
           <a href="index.html" aria-label="TalentVerse Global home"><img src="Images/logo.webp" alt="TalentVerse Global" class="site-logo" width="928" height="501" loading="lazy" /></a>
-          <p>We book speakers for your event — keynotes, conferences, offsites and celebrations.</p>
+          <p>We book speakers for your event: keynotes, conferences, offsites and celebrations.</p>
         </div>
         <div>
           <h3>Find speakers</h3>
@@ -272,7 +272,7 @@ def enquiry_form(form_id, heading, intro, short=False):
             {field(p + '-date', 'Event date', 'event_date', 'date')}
             {topic}
           </div>
-          {field(p + '-speaker', 'Speaker you have in mind', 'speaker', required=False, placeholder='Anyone, listed or not — or leave blank')}
+          {field(p + '-speaker', 'Speaker you have in mind', 'speaker', required=False, placeholder='Anyone, listed or not, or leave blank')}
           <details class="more-details">
             <summary>Add more details (optional)</summary>
             <div class="form-row">
@@ -298,7 +298,7 @@ def enquiry_form(form_id, heading, intro, short=False):
           {HONEYPOT}
           <button class="btn btn-book btn-block" type="submit">Send enquiry →</button>
           {FORM_ERROR}
-          <p class="form-note">We usually reply within 24 hours. We only use your details to respond to this enquiry — see our <a href="privacy.html">privacy policy</a>.</p>
+          <p class="form-note">We usually reply within 24 hours. We only use your details to respond to this enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
         </form>
       </div>"""
 
@@ -318,9 +318,9 @@ def cta_band(title, text):
 
 
 STEPS = """      <div class="steps">
-        <div class="step"><h3>Tell us about your event</h3><p>Share the date, audience and what you want people to take away — or the speaker you already have in mind.</p></div>
+        <div class="step"><h3>Tell us about your event</h3><p>Share the date, audience and what you want people to take away, or the speaker you already have in mind.</p></div>
         <div class="step"><h3>Get a shortlist</h3><p>We send a tailored list of speakers who fit your theme, audience and budget, usually within 24 hours, with availability and fees where we can confirm them.</p></div>
-        <div class="step"><h3>We handle the rest</h3><p>Contracts, briefing, travel and on-the-day support — so your speaker arrives prepared and your event runs smoothly.</p></div>
+        <div class="step"><h3>We handle the rest</h3><p>Contracts, briefing, travel and on-the-day support, so your speaker arrives prepared and your event runs smoothly.</p></div>
       </div>"""
 
 STATS = """      <div class="stats">
@@ -377,7 +377,7 @@ home = f"""    <section class="hero">
           <div class="hero-card">
 {hero_imgs}
           </div>
-          <div class="hero-note">Free shortlist within 24 hours<span>No obligation — just tell us your brief.</span></div>
+          <div class="hero-note">Free shortlist within 24 hours<span>No obligation. Just tell us your brief.</span></div>
         </div>
       </div>
     </section>
@@ -480,7 +480,7 @@ topics_body = f"""    <section class="page-header">
 {topic_tiles()}
       </div>
     </section>
-{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send you a tailored shortlist.')}"""
+{cta_band('Need help choosing?', 'Tell us about your audience and goals, and we will send you a tailored shortlist.')}"""
 page('topics.html', 'Speakers by Topic | TalentVerse Global',
      'Browse speakers by topic: business and leadership, sports, celebrities, comedians, government and policy, health and wellbeing, chefs and more.',
      topics_body, ld=[crumbs(('Home', ''), ('Topics', 'topics.html'))], active='topics.html')
@@ -500,7 +500,7 @@ for c, n in CATS.items():
 {grid(BY_CAT[c])}
       </div>
     </section>
-{cta_band('Need help choosing?', 'Tell us about your audience and goals — we will send you a tailored shortlist.')}"""
+{cta_band('Need help choosing?', 'Tell us about your audience and goals, and we will send you a tailored shortlist.')}"""
     page(f'topics/{c}.html', f'{n} Speakers to Book in India | TalentVerse Global',
          f'Book {n.lower()} speakers for corporate events, conferences and summits. {TOPIC_INTROS[c]}',
          body, ld=[crumbs(('Home', ''), ('Topics', 'topics.html'), (n, f'topics/{c}.html'))], active='topics.html')
@@ -607,7 +607,7 @@ hiw = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">How it works</span>
         <h1>We book speakers for your event</h1>
-        <p>TalentVerse Global is a speaker bureau. We match organisations with the right voice — then manage every detail so the talk lands.</p>
+        <p>TalentVerse Global is a speaker bureau. We match organisations with the right voice, then manage every detail so the talk lands.</p>
       </div>
     </section>
     <section class="section">
@@ -656,10 +656,10 @@ contact = f"""    <section class="page-header">
           </ul>
           <p>Are you a speaker? <a href="join.html">Apply to join our roster</a>.</p>
         </div>
-        {enquiry_form('contact-form', 'Booking enquiry', 'Only the essentials are required — add more detail if you have it.')}
+        {enquiry_form('contact-form', 'Booking enquiry', 'Only the essentials are required. Add more detail if you have it.')}
       </div>
     </section>"""
-page('contact.html', 'Book a Speaker – Enquiry | TalentVerse Global',
+page('contact.html', 'Book a Speaker Enquiry | TalentVerse Global',
      f'Book a speaker for your event. Call or WhatsApp {PHONE_DISPLAY}, email {EMAIL}, or send an enquiry for a free speaker shortlist.',
      contact, ld=[crumbs(('Home', ''), ('Contact', 'contact.html')),
                   {"@context": "https://schema.org", "@type": "ContactPage", "name": "Book a speaker", "url": SITE + "/contact.html"}],
@@ -712,7 +712,7 @@ thanks = f"""    <section class="section">
         </div>
       </div>
     </section>"""
-page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry — TalentVerse Global will be in touch, usually within 24 hours.', thanks, index=False)
+page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry. TalentVerse Global will be in touch, usually within 24 hours.', thanks, index=False)
 
 # ── PRIVACY ──
 OWNER = '<mark class="todo">[OWNER NAME(S)]</mark>'
