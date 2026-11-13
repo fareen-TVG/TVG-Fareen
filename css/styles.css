@@ -87,9 +87,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .nav-links .menu-cta { display: none; }
 
 /* ── HERO ── */
-.hero { background: linear-gradient(180deg, var(--surface) 0%, #fff 100%); padding: clamp(40px, 7vw, 88px) 0 clamp(40px, 6vw, 72px); }
+.hero { background: linear-gradient(180deg, var(--surface) 0%, #fff 100%); padding: clamp(40px, 7vw, 88px) 0 clamp(40px, 6vw, 72px); overflow: hidden; }
 .hero .wrap { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-.hero h1 { margin-bottom: 1.1rem; }
+.hero h1 { margin-bottom: 1.1rem; font-size: clamp(2.1rem, 4.4vw, 3.3rem); }
 .hero-sub { font-size: 1.15rem; max-width: 540px; margin-bottom: 1.8rem; }
 .hero-search { display: flex; gap: 0.5rem; background: #fff; border: 1px solid var(--border); border-radius: 999px; padding: 0.35rem; box-shadow: var(--shadow-sm); max-width: 520px; margin-bottom: 1.2rem; }
 .hero-search input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 0.6rem 1rem; font: inherit; color: var(--ink); }
@@ -103,8 +103,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero-art { position: relative; padding: 0 0 2.5rem 2rem; }
 .hero-art::before { content: ''; position: absolute; inset: 3rem 0 0 4rem; background: var(--orange); border-radius: 28px; transform: rotate(-3deg); }
 .hero-card { position: relative; background: linear-gradient(140deg, var(--purple-light), var(--purple)); border-radius: 28px; padding: 1.2rem; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; transform: rotate(-3deg); }
-.hero-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 20%; border-radius: 16px; }
-.hero-card img:first-child { grid-row: span 2; height: 100%; aspect-ratio: auto; }
+.hero-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; border-radius: 16px; display: block; }
 .hero-card .initials { aspect-ratio: 3 / 4; border-radius: 16px; background: var(--orange); color: var(--ink); }
 .hero-note { position: absolute; left: 0; bottom: 0.5rem; background: #fff; border-radius: 18px; padding: 0.8rem 1.1rem; box-shadow: var(--shadow); font-weight: 700; font-size: 0.92rem; max-width: 250px; }
 .hero-note::after { content: ''; position: absolute; left: 26px; top: -7px; width: 14px; height: 14px; background: #fff; transform: rotate(45deg); }

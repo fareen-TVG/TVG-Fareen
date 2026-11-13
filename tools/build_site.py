@@ -42,7 +42,7 @@ TOPIC_INTROS = {
     'chefs': 'Celebrity and Michelin-starred chefs who speak on creativity, entrepreneurship and food culture.',
 }
 FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'shashi-tharoor', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'aman-gupta']
-HERO_PHOTOS = ['anupam-kher', 'shashi-tharoor', 'anil-kumble']
+HERO_PHOTOS = ['raghav-chadha', 'dia-mirza', 'anil-kumble', 'karan-johar']
 
 ORG = {
     "@context": "https://schema.org", "@type": "Organization", "@id": SITE + "/#organization",
@@ -351,7 +351,7 @@ chips = '\n'.join(f'            <a class="chip" href="topics/{c}.html">{esc(CATS
 home = f"""    <section class="hero">
       <div class="wrap">
         <div>
-          <h1>Book the right <span class="accent">speaker</span> for your event</h1>
+          <h1>India’s <span class="accent">speakers</span>, booked for your stage — anywhere in the world</h1>
           <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs — tell us about your event and get a shortlist within one business day.</p>
           <form class="hero-search" action="speakers.html" role="search">
             <label class="visually-hidden" for="hero-q">Search speakers</label>
