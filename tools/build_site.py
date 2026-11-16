@@ -53,6 +53,15 @@ ORG = {
     "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "telephone": PHONE, "areaServed": "IN", "availableLanguage": ["en", "hi"]},
 }
 
+# Google tag (Google Analytics), exactly as given in the Google Analytics setup screen.
+GOOGLE_TAG_ID = 'GTM-5MVJW4NV'
+GOOGLE_TAG = f"""  <script async src="https://www.googletagmanager.com/gtm.js?id={GOOGLE_TAG_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+  </script>"""
+
 NAV = [('speakers.html', 'Speakers'), ('topics.html', 'Topics'), ('how-it-works.html', 'How it works'), ('contact.html', 'Contact')]
 
 
@@ -161,6 +170,7 @@ def page(path, title, desc, body, ld=(), og_image='Images/og-image.jpg', active=
     out = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+{GOOGLE_TAG}
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{esc(title)}</title>

@@ -46,7 +46,7 @@ DNS at GoDaddy: four `A` records for `@` pointing to `185.199.108.153`, `185.199
 
 1. **Domain** — canonical URLs, social tags, `sitemap.xml` and `robots.txt` assume `https://talentverseglobal.com` (`SITE` in the build script).
 2. **Google Search Console** — verify the domain and submit `sitemap.xml`.
-3. **Google Analytics 4** — add the tag to the `<head>` template in the build script. Forms already fire a `generate_lead` event; the thank-you page is another conversion signal.
+3. **Google Analytics 4** — the Google tag (`GTM-5MVJW4NV`, set as `GOOGLE_TAG_ID` in the build script) is on every page. Forms already fire a `generate_lead` event; the thank-you page is another conversion signal.
 4. **EmailJS** — forms send `first_name`, `last_name`, `email`, `contact_number`, `organisation`, `event_date`, `audience_size`, `topic`, `budget`, `event_details`, `page`. The speaker requested (and, for roster applications, topics and profile link) is added to the top of `event_details`. Send a test enquiry from each form.
 5. **Privacy policy** — have `privacy.html` reviewed before launch.
 6. **Permissions** — confirm you may list each speaker and use their photo.
