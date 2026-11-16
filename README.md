@@ -31,6 +31,17 @@ Fees and locations from the internal roster sheet are deliberately **not** store
 | Join our roster | `join.html` |
 | Privacy policy | `privacy.html` |
 
+## Blog
+
+Articles live in `content/blog/<slug>.md`: a short header (`title`, `date`, `description`, `image` = a speaker slug, and `draft: true` to keep it off the live site), then the text. Put `[[speaker:slug]]` on its own line to show a speaker card.
+
+Make the cover collage from the speakers in an article, then rebuild:
+
+```
+python3 tools/make_cover.py content/blog/<slug>.md
+python3 tools/build_site.py
+```
+
 ## Hosting
 
 The site is hosted on **GitHub Pages** from the `main` branch (root folder). The build script also writes:

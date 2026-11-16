@@ -982,9 +982,17 @@ def nice_date(d):
     return datetime.date.fromisoformat(d).strftime('%-d %B %Y')
 
 
+def post_cover(po):
+    # Collage made by tools/make_cover.py; falls back to the lead speaker's photo.
+    collage = f"Images/blog/{po['slug']}.jpg"
+    if os.path.exists(os.path.join(ROOT, collage)):
+        return collage
+    return BY_SLUG[po['image']]['photo'] if po.get('image') in BY_SLUG else None
+
+
 POSTS = load_posts()
 for po in POSTS:
-    cover = BY_SLUG[po['image']]['photo'] if po.get('image') in BY_SLUG else None
+    cover = post_cover(po)
     mins = max(1, round(po['words'] / 220))
     art = f"""    <section class="page-header post-header">
       <div class="wrap">
@@ -996,6 +1004,7 @@ for po in POSTS:
     <section class="section" style="padding-top:2rem">
       <div class="wrap">
         <article class="prose post-body">
+{f'<img class="post-cover" src="{cover}" alt="" width="1200" height="630" />' if cover and cover.startswith('Images/blog/') else ''}
 {render_md(po['body'])}
         </article>
       </div>
@@ -1013,7 +1022,7 @@ for po in POSTS:
 
 cards = '\n'.join(
     f"""        <a class="post-card" href="blog/{po['slug']}.html">
-          <div class="post-card-img">{f'<img src="{BY_SLUG[po["image"]]["photo"]}" alt="" loading="lazy" />' if po.get('image') in BY_SLUG and BY_SLUG[po['image']]['photo'] else ''}</div>
+          <div class="post-card-img">{f'<img src="{post_cover(po)}" alt="" loading="lazy" />' if post_cover(po) else ''}</div>
           <div class="post-card-body"><span class="post-meta">{nice_date(po['date'])}</span><h2>{esc(po['title'])}</h2><p>{esc(po['description'])}</p><span class="roster-more">Read article →</span></div>
         </a>""" for po in POSTS)
 blog_index = f"""    <section class="page-header">
