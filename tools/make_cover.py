@@ -104,8 +104,9 @@ def make(md_path):
 
     # left: logo, label, title, subtitle
     d = ImageDraw.Draw(canvas)
-    logo = Image.open(os.path.join(ROOT, 'Images', 'logo.webp')).convert('RGBA')
-    lh = 78
+    hq = os.path.join(ROOT, 'Images', 'logo-hq.png')
+    logo = Image.open(hq if os.path.exists(hq) else os.path.join(ROOT, 'Images', 'logo.webp')).convert('RGBA')
+    lh = 92
     logo = logo.resize((int(logo.width * lh / logo.height), lh), Image.LANCZOS)
     canvas.paste(logo, (60, 52), logo)
     tag = meta.get('cover_tag', 'TalentVerse Global blog').upper()
