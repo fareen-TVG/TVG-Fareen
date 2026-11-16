@@ -731,6 +731,29 @@ thanks = f"""    <section class="section">
     </section>"""
 page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry. TalentVerse Global will be in touch, usually within 24 hours on working days.', thanks, index=False)
 
+# ── 404 ──
+# Served for any missing URL at any depth, so links are made root-relative.
+notfound = f"""    <section class="section">
+      <div class="wrap prose" style="text-align:center;margin:0 auto">
+        <span class="bubble">Page not found</span>
+        <h1>Sorry, we could not find that page</h1>
+        <p style="font-size:1.15rem;margin:1rem 0 2rem">It may have moved, or the link may be out of date. Try searching for a speaker, or tell us who you are looking for and we will help.</p>
+        <form class="hero-search" action="speakers.html" role="search" style="margin:0 auto 1.5rem">
+          <label class="visually-hidden" for="nf-q">Search speakers</label>
+          <input id="nf-q" type="search" name="q" placeholder="Search a name or topic" />
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn btn-primary" href="index.html">Go to the home page</a>
+          <a class="btn btn-outline" href="contact.html">Book a speaker</a>
+        </div>
+      </div>
+    </section>"""
+page('404.html', 'Page Not Found | TalentVerse Global', 'The page you were looking for could not be found.', notfound, index=False)
+_nf = os.path.join(ROOT, '404.html')
+_html = open(_nf).read().replace('action="speakers.html"', 'action="/speakers.html"')
+open(_nf, 'w').write(relink(_html, '/'))
+
 # ── PRIVACY ──
 privacy = f"""    <section class="page-header">
       <div class="wrap"><h1>Privacy policy</h1><p>Last updated 16 October 2026</p></div>
