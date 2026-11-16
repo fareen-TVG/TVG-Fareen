@@ -323,6 +323,14 @@ STEPS = """      <div class="steps">
         <div class="step"><h3>We handle the rest</h3><p>Contracts, briefing, travel and on-the-day support, so your speaker arrives prepared and your event runs smoothly.</p></div>
       </div>"""
 
+WHY = """      <div class="why-grid">
+        <div class="why-card"><span class="why-icon" aria-hidden="true">★</span><h3>Any speaker, listed or not</h3><p>Choose from 100+ speakers on our roster, or name anyone you have in mind and we will approach them for you.</p></div>
+        <div class="why-card"><span class="why-icon" aria-hidden="true">✓</span><h3>A free shortlist, fast</h3><p>Tell us your brief and get speakers matched to your theme, audience and budget, usually within 24 hours.</p></div>
+        <div class="why-card"><span class="why-icon" aria-hidden="true">₹</span><h3>Clear fees, no surprises</h3><p>We confirm availability and fees before you commit, so you can plan your budget with confidence.</p></div>
+        <div class="why-card"><span class="why-icon" aria-hidden="true">✈</span><h3>One point of contact</h3><p>We handle contracts, briefing, travel and on-the-day support, here in India or anywhere in the world.</p></div>
+      </div>"""
+
+
 STATS = """      <div class="stats">
         <div class="stat"><div class="stat-num">100+</div><div class="stat-label">Speakers on our roster, and growing each day</div></div>
         <div class="stat"><div class="stat-num">94%</div><div class="stat-label">Client satisfaction</div></div>
@@ -408,6 +416,15 @@ home = f"""    <section class="hero">
     </section>
 
     <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="bubble">Why TalentVerse Global</span><h2>Why organisers choose us</h2></div>
+        </div>
+{WHY}
+      </div>
+    </section>
+
+    <section class="section">
       <div class="wrap">
         <div class="section-head">
           <div><span class="bubble">How it works</span><h2>From brief to standing ovation</h2></div>
