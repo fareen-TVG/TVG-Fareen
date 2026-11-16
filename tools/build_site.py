@@ -732,8 +732,6 @@ thanks = f"""    <section class="section">
 page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry. TalentVerse Global will be in touch, usually within 24 hours on working days.', thanks, index=False)
 
 # ── PRIVACY ──
-OWNER = '<mark class="todo">[OWNER NAME(S)]</mark>'
-ADDRESS = '<mark class="todo">[OFFICE ADDRESS, MUMBAI, PIN]</mark>'
 privacy = f"""    <section class="page-header">
       <div class="wrap"><h1>Privacy policy</h1><p>Last updated 16 October 2026</p></div>
     </section>
@@ -743,7 +741,7 @@ privacy = f"""    <section class="page-header">
         <p>By using this website or sending us your details, you agree to this policy. If you do not agree, please do not submit your details.</p>
 
         <h2>1. Who we are</h2>
-        <p>TalentVerse Global is a speaker bureau run by {OWNER}, trading as TalentVerse Global, at {ADDRESS} (“TalentVerse Global”, “we”, “us”). We decide how your personal data is used, which makes us the Data Fiduciary under Indian law.</p>
+        <p>TalentVerse Global is a speaker bureau based in Mumbai, India (“TalentVerse Global”, “we”, “us”). We decide how your personal data is used, which makes us the Data Fiduciary under Indian law.</p>
         <p>This policy covers talentverseglobal.com and any enquiry, booking or speaker application you make with us by form, email, phone or WhatsApp.</p>
 
         <h2>2. What we collect</h2>
@@ -836,7 +834,7 @@ privacy = f"""    <section class="page-header">
 
         <h2>15. Questions and complaints</h2>
         <p>If you have a question or complaint about your personal data, contact our Grievance Officer:</p>
-        <p>{OWNER}<br />TalentVerse Global, {ADDRESS}<br />Email: <a href="mailto:{EMAIL}">{EMAIL}</a><br />Phone: <a href="tel:{PHONE}">{PHONE_DISPLAY}</a></p>
+        <p>Grievance Officer, TalentVerse Global<br />Mumbai, India<br />Email: <a href="mailto:{EMAIL}">{EMAIL}</a><br />Phone: <a href="tel:{PHONE}">{PHONE_DISPLAY}</a></p>
         <p>We will acknowledge your complaint and try to resolve it quickly. If you are not satisfied with our response, you can complain to the Data Protection Board of India.</p>
 
         <h2>16. Changes to this policy</h2>
