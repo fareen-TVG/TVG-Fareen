@@ -1,0 +1,1844 @@
+{
+ "categories": [
+  {
+   "name": "Government & Policy",
+   "slug": "government-policy"
+  },
+  {
+   "name": "Business & Leadership",
+   "slug": "business-leadership"
+  },
+  {
+   "name": "Sports",
+   "slug": "sports"
+  },
+  {
+   "name": "Defence & Armed Forces",
+   "slug": "defence"
+  },
+  {
+   "name": "Authors & Thinkers",
+   "slug": "authors"
+  },
+  {
+   "name": "Health & Wellbeing",
+   "slug": "health-wellbeing"
+  },
+  {
+   "name": "Spiritual & Mindfulness",
+   "slug": "spiritual"
+  },
+  {
+   "name": "Celebrities",
+   "slug": "celebrities"
+  },
+  {
+   "name": "Digital Creators",
+   "slug": "digital-creators"
+  },
+  {
+   "name": "Comedians",
+   "slug": "comedians"
+  },
+  {
+   "name": "Chefs",
+   "slug": "chefs"
+  }
+ ],
+ "speakers": [
+  {
+   "name": "Navtej Sarna",
+   "slug": "navtej-sarna",
+   "category": "government-policy",
+   "title": "Former Indian Ambassador to the United States · Author",
+   "bio": "Navtej Sarna is a distinguished diplomat, acclaimed author, and former Indian Ambassador to the United States (2016–2018). A member of the Indian Foreign Service from 1980, he also served as India’s High Commissioner to the UK, Ambassador to Israel, and Secretary in the Ministry of External Affairs. He was India’s longest-serving official spokesperson for the Ministry of External Affairs. An award-winning writer, his novel Crimson Spring received the Sahitya Akademi Award (2025) and the KLF Best Fiction Award (2022). Sarna has authored several acclaimed novels, non-fiction works, translations, and continues to write extensively on foreign policy, history, and literature.",
+   "photo": "Images/navtej-sarna.jpg",
+   "topics": [
+    "Foreign policy",
+    "Diplomacy",
+    "India–US relations",
+    "History",
+    "Literature & writing"
+   ]
+  },
+  {
+   "name": "Dr. Shashi Tharoor",
+   "slug": "shashi-tharoor",
+   "category": "government-policy",
+   "title": "Member of Parliament, Thiruvananthapuram · Author · Former UN Under-Secretary-General",
+   "bio": "Shashi Tharoor is an Indian politician, bestselling author, and former international diplomat. A former Under-Secretary-General of the United Nations, he served the organisation for nearly three decades before entering public life in India. Since 2009, he has represented Thiruvananthapuram in Parliament and has held key ministerial portfolios, including External Affairs and Human Resource Development. A prolific writer, Tharoor has authored more than 25 books on history, politics, diplomacy, and culture. Renowned for his eloquence and global perspective, he is a sought-after speaker on international affairs, democracy, leadership, and India’s evolving role on the world stage.",
+   "photo": "Images/speakers/shashi-tharoor.jpg",
+   "topics": [
+    "International affairs",
+    "Democracy",
+    "Leadership",
+    "India’s role in the world",
+    "History & culture"
+   ]
+  },
+  {
+   "name": "Montek Singh Ahluwalia",
+   "slug": "montek-singh-ahluwalia",
+   "category": "government-policy",
+   "title": "Former Deputy Chairman, Planning Commission of India · Economist · Public Policy Expert",
+   "bio": "Montek Singh Ahluwalia is one of India’s most respected economists and public policy leaders. A key architect of India’s economic reforms, he served as Deputy Chairman of the Planning Commission of India from 2004 to 2014 and has held senior positions at the Ministry of Finance, the Prime Minister’s Office, and the World Bank. Over a career spanning more than four decades, he has played a pivotal role in shaping India’s fiscal, economic, and development policies. A distinguished author and thought leader, Ahluwalia continues to contribute to global conversations on economic growth, governance, public policy, and sustainable development.",
+   "photo": "Images/speakers/montek-singh-ahluwalia.jpg",
+   "topics": [
+    "Economic reforms",
+    "Economic growth",
+    "Public policy",
+    "Governance",
+    "Sustainable development"
+   ]
+  },
+  {
+   "name": "Raghav Chadha",
+   "slug": "raghav-chadha",
+   "category": "government-policy",
+   "title": "Member of Parliament (Rajya Sabha) · Chartered Accountant · National Leader, Aam Aadmi Party",
+   "bio": "Raghav Chadha is a Member of Parliament in the Rajya Sabha and one of India’s prominent young political leaders. A Chartered Accountant by profession, he entered public life through the Aam Aadmi Party and has held key responsibilities in governance and public policy. He has served as Vice Chairman of the Delhi Jal Board and has been actively involved in legislative discussions on finance, infrastructure, education, and governance reforms. Known for his articulate public speaking and policy-driven approach, Chadha is a regular participant in national and international forums on leadership, public administration, economic development, and the future of democratic governance.",
+   "photo": "Images/speakers/raghav-chadha.jpg",
+   "topics": [
+    "Public policy",
+    "Governance reform",
+    "Youth in politics",
+    "Economic development",
+    "Leadership"
+   ]
+  },
+  {
+   "name": "Uday Sodhi",
+   "slug": "uday-sodhi",
+   "category": "business-leadership",
+   "title": "Digital Transformation Leader",
+   "bio": "Uday Sodhi, former head of SonyLIV and a respected digital strategist, brings deep expertise in OTT, content innovation and consumer engagement. As a speaker, he shares insights on digital disruption, product scaling, leadership and the future of media. His practical perspectives empower organisations navigating rapid technological and audience shifts.",
+   "photo": "Images/speakers/uday-sodhi.jpg",
+   "topics": [
+    "Digital disruption",
+    "OTT & media",
+    "Product scaling",
+    "Leadership",
+    "Future of media"
+   ]
+  },
+  {
+   "name": "Shiv Shivakumar",
+   "slug": "shiv-shivakumar",
+   "category": "business-leadership",
+   "title": "Corporate Leader & Author",
+   "bio": "Shiv Shivakumar, a celebrated business leader and bestselling author, has led major organisations including PepsiCo and Aditya Birla Group. A renowned speaker, he shares powerful lessons on leadership, strategy, career growth and navigating disruption. His clear frameworks and practical wisdom equip audiences to make smarter decisions and excel professionally.",
+   "photo": "Images/speakers/shiv-shivakumar.jpg",
+   "topics": [
+    "Leadership",
+    "Strategy",
+    "Career growth",
+    "Navigating disruption"
+   ]
+  },
+  {
+   "name": "Rajendran Dandapani",
+   "slug": "rajendran-dandapani",
+   "category": "business-leadership",
+   "title": "CTO, Zoho Schools of Learning",
+   "bio": "Rajendran Dandapani is a veteran technologist and an influential voice at Zoho, championing education, design thinking and product innovation. As a speaker, he bridges technology with human values, inspiring audiences to rethink learning, creativity and digital responsibility. His engaging style motivates teams to build meaningful, user-focused solutions.",
+   "photo": "Images/speakers/rajendran-dandapani.jpg",
+   "topics": [
+    "Product innovation",
+    "Design thinking",
+    "Future of learning",
+    "Technology & human values"
+   ]
+  },
+  {
+   "name": "Harish Bijoor",
+   "slug": "harish-bijoor",
+   "category": "business-leadership",
+   "title": "Brand & Marketing Strategist",
+   "bio": "Harish Bijoor is a leading brand expert and founder of Harish Bijoor Consults Inc., advising global and Indian companies. His talks decode consumer behaviour, brand building, market shifts and customer engagement. With sharp insights and relatable examples, he helps organisations understand markets deeply and craft future-ready strategies.",
+   "photo": "Images/speakers/harish-bijoor.jpg",
+   "topics": [
+    "Brand building",
+    "Consumer behaviour",
+    "Market shifts",
+    "Customer engagement"
+   ]
+  },
+  {
+   "name": "Harish Bhat",
+   "slug": "harish-bhat",
+   "category": "business-leadership",
+   "title": "Marketer · Keynote Speaker · Bestselling Author · Corporate Advisor · Director at the Tata Group",
+   "bio": "Harish Bhat, a marketer, corporate advisor, bestselling author and Director at the Tata Group, is admired for his storytelling and marketing leadership. His sessions explore branding, curiosity-driven creativity, consumer insight and building trusted businesses. He inspires audiences to innovate thoughtfully, communicate authentically and create long-lasting brand impact.",
+   "photo": "Images/speakers/harish-bhat.jpg",
+   "topics": [
+    "Branding",
+    "Consumer insight",
+    "Creativity & curiosity",
+    "Building trusted businesses"
+   ]
+  },
+  {
+   "name": "R. Gopalakrishnan",
+   "slug": "r-gopalakrishnan",
+   "category": "business-leadership",
+   "title": "Former Tata Executive & Leadership Thinker",
+   "bio": "R. Gopalakrishnan, former director of Tata Sons and a respected leadership author, brings decades of boardroom experience across global companies. His talks focus on decision-making, culture, wisdom, organisational growth and lifelong learning. His reflective, experience-rich insights help leaders develop perspective, maturity and purpose in fast-changing business environments.",
+   "photo": "Images/speakers/r-gopalakrishnan.jpg",
+   "topics": [
+    "Decision-making",
+    "Organisational culture",
+    "Leadership wisdom",
+    "Lifelong learning"
+   ]
+  },
+  {
+   "name": "Yamini Bhat",
+   "slug": "yamini-bhat",
+   "category": "business-leadership",
+   "title": "Co-founder & CEO, Vymo",
+   "bio": "Yamini Bhat is the co-founder and CEO of Vymo, a leading AI-driven sales productivity platform. A Stanford alum and strategic thinker, she speaks on digital transformation, scaling SaaS companies, customer-centric innovation and women leadership. Her clarity, insight and experience make her a compelling voice for technology and business audiences.",
+   "photo": "Images/speakers/yamini-bhat.jpg",
+   "topics": [
+    "Digital transformation",
+    "Scaling SaaS",
+    "Customer-centric innovation",
+    "Women in leadership"
+   ]
+  },
+  {
+   "name": "Aman Gupta",
+   "slug": "aman-gupta",
+   "category": "business-leadership",
+   "title": "Co-founder & CMO, boAt",
+   "bio": "Aman Gupta, co-founder and CMO of boAt, is one of India’s most influential entrepreneurs and a Shark Tank India favourite. Known for disruptive marketing and brand-building, he speaks on consumer insights, scaling businesses, creative leadership and founder resilience. His energetic style inspires teams and entrepreneurs to think boldly and innovate fearlessly.",
+   "photo": "Images/speakers/aman-gupta.jpg",
+   "topics": [
+    "Brand building",
+    "Disruptive marketing",
+    "Scaling a business",
+    "Founder resilience"
+   ]
+  },
+  {
+   "name": "Vineeta Singh",
+   "slug": "vineeta-singh",
+   "category": "business-leadership",
+   "title": "Co-founder & CEO, Sugar Cosmetics",
+   "bio": "Vineeta Singh, CEO and co-founder of Sugar Cosmetics, is celebrated for her grit, bold decisions and consumer-brand innovation. A Shark Tank India judge, she speaks on entrepreneurship, women leadership, disciplined execution and building modern Indian brands. Her inspiring journey motivates audiences to embrace ambition with resilience and confidence.",
+   "photo": "Images/speakers/vineeta-singh.jpg",
+   "topics": [
+    "Entrepreneurship",
+    "Women in leadership",
+    "Disciplined execution",
+    "Building Indian brands"
+   ]
+  },
+  {
+   "name": "Dr. A. Velumani",
+   "slug": "dr-a-velumani",
+   "category": "business-leadership",
+   "title": "Founder, Thyrocare",
+   "bio": "Dr. A. Velumani, founder of Thyrocare, built one of India’s largest diagnostic networks with remarkable frugality and vision. His talks offer powerful lessons on entrepreneurship, risk-taking, value creation and converting adversity into opportunity. His straightforward storytelling and lived experience inspire audiences to think long-term and lead with discipline.",
+   "photo": "Images/speakers/dr-a-velumani.jpg",
+   "topics": [
+    "Entrepreneurship",
+    "Risk-taking",
+    "Frugal innovation",
+    "Turning adversity into opportunity"
+   ]
+  },
+  {
+   "name": "Chetna Sinha",
+   "slug": "chetna-sinha",
+   "category": "business-leadership",
+   "title": "Social Entrepreneur & Founder, Mann Deshi Foundation",
+   "bio": "Chetna Sinha is a pioneering social entrepreneur empowering rural women through financial inclusion and entrepreneurship. Founder of the Mann Deshi Foundation and a global policy influencer, she speaks on grassroots leadership, women empowerment, innovation and community transformation. Her impactful journey inspires audiences to build inclusive, purpose-driven change.",
+   "photo": "Images/speakers/chetna-sinha.jpg",
+   "topics": [
+    "Social entrepreneurship",
+    "Women empowerment",
+    "Financial inclusion",
+    "Grassroots leadership"
+   ]
+  },
+  {
+   "name": "Nitin Saluja",
+   "slug": "nitin-saluja",
+   "category": "business-leadership",
+   "title": "Founder & CEO, Chaayos",
+   "bio": "Nitin Saluja, founder of Chaayos, reimagined India’s tea culture through technology, personalization and brand innovation. As a speaker, he offers insights on product experimentation, customer obsession and scaling Indian consumer brands. His practical entrepreneurial wisdom resonates with founders, business leaders and teams seeking sustainable, creative growth.",
+   "photo": "Images/speakers/nitin-saluja.jpg",
+   "topics": [
+    "Building consumer brands",
+    "Customer obsession",
+    "Product experimentation",
+    "Scaling up"
+   ]
+  },
+  {
+   "name": "Parul Gulati",
+   "slug": "parul-gulati",
+   "category": "business-leadership",
+   "title": "Actor, Entrepreneur & Founder, Nish Hair",
+   "bio": "Parul Gulati is an actor-turned-entrepreneur and founder of Nish Hair, a fast-growing beauty and hair solutions brand. She speaks on building modern D2C businesses, personal branding, women entrepreneurship and embracing authenticity. Her relatable journey inspires young creators and founders to pursue independence, confidence and bold ideas.",
+   "photo": "Images/speakers/parul-gulati.jpg",
+   "topics": [
+    "D2C business",
+    "Personal branding",
+    "Women entrepreneurship",
+    "Authenticity"
+   ]
+  },
+  {
+   "name": "Radhika Gupta",
+   "slug": "radhika-gupta",
+   "category": "business-leadership",
+   "title": "MD & CEO, Edelweiss Mutual Fund",
+   "bio": "Radhika Gupta, MD & CEO of Edelweiss Mutual Fund, is a respected finance leader and bestselling author. Known for her clarity and authenticity, she speaks on leadership, overcoming self-doubt, investing, career resilience and building confidence. Her articulate storytelling inspires professionals to grow with purpose, courage and consistent effort.",
+   "photo": "Images/speakers/radhika-gupta.jpg",
+   "topics": [
+    "Leadership",
+    "Overcoming self-doubt",
+    "Investing",
+    "Career resilience"
+   ]
+  },
+  {
+   "name": "Samir Saran",
+   "slug": "samir-saran",
+   "category": "business-leadership",
+   "title": "President, ORF & Global Affairs Expert",
+   "bio": "Samir Saran, President of the Observer Research Foundation, is a leading global voice on geopolitics, technology, climate policy and India’s strategic future. A sought-after speaker at major international forums, he provides sharp analysis and visionary perspectives. His sessions empower leaders to navigate global change with clarity and insight.",
+   "photo": "Images/speakers/samir-saran.jpg",
+   "topics": [
+    "Geopolitics",
+    "Technology & society",
+    "Climate policy",
+    "India’s strategic future"
+   ]
+  },
+  {
+   "name": "Varun Singh Rathore",
+   "slug": "varun-singh-rathore",
+   "category": "business-leadership",
+   "title": "Managing Partner, FMCG Advisory · Former National Business Leader · Food & Beverages Industry Expert",
+   "bio": "Varun Singh Rathore is a seasoned FMCG and Food & Beverages leader with over 19 years of experience driving growth, transformation, and profitability across India’s consumer goods sector. Having led national businesses with full P&L responsibility, he brings deep expertise in brand building, route-to-market strategy, commercial execution, pricing, distribution, and new product commercialization. His experience spans beverages, packaged foods, energy drinks, and value-added nutrition categories. Varun also advises private equity firms, venture capital investors, consulting firms, and institutional investors on market dynamics, consumer trends, commercial due diligence, and growth opportunities within India’s rapidly evolving FMCG landscape.",
+   "photo": "Images/speakers/varun-singh-rathore.jpg",
+   "topics": [
+    "FMCG growth strategy",
+    "Brand building",
+    "Route-to-market",
+    "Consumer trends"
+   ]
+  },
+  {
+   "name": "Jonty Rhodes",
+   "slug": "jonty-rhodes",
+   "category": "sports",
+   "title": "Legendary Cricketer & High-Performance Coach",
+   "bio": "Jonty Rhodes, one of cricket’s greatest fielders, is celebrated for redefining athleticism and commitment. As an international coach and motivational speaker, he inspires audiences with lessons on excellence, teamwork, discipline, and sustained performance. His insightful sessions energise professionals, leaders, and students seeking peak productivity and a winning mindset.",
+   "photo": "Images/speakers/jonty-rhodes.jpg",
+   "topics": [
+    "Excellence",
+    "Teamwork",
+    "Discipline",
+    "High performance"
+   ]
+  },
+  {
+   "name": "V.V.S. Laxman",
+   "slug": "v-v-s-laxman",
+   "category": "sports",
+   "title": "Cricket Icon & Mentor",
+   "bio": "V.V.S. Laxman, renowned for his elegant batting and match-winning temperament, is a respected cricketing statesman and coach. His talks explore leadership under pressure, discipline, preparation, and navigating challenges with calm focus. Laxman’s deep insights and humility make him a powerful speaker for corporate, academic, and sports events.",
+   "photo": "Images/speakers/v-v-s-laxman.jpg",
+   "topics": [
+    "Leadership under pressure",
+    "Preparation",
+    "Discipline",
+    "Calm focus"
+   ]
+  },
+  {
+   "name": "Sunil Chhetri",
+   "slug": "sunil-chhetri",
+   "category": "sports",
+   "title": "Indian Football Captain & Youth Inspiration",
+   "bio": "Sunil Chhetri, India’s most celebrated footballer and long-serving national captain, inspires millions with his discipline, humility, and relentless work ethic. As a speaker, he shares lessons on leadership, perseverance, fitness, and goal-driven living. His journey empowers audiences to push limits and pursue excellence with determination.",
+   "photo": "Images/speakers/sunil-chhetri.jpg",
+   "topics": [
+    "Leadership",
+    "Perseverance",
+    "Fitness",
+    "Goal-driven living"
+   ]
+  },
+  {
+   "name": "Anil Kumble",
+   "slug": "anil-kumble",
+   "category": "sports",
+   "title": "Former India Captain & Leadership Speaker",
+   "bio": "Anil Kumble, legendary bowler and former Indian cricket captain, is admired for his integrity, resilience, and strategic brilliance. His talks offer powerful lessons on leadership, handling pressure, team building, and long-term success. His calm, analytical approach resonates strongly with corporate audiences and aspiring leaders.",
+   "photo": "Images/speakers/anil-kumble.jpg",
+   "topics": [
+    "Leadership",
+    "Handling pressure",
+    "Team building",
+    "Integrity"
+   ]
+  },
+  {
+   "name": "Prakash Padukone",
+   "slug": "prakash-padukone",
+   "category": "sports",
+   "title": "Badminton Pioneer & Mentor",
+   "bio": "Prakash Padukone, India’s first global badminton champion, is a visionary who transformed Indian sport. His speaking sessions highlight discipline, focus, humility, and leadership rooted in values. As an academy founder and mentor, he inspires individuals to commit to excellence and pursue growth with patience and consistent effort.",
+   "photo": "Images/speakers/prakash-padukone.jpg",
+   "topics": [
+    "Discipline & focus",
+    "Values-based leadership",
+    "Pursuing excellence",
+    "Patience"
+   ]
+  },
+  {
+   "name": "Sania Mirza",
+   "slug": "sania-mirza",
+   "category": "sports",
+   "title": "Tennis Champion & Women Empowerment Speaker",
+   "bio": "Sania Mirza, one of India’s greatest tennis players, is celebrated globally for her achievements and resilience. As a speaker, she addresses confidence, overcoming societal barriers, mental strength, and championing women’s voices. Her inspiring journey motivates audiences to challenge norms and pursue dreams with courage and self-belief.",
+   "photo": "Images/speakers/sania-mirza.jpg",
+   "topics": [
+    "Confidence",
+    "Breaking barriers",
+    "Mental strength",
+    "Women empowerment"
+   ]
+  },
+  {
+   "name": "Mithali Raj",
+   "slug": "mithali-raj",
+   "category": "sports",
+   "title": "Cricket Legend & Leadership Role Model",
+   "bio": "Mithali Raj, India’s most accomplished women’s cricketer and former national captain, is a symbol of discipline, determination, and excellence. Her talks explore leadership, gender equality in sports, and staying motivated through adversity. She inspires audiences to dream fearlessly and lead with purpose and grace.",
+   "photo": "Images/speakers/mithali-raj.jpg",
+   "topics": [
+    "Leadership",
+    "Gender equality in sport",
+    "Motivation through adversity"
+   ]
+  },
+  {
+   "name": "Deepa Malik",
+   "slug": "deepa-malik",
+   "category": "sports",
+   "title": "Paralympian & Motivational Force",
+   "bio": "Deepa Malik, India’s first female Paralympic medalist, is a celebrated speaker on resilience, courage, and redefining limitations. Her extraordinary journey, from overcoming paralysis to earning global sporting honours, empowers audiences to embrace challenges with strength. Her talks deeply resonate across corporate, youth, and inclusion-focused platforms.",
+   "photo": "Images/speakers/deepa-malik.jpg",
+   "topics": [
+    "Resilience",
+    "Courage",
+    "Redefining limits",
+    "Inclusion"
+   ]
+  },
+  {
+   "name": "Pullela Gopichand",
+   "slug": "pullela-gopichand",
+   "category": "sports",
+   "title": "Coach, Visionary & Leadership Architect",
+   "bio": "Pullela Gopichand, former All-England champion and India’s most influential badminton coach, has shaped multiple world-class athletes. His sessions focus on discipline, preparation, values-based leadership, and building winning systems. Gopichand’s insights inspire organisations to nurture talent, embrace consistency, and create high-performance cultures.",
+   "photo": "Images/speakers/pullela-gopichand.jpg",
+   "topics": [
+    "Building high-performance cultures",
+    "Nurturing talent",
+    "Values-based leadership",
+    "Discipline"
+   ]
+  },
+  {
+   "name": "Brett Lee",
+   "slug": "brett-lee",
+   "category": "sports",
+   "title": "Fast Bowling Legend & Global Speaker",
+   "bio": "Brett Lee, one of world cricket’s fastest bowlers, is admired for his sportsmanship, passion, and sustained excellence. As a speaker, he shares powerful lessons on teamwork, pressure management, global collaboration, and maintaining peak performance. His charismatic presence makes him a memorable addition to international events.",
+   "photo": "Images/speakers/brett-lee.jpg",
+   "topics": [
+    "Teamwork",
+    "Managing pressure",
+    "Peak performance",
+    "Sportsmanship"
+   ]
+  },
+  {
+   "name": "Saina Nehwal",
+   "slug": "saina-nehwal",
+   "category": "sports",
+   "title": "Champion Shuttler & Youth Icon",
+   "bio": "Saina Nehwal, Olympic medalist and world badminton champion, inspires millions through her dedication and resilience. Her talks focus on achieving goals, handling setbacks, mental strength, and building a champion’s mindset. She connects strongly with young audiences, encouraging them to work hard and dream boldly.",
+   "photo": "Images/speakers/saina-nehwal.jpg",
+   "topics": [
+    "Goal setting",
+    "Handling setbacks",
+    "Mental strength",
+    "A champion’s mindset"
+   ]
+  },
+  {
+   "name": "Harbhajan Singh",
+   "slug": "harbhajan-singh",
+   "category": "sports",
+   "title": "Cricket Star & Motivational Speaker",
+   "bio": "Harbhajan Singh, one of India’s most successful bowlers, is known for his fighting spirit, passion, and match-winning performances. As a speaker, he shares insights on handling pressure, teamwork, overcoming criticism, and staying committed to excellence. His candid, engaging style makes him a favourite at corporate and youth events.",
+   "photo": "Images/speakers/harbhajan-singh.jpg",
+   "topics": [
+    "Handling pressure",
+    "Teamwork",
+    "Overcoming criticism",
+    "Fighting spirit"
+   ]
+  },
+  {
+   "name": "Harsha Bhogle",
+   "slug": "harsha-bhogle",
+   "category": "sports",
+   "title": "Cricket Commentator & Sports Broadcaster",
+   "bio": "Harsha Bhogle is one of cricket’s most respected commentators and presenters, known for his insightful analysis and articulate storytelling. With decades of global broadcasting experience, he brings deep game knowledge, communication excellence, and leadership lessons from sport, making him a sought-after moderator and speaker at business and leadership forums.",
+   "photo": "Images/speakers/harsha-bhogle.jpg",
+   "topics": [
+    "Communication",
+    "Leadership lessons from sport",
+    "Storytelling",
+    "Event moderation"
+   ]
+  },
+  {
+   "name": "Sunil Gavaskar",
+   "slug": "sunil-gavaskar",
+   "category": "sports",
+   "title": "Cricket Legend, Leadership Thinker & Sports Commentator",
+   "bio": "Sunil Gavaskar is a pioneering figure in Indian cricket and a respected voice on leadership, integrity, and consistency. His talks blend decades of on-field experience with sharp insights on decision-making, resilience, and ethical leadership, making him a compelling speaker for senior leadership and strategy-focused audiences.",
+   "photo": "Images/speakers/sunil-gavaskar.jpg",
+   "topics": [
+    "Leadership",
+    "Integrity",
+    "Consistency",
+    "Decision-making"
+   ]
+  },
+  {
+   "name": "Manika Batra",
+   "slug": "manika-batra",
+   "category": "sports",
+   "title": "International Table Tennis Champion & Youth Inspiration Speaker",
+   "bio": "Manika Batra is India’s leading table tennis star who has redefined the country’s presence on the global stage. As a speaker, she shares her journey of breaking barriers, mental toughness, and competing fearlessly at international level, resonating strongly with youth, women professionals, and high-performance teams.",
+   "photo": "Images/speakers/manika-batra.jpg",
+   "topics": [
+    "Breaking barriers",
+    "Mental toughness",
+    "Competing fearlessly",
+    "Youth inspiration"
+   ]
+  },
+  {
+   "name": "Lt. Gen. D.S. Hooda (Retd.)",
+   "slug": "lt-gen-d-s-hooda-retd",
+   "category": "defence",
+   "title": "Former Northern Army Commander",
+   "bio": "Lt. Gen. D.S. Hooda, former Northern Army Commander, is respected for strategic brilliance and leading critical operations. As a speaker, he shares insights on national security, leadership under pressure, crisis management and nation-building. His clarity, humility and deep experience inspire audiences to lead with responsibility, discipline and purpose.",
+   "photo": "Images/speakers/lt-gen-d-s-hooda-retd.jpg",
+   "topics": [
+    "National security",
+    "Leadership under pressure",
+    "Crisis management",
+    "Nation-building"
+   ]
+  },
+  {
+   "name": "Captain Yashika Tyagi",
+   "slug": "captain-yashika-tyagi",
+   "category": "defence",
+   "title": "Inspirational Defence Speaker",
+   "bio": "Captain Yashika Tyagi, a trailblazing former Army officer, is celebrated for her courage and leadership. She speaks on women empowerment, battlefield decision-making, resilience and breaking stereotypes. Her powerful storytelling and lived experiences inspire audiences to embrace strength, confidence and fearlessness in challenging environments.",
+   "photo": "Images/speakers/captain-yashika-tyagi.jpg",
+   "topics": [
+    "Women empowerment",
+    "Decision-making",
+    "Resilience",
+    "Breaking stereotypes"
+   ]
+  },
+  {
+   "name": "Major D.P. Singh",
+   "slug": "major-d-p-singh",
+   "category": "defence",
+   "title": "Kargil Veteran & Blade Runner",
+   "bio": "Major D.P. Singh, a Kargil War veteran and India’s first blade runner, is a symbol of courage and extraordinary resilience. His sessions highlight grit, rehabilitation, mindset transformation and overcoming adversity. His journey from battlefield injury to marathon champion motivates audiences to rise above limitations and lead with unwavering determination.",
+   "photo": "Images/speakers/major-d-p-singh.jpg",
+   "topics": [
+    "Overcoming adversity",
+    "Grit",
+    "Mindset transformation",
+    "Resilience"
+   ]
+  },
+  {
+   "name": "Captain Yogendra Singh Yadav",
+   "slug": "captain-yogendra-singh-yadav",
+   "category": "defence",
+   "title": "Param Vir Chakra Awardee",
+   "bio": "Captain Yogendra Singh Yadav, India’s youngest Param Vir Chakra recipient, is revered for his unmatched bravery during the Kargil War. His talks offer profound lessons on courage, sacrifice, patriotism and staying mission-focused under extreme adversity. His presence inspires audiences to embody fearlessness, loyalty and commitment to duty.",
+   "photo": "Images/speakers/captain-yogendra-singh-yadav.jpg",
+   "topics": [
+    "Courage",
+    "Sacrifice & duty",
+    "Patriotism",
+    "Staying mission-focused"
+   ]
+  },
+  {
+   "name": "Major Vandana Sharma",
+   "slug": "major-vandana-sharma",
+   "category": "defence",
+   "title": "Veteran & Leadership Mentor",
+   "bio": "Major Vandana Sharma, a distinguished Army veteran, is known for her leadership, discipline and advocacy for women in uniform. As a speaker, she addresses resilience, organisational excellence, transitions, and leading with integrity. Her journey empowers audiences to build confidence, embrace responsibility and develop strong, values-driven leadership.",
+   "photo": "Images/speakers/major-vandana-sharma.jpg",
+   "topics": [
+    "Resilience",
+    "Organisational excellence",
+    "Career transitions",
+    "Leading with integrity"
+   ]
+  },
+  {
+   "name": "General Bikram Singh (Retd.)",
+   "slug": "general-bikram-singh-retd",
+   "category": "defence",
+   "title": "Former Chief of Army Staff",
+   "bio": "General Bikram Singh, former Chief of the Indian Army, brings unparalleled experience in national security, strategic affairs and global military diplomacy. His keynotes highlight leadership, accountability, crisis strategy and building high-trust teams. His authoritative perspective inspires organisations and leaders to excel with discipline, ethics and long-term vision.",
+   "photo": "Images/speakers/general-bikram-singh-retd.jpg",
+   "topics": [
+    "National security",
+    "Leadership & accountability",
+    "Crisis strategy",
+    "High-trust teams"
+   ]
+  },
+  {
+   "name": "Major Gaurav Arya (Retd.)",
+   "slug": "major-gaurav-arya-retd",
+   "category": "defence",
+   "title": "Defence Analyst & Speaker",
+   "bio": "Major Gaurav Arya, a former Army officer and prominent defence analyst, speaks passionately about national security, leadership, patriotism and India’s strategic challenges. His insights combine frontline experience with geopolitical understanding. Engaging and relatable, he inspires audiences to think critically, value discipline and contribute meaningfully to national growth.",
+   "photo": "Images/speakers/major-gaurav-arya-retd.jpg",
+   "topics": [
+    "National security",
+    "Leadership",
+    "Patriotism",
+    "India’s strategic challenges"
+   ]
+  },
+  {
+   "name": "General G.D. Bakshi (Retd.)",
+   "slug": "general-g-d-bakshi-retd",
+   "category": "defence",
+   "title": "War Veteran & Strategic Expert",
+   "bio": "General G.D. Bakshi, a decorated Army veteran and defence strategist, is known for his deep knowledge of warfare, counter-terror operations and national security. His talks deliver powerful insights on leadership, security challenges and nation-building. His energetic presence motivates audiences to adopt courage, preparedness and strategic thinking.",
+   "photo": "Images/speakers/general-g-d-bakshi-retd.jpg",
+   "topics": [
+    "National security",
+    "Counter-terrorism",
+    "Leadership",
+    "Strategic thinking"
+   ]
+  },
+  {
+   "name": "Colonel Lalit Rai (Retd.)",
+   "slug": "colonel-lalit-rai-retd",
+   "category": "defence",
+   "title": "Vir Chakra Awardee",
+   "bio": "Colonel Lalit Rai, Vir Chakra awardee, is celebrated for his heroic leadership during the Kargil War. His sessions centre on battlefield courage, decision-making under pressure, team spirit and honour. His inspiring journey teaches audiences the value of discipline, integrity and leading from the front in every situation.",
+   "photo": "Images/speakers/colonel-lalit-rai-retd.jpg",
+   "topics": [
+    "Courage",
+    "Decision-making under pressure",
+    "Team spirit",
+    "Leading from the front"
+   ]
+  },
+  {
+   "name": "Lt. Gen. K.J.S. Dhillon (Retd.)",
+   "slug": "lt-gen-k-j-s-dhillon-retd",
+   "category": "defence",
+   "title": "Former Corps Commander & Motivational Leader",
+   "bio": "Lt. Gen. K.J.S. Dhillon, widely known as “Dropadi,” is a highly respected senior Army commander known for counter-terror expertise and compassionate leadership. His talks focus on nation-building, crisis management, youth motivation and value-based leadership. His authenticity and experience inspire audiences to serve with humility, courage and commitment.",
+   "photo": "Images/speakers/lt-gen-k-j-s-dhillon-retd.jpg",
+   "topics": [
+    "Crisis management",
+    "Values-based leadership",
+    "Nation-building",
+    "Youth motivation"
+   ]
+  },
+  {
+   "name": "Ashwin Sanghi",
+   "slug": "ashwin-sanghi",
+   "category": "authors",
+   "title": "Bestselling Author & Storytelling Speaker",
+   "bio": "Ashwin Sanghi is one of India’s most successful authors, renowned for mythological and historical thrillers blending research with compelling narratives. As a speaker, he explores creativity, Indian history, writing discipline, and entrepreneurial resilience. His engaging sessions inspire audiences to think deeper, challenge assumptions, and find powerful stories within complex ideas.",
+   "photo": "Images/speakers/ashwin-sanghi.jpg",
+   "topics": [
+    "Creativity",
+    "Indian history",
+    "Writing discipline",
+    "Entrepreneurial resilience"
+   ]
+  },
+  {
+   "name": "Vikas Swarup",
+   "slug": "vikas-swarup",
+   "category": "authors",
+   "title": "Diplomat & Acclaimed Author",
+   "bio": "Vikas Swarup, celebrated author of Q&A the novel behind Slumdog Millionaire is an accomplished diplomat and global thinker. His talks weave storytelling, world affairs, cultural understanding, and creativity. With unique experiences across continents, he inspires audiences to broaden perspectives, embrace curiosity, and appreciate the power of narratives in shaping global society.",
+   "photo": "Images/speakers/vikas-swarup.jpg",
+   "topics": [
+    "Storytelling",
+    "World affairs",
+    "Cultural understanding",
+    "Creativity"
+   ]
+  },
+  {
+   "name": "Anand Neelakantan",
+   "slug": "anand-neelakantan",
+   "category": "authors",
+   "title": "Mythology Author & Cultural Speaker",
+   "bio": "Anand Neelakantan, bestselling author of Asura, Baahubali series, and other retellings, brings fresh perspectives to Indian epics through unheard voices. As a speaker, he discusses mythology, storytelling, identity, and interpretation. His thought-provoking sessions encourage audiences to question traditional narratives and appreciate the richness of India’s cultural imagination.",
+   "photo": "Images/speakers/anand-neelakantan.jpg",
+   "topics": [
+    "Mythology",
+    "Storytelling",
+    "Identity",
+    "Indian culture"
+   ]
+  },
+  {
+   "name": "Amish Tripathi",
+   "slug": "amish-tripathi",
+   "category": "authors",
+   "title": "Author & Cultural Ambassador",
+   "bio": "Amish Tripathi, bestselling author of the Shiva Trilogy and Ram Chandra Series, is known for bringing Indian mythology to modern readers with depth and accessibility. His talks explore culture, spirituality, leadership, and India’s civilisational strengths. Amish’s articulate storytelling inspires audiences to rediscover heritage and embrace personal and professional growth.",
+   "photo": "Images/speakers/amish-tripathi.jpg",
+   "topics": [
+    "Indian culture & heritage",
+    "Spirituality",
+    "Leadership",
+    "Mythology"
+   ]
+  },
+  {
+   "name": "Rajdeep Sardesai",
+   "slug": "rajdeep-sardesai",
+   "category": "authors",
+   "title": "Journalist, Author & Public Affairs Speaker",
+   "bio": "Rajdeep Sardesai is a leading journalist and bestselling author known for his incisive analysis of Indian politics, media, and democracy. As a speaker, he offers sharp insights, historical context, and balanced perspectives on current affairs. His sessions spark meaningful conversations, making him a sought-after voice at corporate and academic events.",
+   "photo": "Images/speakers/rajdeep-sardesai.jpg",
+   "topics": [
+    "Indian politics",
+    "Media",
+    "Democracy",
+    "Current affairs"
+   ]
+  },
+  {
+   "name": "Sudha Menon",
+   "slug": "sudha-menon",
+   "category": "authors",
+   "title": "Author, Coach & Women Leadership Speaker",
+   "bio": "Sudha Menon is a bestselling author, columnist, and leadership coach who inspires audiences with powerful stories on women empowerment, personal growth, and finding authentic voice. Her workshops and talks focus on mindfulness, communication, and inclusive leadership. She helps individuals discover courage, creativity, and purpose in their professional and personal journeys.",
+   "photo": "Images/speakers/sudha-menon.jpg",
+   "topics": [
+    "Women empowerment",
+    "Personal growth",
+    "Mindfulness",
+    "Inclusive leadership"
+   ]
+  },
+  {
+   "name": "Dr. Kiran Bedi",
+   "slug": "dr-kiran-bedi",
+   "category": "authors",
+   "title": "Former IPS Officer & Leadership Speaker",
+   "bio": "Dr. Kiran Bedi, India’s first female IPS officer and a globally recognised reformer, is celebrated for her transformational leadership and social impact. As a speaker, she shares lessons on courage, discipline, integrity, and public service. Her dynamic presence inspires audiences to lead with conviction and create meaningful, lasting change.",
+   "photo": "Images/speakers/dr-kiran-bedi.jpg",
+   "topics": [
+    "Leadership",
+    "Courage & integrity",
+    "Public service",
+    "Driving change"
+   ]
+  },
+  {
+   "name": "Dr. Seema Anand",
+   "slug": "dr-seema-anand",
+   "category": "authors",
+   "title": "Mythology Researcher & Feminine Wellbeing Speaker",
+   "bio": "Dr. Seema Anand is a renowned mythologist, storyteller, and expert on feminine wellbeing, relationships, and heritage. Her talks blend ancient wisdom with modern perspectives, empowering audiences to understand intimacy, identity, and cultural narratives. She brings elegance, clarity, and depth to conversations on personal empowerment and timeless Indian traditions.",
+   "photo": "Images/speakers/dr-seema-anand.jpg",
+   "topics": [
+    "Mythology",
+    "Feminine wellbeing",
+    "Relationships",
+    "Indian heritage"
+   ]
+  },
+  {
+   "name": "Chetan Bhagat",
+   "slug": "chetan-bhagat",
+   "category": "authors",
+   "title": "Author, Columnist & Youth Motivator",
+   "bio": "Chetan Bhagat, India’s bestselling contemporary author and influential columnist, connects strongly with young audiences through relatable storytelling and practical life lessons. As a speaker, he addresses ambition, career growth, self-belief, and navigating modern challenges. His energetic, humorous, and insightful sessions make him a popular choice for corporate and youth events.",
+   "photo": "Images/speakers/chetan-bhagat.jpg",
+   "topics": [
+    "Ambition",
+    "Career growth",
+    "Self-belief",
+    "Modern challenges"
+   ]
+  },
+  {
+   "name": "Devdutt Pattanaik",
+   "slug": "devdutt-pattanaik",
+   "category": "authors",
+   "title": "Mythologist, Author & Leadership Thinker",
+   "bio": "Devdutt Pattanaik is a leading mythologist and bestselling author known for decoding Indian mythology to understand business, leadership, culture, and human behaviour. His talks offer unique frameworks for decision-making, creativity, and organisational wisdom. With rich storytelling and fresh insights, he helps audiences view challenges through timeless mythological lenses.",
+   "photo": "Images/speakers/devdutt-pattanaik.jpg",
+   "topics": [
+    "Mythology & business",
+    "Leadership",
+    "Decision-making",
+    "Organisational culture"
+   ]
+  },
+  {
+   "name": "Luke Coutinho",
+   "slug": "luke-coutinho",
+   "category": "health-wellbeing",
+   "title": "Holistic Wellness Coach & Author",
+   "bio": "Luke Coutinho is a globally recognised holistic wellness expert specializing in integrative nutrition, lifestyle medicine and disease prevention. As a speaker, he empowers audiences with practical strategies for sustainable health, emotional balance, immunity and mindful living. His science-backed yet compassionate approach inspires people to take charge of their wellbeing.",
+   "photo": "Images/speakers/luke-coutinho.jpg",
+   "topics": [
+    "Holistic wellness",
+    "Nutrition",
+    "Immunity",
+    "Mindful living"
+   ]
+  },
+  {
+   "name": "Dr. Pradeep Chowbey",
+   "slug": "dr-pradeep-chowbey",
+   "category": "health-wellbeing",
+   "title": "Pioneer in Minimal Access Surgery",
+   "bio": "Dr. Pradeep Chowbey is a world-renowned surgeon and pioneer in minimal access and bariatric surgery. A Padma awardee and global educator, he speaks on medical innovation, preventive health, surgical excellence and patient-centric care. His decades of clinical leadership inspire audiences to embrace innovation, discipline and compassionate healthcare delivery.",
+   "photo": "Images/speakers/dr-pradeep-chowbey.jpg",
+   "topics": [
+    "Medical innovation",
+    "Preventive health",
+    "Surgical excellence",
+    "Patient-centric care"
+   ]
+  },
+  {
+   "name": "Anand Damani",
+   "slug": "anand-damani",
+   "category": "health-wellbeing",
+   "title": "Behavioural Scientist & Innovation Strategist",
+   "bio": "Anand Damani is a behavioural science expert helping organisations rethink decision-making, user psychology and human-centred innovation. As a speaker, he reveals how behavioural insights shape habits, communication and product design. His practical frameworks empower leaders and teams to influence behaviour ethically and solve complex problems with clarity and creativity.",
+   "photo": "Images/speakers/anand-damani.jpg",
+   "topics": [
+    "Behavioural science",
+    "Decision-making",
+    "Human-centred innovation",
+    "Habits & communication"
+   ]
+  },
+  {
+   "name": "Yasmin Karachiwala",
+   "slug": "yasmin-karachiwala",
+   "category": "health-wellbeing",
+   "title": "Celebrity Fitness Trainer & Pilates Expert",
+   "bio": "Yasmin Karachiwala, India’s leading Pilates expert and trainer to top celebrities, is known for redefining functional fitness for modern lifestyles. Her talks focus on movement science, discipline, body awareness and building sustainable, personalised fitness habits. She inspires audiences to prioritise health through mindful movement and consistent, informed training.",
+   "photo": "Images/speakers/yasmin-karachiwala.jpg",
+   "topics": [
+    "Functional fitness",
+    "Pilates",
+    "Movement science",
+    "Sustainable fitness habits"
+   ]
+  },
+  {
+   "name": "Rujuta Diwekar",
+   "slug": "rujuta-diwekar",
+   "category": "health-wellbeing",
+   "title": "Nutritionist & Bestselling Author",
+   "bio": "Rujuta Diwekar is one of India’s most influential nutritionists, renowned for simplifying traditional eating and promoting sustainable, local food habits. As a speaker, she discusses metabolic health, women’s wellness, mindful eating and the science behind India’s food wisdom. Her relatable, research-driven approach helps audiences build long-term, balanced lifestyles.",
+   "photo": "Images/speakers/rujuta-diwekar.jpg",
+   "topics": [
+    "Nutrition",
+    "Metabolic health",
+    "Women’s wellness",
+    "Mindful eating"
+   ]
+  },
+  {
+   "name": "Milind Soman",
+   "slug": "milind-soman",
+   "category": "health-wellbeing",
+   "title": "Endurance Athlete, Wellness Icon & Longevity Advocate",
+   "bio": "Milind Soman is one of India’s most respected voices on fitness, discipline, and active ageing. An Ironman triathlete and endurance athlete, he speaks on building lifelong vitality through movement, mental resilience, and consistency. His sessions inspire audiences to rethink ageing, embrace physical challenges, and adopt sustainable wellness habits for long-term health.",
+   "photo": "Images/speakers/milind-soman.jpg",
+   "topics": [
+    "Fitness",
+    "Active ageing",
+    "Mental resilience",
+    "Endurance"
+   ]
+  },
+  {
+   "name": "Dr. Aditi Nerurkar",
+   "slug": "dr-aditi-nerurkar",
+   "category": "health-wellbeing",
+   "title": "Physician, Stress & Longevity Specialist",
+   "bio": "Dr. Aditi Nerurkar is a Harvard-trained physician and wellbeing expert specialising in stress, burnout prevention, and long-term health. As a speaker, she translates medical science into practical strategies for resilience, sustainable performance, and healthy ageing, helping individuals and leaders protect both productivity and wellbeing in high-pressure environments.",
+   "photo": "Images/speakers/dr-aditi-nerurkar.jpg",
+   "topics": [
+    "Stress management",
+    "Burnout prevention",
+    "Resilience",
+    "Healthy ageing"
+   ]
+  },
+  {
+   "name": "Deanna Panday",
+   "slug": "deanna-panday",
+   "category": "health-wellbeing",
+   "title": "Fitness Coach & Lifestyle Wellness Speaker",
+   "bio": "Deanna Panday is a fitness coach and wellness speaker who focuses on building strength, balance, and confidence through everyday movement. Her talks centre on habit-building, body positivity, and integrating fitness into modern lifestyles, making wellness accessible, realistic, and sustainable for long-term health.",
+   "photo": "Images/speakers/deanna-panday.jpg",
+   "topics": [
+    "Fitness",
+    "Habit-building",
+    "Body positivity",
+    "Wellness at work"
+   ]
+  },
+  {
+   "name": "Namrata Purohit",
+   "slug": "namrata-purohit",
+   "category": "health-wellbeing",
+   "title": "Pilates Expert & Movement for Longevity Specialist",
+   "bio": "Namrata Purohit is a leading Pilates trainer and movement specialist who speaks on posture, injury prevention, and functional fitness for longevity. Combining science-backed techniques with mindful movement, her sessions help audiences understand how intelligent training supports long-term mobility, core strength, and overall wellbeing.",
+   "photo": "Images/speakers/namrata-purohit.jpg",
+   "topics": [
+    "Pilates",
+    "Posture & injury prevention",
+    "Functional fitness",
+    "Longevity"
+   ]
+  },
+  {
+   "name": "Ira Trivedi",
+   "slug": "ira-trivedi",
+   "category": "health-wellbeing",
+   "title": "Author, Wellness Speaker & Mindful Living Advocate",
+   "bio": "Ira Trivedi is a wellness speaker and author who addresses holistic wellbeing, mindful living, and self-care in today’s fast-paced world. Her talks encourage audiences to reconnect with their physical and mental health, cultivate balance, and adopt conscious lifestyle practices that support sustained wellbeing and quality of life.",
+   "photo": "Images/speakers/ira-trivedi.jpg",
+   "topics": [
+    "Holistic wellbeing",
+    "Mindful living",
+    "Self-care",
+    "Work–life balance"
+   ]
+  },
+  {
+   "name": "Sri Sri Ravi Shankar",
+   "slug": "sri-sri-ravi-shankar",
+   "category": "spiritual",
+   "title": "Global Spiritual Leader & Peace Ambassador",
+   "bio": "Sri Sri Ravi Shankar is a globally respected spiritual leader known for integrating ancient wisdom with modern wellbeing. His talks focus on stress management, emotional resilience, and inner peace in high-pressure environments. He brings clarity on leadership through mindfulness and compassion. Widely welcomed across corporate, government, and international platforms.",
+   "photo": "Images/speakers/sri-sri-ravi-shankar.jpg",
+   "topics": [
+    "Stress management",
+    "Emotional resilience",
+    "Inner peace",
+    "Mindful leadership"
+   ]
+  },
+  {
+   "name": "Gaur Gopal Das",
+   "slug": "gaur-gopal-das",
+   "category": "spiritual",
+   "title": "Spiritual Mentor & Mindfulness Storyteller",
+   "bio": "Gaur Gopal Das connects timeless spiritual wisdom with everyday personal and professional challenges. Known for his relatable storytelling and warmth, he speaks on purpose, relationships, and emotional balance. His sessions resonate strongly with youth and corporate audiences alike. He simplifies complex ideas into practical life lessons.",
+   "photo": "Images/speakers/gaur-gopal-das.jpg",
+   "topics": [
+    "Purpose",
+    "Relationships",
+    "Emotional balance",
+    "Practical spirituality"
+   ]
+  },
+  {
+   "name": "Swami Mukundananda",
+   "slug": "swami-mukundananda",
+   "category": "spiritual",
+   "title": "Spiritual Leader & Mind Management Expert",
+   "bio": "Swami Mukundananda blends spiritual philosophy with scientific thinking and leadership principles. He speaks on mind control, stress reduction, and purposeful living. His sessions translate ancient wisdom into tools for productivity and clarity. Especially relevant for leadership and performance-driven audiences.",
+   "photo": "Images/speakers/swami-mukundananda.jpg",
+   "topics": [
+    "Mind management",
+    "Stress reduction",
+    "Purposeful living",
+    "Productivity & clarity"
+   ]
+  },
+  {
+   "name": "Swami Narasimhananda",
+   "slug": "swami-narasimhananda",
+   "category": "spiritual",
+   "title": "Vedanta Teacher & Consciousness Thinker",
+   "bio": "Swami Narasimhananda is known for his clear, rational interpretation of Vedanta. His talks focus on self-awareness, inner freedom, and conscious living beyond dogma. He appeals strongly to intellectual and academic audiences. His sessions encourage reflection, clarity, and depth of thought.",
+   "photo": "Images/speakers/swami-narasimhananda.jpg",
+   "topics": [
+    "Vedanta",
+    "Self-awareness",
+    "Inner freedom",
+    "Conscious living"
+   ]
+  },
+  {
+   "name": "Swami Gaurangadas",
+   "slug": "swami-gaurangadas",
+   "category": "spiritual",
+   "title": "Monk, Educator & Leadership Speaker",
+   "bio": "Swami Gaurangadas speaks on values-based leadership, ethics, and purpose-driven living. Drawing from spiritual philosophy and modern organisational life, he offers practical insights for leaders. His sessions balance discipline with compassion. Widely appreciated in educational and leadership forums.",
+   "photo": "Images/speakers/swami-gaurangadas.jpg",
+   "topics": [
+    "Values-based leadership",
+    "Ethics",
+    "Purpose-driven living"
+   ]
+  },
+  {
+   "name": "Jaya Kishori",
+   "slug": "jaya-kishori",
+   "category": "spiritual",
+   "title": "Spiritual Orator & Youth Inspiration Voice",
+   "bio": "Jaya Kishori is known for presenting spiritual teachings in a contemporary, relatable style. She speaks on faith, inner strength, and emotional resilience, especially resonating with younger audiences. Her sessions inspire positivity and grounded confidence. She bridges tradition with modern life experiences.",
+   "photo": "Images/speakers/jaya-kishori.jpg",
+   "topics": [
+    "Faith & inner strength",
+    "Emotional resilience",
+    "Positivity",
+    "Youth inspiration"
+   ]
+  },
+  {
+   "name": "Boman Irani",
+   "slug": "boman-irani",
+   "category": "celebrities",
+   "title": "Actor & Inspirational Speaker",
+   "bio": "Boman Irani is an acclaimed Indian actor known for his powerful performances and inspiring personal journey. A natural storyteller, he brings humour, depth, and life lessons to every stage. His sessions motivate audiences with insights on resilience, creativity, reinvention, and embracing challenges with optimism.",
+   "photo": "Images/speakers/boman-irani.jpg",
+   "topics": [
+    "Resilience",
+    "Creativity",
+    "Reinvention",
+    "Optimism"
+   ]
+  },
+  {
+   "name": "Anupam Kher",
+   "slug": "anupam-kher",
+   "category": "celebrities",
+   "title": "Actor, Author & Motivational Speaker",
+   "bio": "Anupam Kher is an internationally respected actor and bestselling author, celebrated for his lifelong commitment to performance and personal transformation. As a global motivational speaker, he shares uplifting insights on courage, discipline, failure, and reinvention. His sessions energise audiences and inspire them to pursue excellence with determination.",
+   "photo": "Images/speakers/anupam-kher.jpg",
+   "topics": [
+    "Courage",
+    "Discipline",
+    "Learning from failure",
+    "Reinvention"
+   ]
+  },
+  {
+   "name": "Gul Panag",
+   "slug": "gul-panag",
+   "category": "celebrities",
+   "title": "Actor, Entrepreneur & Policy Advocate",
+   "bio": "Gul Panag is an actor, pilot, entrepreneur, and public-policy advocate known for her dynamic leadership and multifaceted achievements. She speaks compellingly about women empowerment, fitness, governance, and personal development. With her sharp insights and grounded presence, she inspires audiences to lead purposeful, driven, and socially conscious lives.",
+   "photo": "Images/speakers/gul-panag.jpg",
+   "topics": [
+    "Women empowerment",
+    "Fitness",
+    "Governance",
+    "Personal development"
+   ]
+  },
+  {
+   "name": "Mandira Bedi",
+   "slug": "mandira-bedi",
+   "category": "celebrities",
+   "title": "Actor, Host & Fitness Icon",
+   "bio": "Mandira Bedi is a celebrated actor, television host, and fitness personality known for her discipline and breaking stereotypes. She delivers impactful talks on wellness, mental strength, reinvention, and overcoming personal challenges. Her inspiring journey makes her a powerful speaker for corporate, wellness, and women-leadership events.",
+   "photo": "Images/speakers/mandira-bedi.jpg",
+   "topics": [
+    "Wellness",
+    "Mental strength",
+    "Reinvention",
+    "Breaking stereotypes"
+   ]
+  },
+  {
+   "name": "Suniel Shetty",
+   "slug": "suniel-shetty",
+   "category": "celebrities",
+   "title": "Actor, Entrepreneur & Philanthropist",
+   "bio": "Suniel Shetty is a respected actor, entrepreneur, and philanthropist who brings authenticity and leadership to every conversation. He speaks passionately about fitness, entrepreneurship, discipline, and building a meaningful life. His real-world experience and grounded wisdom make him a compelling presence at corporate, youth, and motivational events.",
+   "photo": "Images/speakers/suniel-shetty.jpg",
+   "topics": [
+    "Fitness",
+    "Entrepreneurship",
+    "Discipline",
+    "Building a meaningful life"
+   ]
+  },
+  {
+   "name": "Farhan Akhtar",
+   "slug": "farhan-akhtar",
+   "category": "celebrities",
+   "title": "Actor, Filmmaker & Creative Entrepreneur",
+   "bio": "Farhan Akhtar’s career spans filmmaking, acting, music, and entrepreneurship. He speaks on creativity, leadership, reinvention, and balancing multiple pursuits. Farhan’s journey reflects discipline, purpose, and adaptability. His conversations appeal to leadership, creative, and youth-driven audiences alike.",
+   "photo": "Images/speakers/farhan-akhtar.jpg",
+   "topics": [
+    "Creativity",
+    "Leadership",
+    "Reinvention",
+    "Balancing multiple pursuits"
+   ]
+  },
+  {
+   "name": "Vikrant Massey",
+   "slug": "vikrant-massey",
+   "category": "celebrities",
+   "title": "Actor & Youth Inspiration",
+   "bio": "Vikrant Massey is an acclaimed actor known for his versatile performances and thoughtful approach to storytelling. A grounded speaker, he connects deeply with young audiences, discussing creativity, authenticity, hard work, and navigating the ever-evolving entertainment industry. His inspiring journey makes him ideal for youth and creative-industry events.",
+   "photo": "Images/speakers/vikrant-massey.jpg",
+   "topics": [
+    "Creativity",
+    "Authenticity",
+    "Hard work",
+    "The entertainment industry"
+   ]
+  },
+  {
+   "name": "Manoj Bajpayee",
+   "slug": "manoj-bajpayee",
+   "category": "celebrities",
+   "title": "National Award-Winning Actor",
+   "bio": "Manoj Bajpayee is one of India’s most respected actors, known for his transformative roles and dedication to craft. His journey from small-town beginnings to national acclaim offers profound lessons in perseverance, purpose, and excellence. His keynote sessions inspire audiences to pursue passion relentlessly and push creative boundaries fearlessly.",
+   "photo": "Images/speakers/manoj-bajpayee.jpg",
+   "topics": [
+    "Perseverance",
+    "Purpose",
+    "Excellence",
+    "Dedication to craft"
+   ]
+  },
+  {
+   "name": "Rhea Chakraborty",
+   "slug": "rhea-chakraborty",
+   "category": "celebrities",
+   "title": "Actor, Youth & Wellness Speaker",
+   "bio": "Rhea Chakraborty is an actor and youth-inspiration voice who speaks openly about resilience, mental health, and rebuilding life after adversity. Her candid, empathetic storytelling encourages audiences to embrace healing, courage, and self-growth. She connects deeply with young people, making her an impactful speaker for wellness, empowerment, and transformational events.",
+   "photo": "Images/speakers/rhea-chakraborty.jpg",
+   "topics": [
+    "Resilience",
+    "Mental health",
+    "Rebuilding after adversity",
+    "Self-growth"
+   ]
+  },
+  {
+   "name": "Tisca Chopra",
+   "slug": "tisca-chopra",
+   "category": "celebrities",
+   "title": "Actor, Author & Creative Leader",
+   "bio": "Tisca Chopra is an acclaimed actor, author, and storyteller known for her thoughtful perspectives on creativity, leadership, and personal reinvention. A dynamic speaker, she engages audiences with insights from film, writing, and life experiences. Her articulate, inspiring presence makes her ideal for corporate, cultural, and women-leadership events.",
+   "photo": "Images/speakers/tisca-chopra.jpg",
+   "topics": [
+    "Creativity",
+    "Leadership",
+    "Personal reinvention",
+    "Women in leadership"
+   ]
+  },
+  {
+   "name": "Neha Dupia",
+   "slug": "neha-dupia",
+   "category": "celebrities",
+   "title": "Actor, Producer & Advocate for Women’s Voices",
+   "bio": "Neha Dhupia brings candid perspectives shaped by her work across film, media, and entrepreneurship. She speaks on women in leadership, self-belief, and balancing ambition with personal identity. Known for her forthright opinions, Neha encourages open dialogue on confidence, choice, and growth. Her sessions resonate strongly with professional women and leadership forums.",
+   "photo": "Images/speakers/neha-dupia.jpg",
+   "topics": [
+    "Women in leadership",
+    "Self-belief",
+    "Balancing ambition and identity",
+    "Confidence"
+   ]
+  },
+  {
+   "name": "Dia Mirza",
+   "slug": "dia-mirza",
+   "category": "celebrities",
+   "title": "Actor, Producer & Sustainability Advocate",
+   "bio": "Dia Mirza is widely respected for her work in cinema and environmental advocacy. Her conversations focus on purpose-driven leadership, sustainability, wellbeing, and responsible influence. Dia brings empathy and thoughtfulness to discussions around impact and long-term thinking. She is especially relevant for organisations prioritising ESG, culture, and conscious leadership.",
+   "photo": "Images/speakers/dia-mirza.jpg",
+   "topics": [
+    "Sustainability",
+    "Purpose-driven leadership",
+    "Wellbeing",
+    "Responsible influence"
+   ]
+  },
+  {
+   "name": "Zoya Akhtar",
+   "slug": "zoya-akhtar",
+   "category": "celebrities",
+   "title": "Filmmaker & Storyteller of Contemporary India",
+   "bio": "Zoya Akhtar is an acclaimed filmmaker known for building nuanced, inclusive narratives. She speaks on creativity, leadership, collaboration, and managing diverse teams in high-performance environments. Her insights bridge storytelling with organisational culture and innovation. Zoya’s sessions appeal to leaders navigating complexity and creative decision-making.",
+   "photo": "Images/speakers/zoya-akhtar.jpg",
+   "topics": [
+    "Creativity",
+    "Leadership",
+    "Collaboration",
+    "Managing diverse teams"
+   ]
+  },
+  {
+   "name": "Rajkummar Rao",
+   "slug": "rajkummar-rao",
+   "category": "celebrities",
+   "title": "Actor Known for Craft, Discipline & Grit",
+   "bio": "Rajkummar Rao’s journey is rooted in perseverance, discipline, and mastery of craft. He speaks about consistency, humility, and long-term growth in competitive environments. His story resonates with audiences navigating early struggles and sustained performance. Rajkummar offers grounded motivation through lived experience rather than abstraction.",
+   "photo": "Images/speakers/rajkummar-rao.jpg",
+   "topics": [
+    "Perseverance",
+    "Consistency",
+    "Humility",
+    "Long-term growth"
+   ]
+  },
+  {
+   "name": "Vivek Oberoi",
+   "slug": "vivek-oberoi",
+   "category": "celebrities",
+   "title": "Actor, Entrepreneur & Impact Investor",
+   "bio": "Vivek Oberoi bridges the worlds of entertainment, entrepreneurship, and social impact. He speaks on reinvention, conscious business, and aligning purpose with profit. Drawing from his diverse ventures, Vivek shares lessons on adaptability and long-term thinking. His sessions suit leadership, startup, and innovation-driven audiences.",
+   "photo": "Images/speakers/vivek-oberoi.jpg",
+   "topics": [
+    "Reinvention",
+    "Conscious business",
+    "Purpose and profit",
+    "Adaptability"
+   ]
+  },
+  {
+   "name": "Chitrangada Singh",
+   "slug": "chitrangada-singh",
+   "category": "celebrities",
+   "title": "Actor & Voice of Individuality",
+   "bio": "Chitrangada Singh is known for her distinctive choices and quiet confidence. She speaks on resilience, self-expression, and embracing individuality in both personal and professional life. Her conversations encourage authenticity without conformity. Chitrangada resonates strongly with audiences seeking balance between strength and sensitivity.",
+   "photo": "Images/speakers/chitrangada-singh.jpg",
+   "topics": [
+    "Resilience",
+    "Self-expression",
+    "Individuality",
+    "Authenticity"
+   ]
+  },
+  {
+   "name": "Karan Johar",
+   "slug": "karan-johar",
+   "category": "celebrities",
+   "title": "Filmmaker, Producer & Cultural Influencer",
+   "bio": "Karan Johar is one of India’s most influential creative voices. He speaks on leadership, creativity, brand-building, and navigating public scrutiny. Drawing from decades in media and entrepreneurship, Karan offers insights into relevance, reinvention, and storytelling at scale. His sessions are impactful for leadership and brand-focused audiences.",
+   "photo": "Images/speakers/karan-johar.jpg",
+   "topics": [
+    "Leadership",
+    "Creativity",
+    "Brand building",
+    "Storytelling at scale"
+   ]
+  },
+  {
+   "name": "Karisma Kapoor",
+   "slug": "karisma-kapoor",
+   "category": "celebrities",
+   "title": "Actor & Icon of Reinvention",
+   "bio": "Karisma Kapoor’s career reflects longevity, adaptability, and evolution. She speaks on reinvention, sustaining relevance, and embracing change across life stages. Her journey offers lessons in resilience and self-renewal. Karisma connects deeply with audiences navigating transitions and growth.",
+   "photo": "Images/speakers/karisma-kapoor.jpg",
+   "topics": [
+    "Reinvention",
+    "Staying relevant",
+    "Embracing change",
+    "Resilience"
+   ]
+  },
+  {
+   "name": "Rahul Bose",
+   "slug": "rahul-bose",
+   "category": "celebrities",
+   "title": "Actor, Athlete & Social Advocate",
+   "bio": "Rahul Bose brings a unique blend of cinema, sport, and social consciousness. He speaks on discipline, leadership, equality, and purpose-driven living. Drawing from endurance sports and activism, Rahul’s conversations are direct and thought-provoking. He is well-suited for leadership and impact-led forums.",
+   "photo": "Images/speakers/rahul-bose.jpg",
+   "topics": [
+    "Discipline",
+    "Leadership",
+    "Equality",
+    "Purpose-driven living"
+   ]
+  },
+  {
+   "name": "Rannvijay Singh Singa",
+   "slug": "rannvijay-singh-singa",
+   "category": "celebrities",
+   "title": "Youth Icon & Leadership Communicator",
+   "bio": "Rannvijay Singha is known for his strong connect with young professionals and emerging leaders. He speaks on teamwork, resilience, decision-making, and growth through challenge. His style is energetic yet grounded in real experience. Rannvijay is highly effective for youth, campus, and mid-level leadership audiences.",
+   "photo": "Images/speakers/rannvijay-singh-singa.jpg",
+   "topics": [
+    "Teamwork",
+    "Resilience",
+    "Decision-making",
+    "Growth through challenge"
+   ]
+  },
+  {
+   "name": "Sonali Bendre",
+   "slug": "sonali-bendre",
+   "category": "celebrities",
+   "title": "Actor, Author & Resilience Advocate",
+   "bio": "Sonali Bendre brings authenticity and emotional depth shaped by personal experience. She speaks on resilience, mental wellbeing, and navigating adversity with grace. Her conversations foster empathy, courage, and strength. Sonali’s sessions are especially impactful for wellbeing and women-centric initiatives.",
+   "photo": "Images/speakers/sonali-bendre.jpg",
+   "topics": [
+    "Resilience",
+    "Mental wellbeing",
+    "Navigating adversity",
+    "Courage"
+   ]
+  },
+  {
+   "name": "Imtiaz Ali",
+   "slug": "imtiaz-ali",
+   "category": "celebrities",
+   "title": "Filmmaker & Explorer of Inner Purpose",
+   "bio": "Imtiaz Ali is known for stories rooted in self-discovery and emotional truth. He speaks on creativity, purpose, and navigating inner journeys in professional life. His conversations blend philosophy with storytelling. Imtiaz resonates with audiences seeking meaning, reflection, and depth.",
+   "photo": "Images/speakers/imtiaz-ali.jpg",
+   "topics": [
+    "Creativity",
+    "Purpose",
+    "Self-discovery",
+    "Storytelling"
+   ]
+  },
+  {
+   "name": "Sharan Hegde",
+   "slug": "sharan-hegde",
+   "category": "digital-creators",
+   "title": "Finance Creator & Entrepreneur",
+   "bio": "Sharan Hegde, founder of finance platform Finance With Sharan, simplifies money management for millions through humour and relatable content. His talks focus on financial literacy, behaviour change, smart decision-making and creator-led entrepreneurship. He empowers audiences to take control of their financial journeys with clarity, confidence and practical strategies.",
+   "photo": "Images/speakers/sharan-hegde.jpg",
+   "topics": [
+    "Financial literacy",
+    "Money behaviour",
+    "Smart decision-making",
+    "Creator-led business"
+   ]
+  },
+  {
+   "name": "Raj Shamani",
+   "slug": "raj-shamani",
+   "category": "digital-creators",
+   "title": "Entrepreneur, Creator & Speaker",
+   "bio": "Raj Shamani is a top business creator, podcaster and entrepreneur inspiring young India with insights on money, entrepreneurship and personal branding. His sessions highlight self-belief, market trends, digital opportunities and building influence with purpose. His energetic, relatable storytelling motivates audiences to learn boldly and pursue disruptive ideas fearlessly.",
+   "photo": "Images/speakers/raj-shamani.jpg",
+   "topics": [
+    "Entrepreneurship",
+    "Money",
+    "Personal branding",
+    "Digital opportunities"
+   ]
+  },
+  {
+   "name": "Neha Nagar",
+   "slug": "neha-nagar",
+   "category": "digital-creators",
+   "title": "Finance Influencer & Entrepreneur",
+   "bio": "Neha Nagar is a popular finance creator simplifying taxes, investing and money concepts for young India. As a speaker, she addresses financial independence, digital entrepreneurship, money mindset and women empowerment. Her relatable, practical approach inspires audiences to become financially aware, responsible and confident in managing their personal finances.",
+   "photo": "Images/speakers/neha-nagar.jpg",
+   "topics": [
+    "Financial independence",
+    "Money mindset",
+    "Digital entrepreneurship",
+    "Women empowerment"
+   ]
+  },
+  {
+   "name": "Anushka Rathod",
+   "slug": "anushka-rathod",
+   "category": "digital-creators",
+   "title": "Finance Creator & Educator",
+   "bio": "Anushka Rathod, a fast-growing finance creator, is known for making complex financial topics easy, engaging and actionable. Her talks cover saving, investing, smart spending, economic awareness and building credibility online. She empowers young professionals and students to make informed financial choices and develop lifelong money confidence.",
+   "photo": "Images/speakers/anushka-rathod.jpg",
+   "topics": [
+    "Saving & investing",
+    "Smart spending",
+    "Financial confidence",
+    "Building credibility online"
+   ]
+  },
+  {
+   "name": "Ruhee Dosani",
+   "slug": "ruhee-dosani",
+   "category": "digital-creators",
+   "title": "Global Creator & Cultural Storyteller",
+   "bio": "Ruhee Dosani, known for her high-energy content and global dance collaborations, is a creator who celebrates diversity and community. As a speaker, she shares insights on authenticity, cross-cultural creativity, digital collaboration and building joyful online spaces. Her vibrant personality inspires audiences to embrace individuality and create fearlessly.",
+   "photo": "Images/speakers/ruhee-dosani.jpg",
+   "topics": [
+    "Authenticity",
+    "Cross-cultural creativity",
+    "Digital collaboration",
+    "Community"
+   ]
+  },
+  {
+   "name": "Ranveer Allahbadia",
+   "slug": "ranveer-allahbadia",
+   "category": "digital-creators",
+   "title": "Entrepreneur, Podcaster & Self-Growth Content Creator",
+   "bio": "Ranveer Allahbadia is the founder of BeerBiceps and host of The Ranveer Show, one of India’s most popular podcasts. Known for his content on entrepreneurship, mental fitness, spirituality, leadership, and personal growth, he has interviewed global leaders, business icons, athletes, and spiritual masters. Ranveer inspires millions of young Indians to build disciplined habits, long-term thinking, and purpose-driven careers.",
+   "photo": "Images/speakers/ranveer-allahbadia.jpg",
+   "topics": [
+    "Entrepreneurship",
+    "Mental fitness",
+    "Personal growth",
+    "Disciplined habits"
+   ]
+  },
+  {
+   "name": "Kusha Kapila",
+   "slug": "kusha-kapila",
+   "category": "digital-creators",
+   "title": "Digital Creator, Actor & Culture Commentator",
+   "bio": "Kusha Kapila is a leading digital creator and actor known for her sharp observational humor, relatable characters, and commentary on modern Indian life. Rising to prominence through social media, she has since transitioned into films, OTT shows, and major brand collaborations. Her work often explores identity, confidence, relationships, and evolving gender roles with wit and authenticity.",
+   "photo": "Images/speakers/kusha-kapila.jpg",
+   "topics": [
+    "Identity",
+    "Confidence",
+    "Relationships",
+    "Gender roles",
+    "Digital careers"
+   ]
+  },
+  {
+   "name": "Prajakta Koli",
+   "slug": "prajakta-koli",
+   "category": "digital-creators",
+   "title": "Actor, YouTuber & Youth Icon",
+   "bio": "Prajakta Koli, widely known as MostlySane, is one of India’s most influential digital creators and actors. Starting with relatable comedy sketches, she has grown into a global youth voice, acting in films and Netflix series while also serving as a UNDP Youth Climate Champion. Prajakta speaks on self-expression, mental health, resilience, and using digital platforms for positive impact.",
+   "photo": "Images/speakers/prajakta-koli.jpg",
+   "topics": [
+    "Self-expression",
+    "Mental health",
+    "Resilience",
+    "Digital for good",
+    "Climate action"
+   ]
+  },
+  {
+   "name": "Suhani Shah",
+   "slug": "suhani-shah",
+   "category": "digital-creators",
+   "title": "Mentalist & Illusionist",
+   "bio": "Suhani Shah, India’s leading mentalist, blends psychology, intuition and storytelling to create unforgettable experiences. As a speaker-performer, she explores perception, confidence, communication and the science of human behaviour. Her engaging sessions inspire audiences to think differently, challenge assumptions and tap into their hidden potential with curiosity and clarity.",
+   "photo": "Images/speakers/suhani-shah.jpg",
+   "topics": [
+    "Perception",
+    "Confidence",
+    "Communication",
+    "Human behaviour"
+   ]
+  },
+  {
+   "name": "Gurleen Singh",
+   "slug": "gurleen-singh",
+   "category": "comedians",
+   "title": "Stand-Up Comedian & Observational Humorist",
+   "bio": "Gurleen Singh is a sharp-witted stand-up comedian known for relatable observational humor and quick crowd work. Blending everyday situations with fresh perspectives, Gurleen delivers high-energy performances that connect instantly with audiences. From corporate events to live stages, Gurleen brings laughter, authenticity, and a memorable comedic voice that leaves audiences wanting more.",
+   "photo": "Images/speakers/gurleen-singh.jpg",
+   "topics": [
+    "Stand-up comedy",
+    "Observational humour",
+    "Crowd work",
+    "Corporate entertainment"
+   ]
+  },
+  {
+   "name": "Naman Anand",
+   "slug": "naman-anand",
+   "category": "comedians",
+   "title": "Comedian & Digital Creator",
+   "bio": "Naman Anand is a rising comedian and content creator known for his sharp wit, relatable humor and modern perspectives on everyday life. As a speaker-performer, he brings authenticity, creativity and fresh insight into youth culture, digital storytelling and creative careers. His engaging style resonates strongly with young, high-energy audiences.",
+   "photo": "Images/speakers/naman-anand.jpg",
+   "topics": [
+    "Comedy",
+    "Youth culture",
+    "Digital storytelling",
+    "Creative careers"
+   ]
+  },
+  {
+   "name": "Abhishek Upmanyu",
+   "slug": "abhishek-upmanyu",
+   "category": "comedians",
+   "title": "Stand-Up Comedian & Writer",
+   "bio": "Abhishek Upmanyu, one of India’s most popular stand-up comedians, is known for his quick delivery, sharp observations and memorable stage presence. As a speaker-performer, he brings humour, authenticity and cultural insight to every audience. His sessions spark laughter while offering witty perspectives on modern life, creativity and communication.",
+   "photo": "Images/speakers/abhishek-upmanyu.jpg",
+   "topics": [
+    "Stand-up comedy",
+    "Modern life",
+    "Creativity",
+    "Communication"
+   ]
+  },
+  {
+   "name": "Rahul Subramanian",
+   "slug": "rahul-subramanian",
+   "category": "comedians",
+   "title": "Stand-Up Comedian & Corporate Satirist",
+   "bio": "Rahul Subramanian is a top stand-up comedian celebrated for his clever corporate humour, improvisation and relatable storytelling. As a speaker-performer, he offers unique perspectives on workplaces, communication and navigating modern professional life. His intelligent comedy connects instantly with corporate audiences seeking high-energy entertainment and sharp observational humour.",
+   "photo": "Images/speakers/rahul-subramanian.jpg",
+   "topics": [
+    "Corporate comedy",
+    "Workplace life",
+    "Improvisation",
+    "Communication"
+   ]
+  },
+  {
+   "name": "Rahul Dua",
+   "slug": "rahul-dua",
+   "category": "comedians",
+   "title": "Comedian, Host & Entertainment Personality",
+   "bio": "Rahul Dua is a popular comedian and one of India’s most versatile entertainers, known for his charismatic stage presence and effortless humour. As a speaker-performer, he blends wit, storytelling and audience interaction to deliver memorable experiences. His engaging personality makes him a favourite for youth-centric and corporate events.",
+   "photo": "Images/speakers/rahul-dua.jpg",
+   "topics": [
+    "Comedy",
+    "Hosting",
+    "Storytelling",
+    "Audience interaction"
+   ]
+  },
+  {
+   "name": "Kanan Gill",
+   "slug": "kanan-gill",
+   "category": "comedians",
+   "title": "Comedian, Writer & Storyteller",
+   "bio": "Kanan Gill is an acclaimed comedian and writer known for his intelligent humour, thoughtful observations and creative storytelling. As a speaker-performer, he explores creativity, self-expression, navigating modern pressures and finding one’s voice. His calm yet comedic style resonates widely, making him ideal for corporate, college and creative-industry audiences.",
+   "photo": "Images/speakers/kanan-gill.jpg",
+   "topics": [
+    "Comedy",
+    "Creativity",
+    "Self-expression",
+    "Finding your voice"
+   ]
+  },
+  {
+   "name": "Vir Das",
+   "slug": "vir-das",
+   "category": "comedians",
+   "title": "Emmy-winning Comedian & Actor",
+   "bio": "Vir Das is a globally acclaimed comedian, actor and International Emmy winner known for his sharp writing, global perspective and boundary-pushing performances. As a speaker-performer, he discusses creativity, identity, comedy as social commentary and building international careers. His unique voice inspires audiences to think boldly and embrace originality.",
+   "photo": "Images/speakers/vir-das.jpg",
+   "topics": [
+    "Comedy",
+    "Creativity",
+    "Identity",
+    "Building a global career"
+   ]
+  },
+  {
+   "name": "Zakir Khan",
+   "slug": "zakir-khan",
+   "category": "comedians",
+   "title": "Comedian, Storyteller & Cultural Voice",
+   "bio": "Zakir Khan, one of India’s most beloved comedians, is celebrated for his heartfelt storytelling, poetic humour and deep relatability. As a speaker-performer, he shares insights on authenticity, resilience, creative journeys and connecting emotionally through humour. His warm presence inspires audiences to embrace vulnerability, simplicity and meaningful expression.",
+   "photo": "Images/speakers/zakir-khan.jpg",
+   "topics": [
+    "Comedy",
+    "Storytelling",
+    "Authenticity",
+    "Resilience"
+   ]
+  },
+  {
+   "name": "Anubhav Singh Bassi",
+   "slug": "anubhav-singh-bassi",
+   "category": "comedians",
+   "title": "Comedian & Youth Icon",
+   "bio": "Bassi is a breakout comedy star known for his hilarious, nostalgia-driven storytelling and effortless stage charisma. As a speaker-performer, he brings humour, relatability and insights on self-discovery, career twists and embracing life’s unpredictability. His engaging style makes him a top choice for youth festivals and corporate events.",
+   "photo": "Images/speakers/anubhav-singh-bassi.jpg",
+   "topics": [
+    "Comedy",
+    "Storytelling",
+    "Self-discovery",
+    "Career twists"
+   ]
+  },
+  {
+   "name": "Atul Khatri",
+   "slug": "atul-khatri",
+   "category": "comedians",
+   "title": "Corporate Comedy Specialist & Observational Humorist",
+   "bio": "Atul Khatri is one of India’s most trusted comedians for corporate audiences. With sharp observational humor rooted in office life, family, and everyday experiences, he delivers clean, intelligent comedy that resonates across age groups. His polished, professional style makes him a favourite for leadership events and large corporate gatherings.",
+   "photo": "Images/speakers/atul-khatri.jpg",
+   "topics": [
+    "Clean corporate comedy",
+    "Office life",
+    "Observational humour"
+   ]
+  },
+  {
+   "name": "Amit Tandon",
+   "slug": "amit-tandon",
+   "category": "comedians",
+   "title": "Clean Comedy Expert & Relatable Storyteller",
+   "bio": "Amit Tandon is widely known as “the married guy” of Indian comedy, bringing clean, relatable humor drawn from family life and workplace realities. His comedy connects effortlessly with diverse audiences, making him an excellent choice for corporates seeking inclusive, feel-good entertainment without edgy content.",
+   "photo": "Images/speakers/amit-tandon.jpg",
+   "topics": [
+    "Clean comedy",
+    "Family life",
+    "Workplace humour"
+   ]
+  },
+  {
+   "name": "Akash Gupta",
+   "slug": "akash-gupta",
+   "category": "comedians",
+   "title": "High-Energy Storyteller & Youth Icon",
+   "bio": "Akash Gupta is a popular stand-up comedian known for his energetic performances and animated storytelling. His humor rooted in personal experiences, ambition, and modern work-life culture appeals strongly to young professionals and millennial audiences, making him ideal for dynamic corporate celebrations and employee engagement events.",
+   "photo": "Images/speakers/akash-gupta.jpg",
+   "topics": [
+    "Comedy",
+    "Storytelling",
+    "Work-life culture",
+    "Employee engagement"
+   ]
+  },
+  {
+   "name": "Gaurav Gupta",
+   "slug": "gaurav-gupta",
+   "category": "comedians",
+   "title": "Character Comedy Specialist & Observational Performer",
+   "bio": "Gaurav Gupta is best known for his hilarious character-based comedy, especially his iconic portrayals inspired by Indian family dynamics. His clean, situational humor works exceptionally well for corporates, creating high recall and laughter without crossing comfort boundaries.",
+   "photo": "Images/speakers/gaurav-gupta.jpg",
+   "topics": [
+    "Character comedy",
+    "Indian family life",
+    "Clean humour"
+   ]
+  },
+  {
+   "name": "Prashasti Singh",
+   "slug": "prashasti-singh",
+   "category": "comedians",
+   "title": "Sharp Observational Comic & Contemporary Voice",
+   "bio": "Prashasti Singh is a bold, intelligent comedian known for her sharp takes on modern life, workplace culture, and social dynamics. Her confident stage presence and witty storytelling make her a strong fit for progressive corporate audiences seeking fresh, contemporary humor.",
+   "photo": "Images/speakers/prashasti-singh.jpg",
+   "topics": [
+    "Comedy",
+    "Workplace culture",
+    "Modern life",
+    "Social dynamics"
+   ]
+  },
+  {
+   "name": "Biswa Kalyan Rath",
+   "slug": "biswa-kalyan-rath",
+   "category": "comedians",
+   "title": "Intellectual Humorist & Story-Driven Performer",
+   "bio": "Biswa Kalyan Rath is known for his clever, introspective comedy that blends logic, life experiences, and observational humor. His structured storytelling and sharp punchlines appeal particularly to thinking audiences, making him a great choice for corporates looking for smart, engaging entertainment.",
+   "photo": "Images/speakers/biswa-kalyan-rath.jpg",
+   "topics": [
+    "Comedy",
+    "Storytelling",
+    "Observational humour",
+    "Smart entertainment"
+   ]
+  },
+  {
+   "name": "Johnson Ebenezer",
+   "slug": "johnson-ebenezer",
+   "category": "chefs",
+   "title": "Culinary Innovator & Hospitality Leader",
+   "bio": "Chef Johnson is a celebrated culinary expert known for his creative approach to regional Indian flavours and modern presentation. As a speaker, he shares insights on food innovation, kitchen leadership, sustainability and the evolving dining culture. His warm storytelling inspires audiences to appreciate craftsmanship, discipline and passion in the culinary arts.",
+   "photo": "Images/speakers/johnson-ebenezer.jpg",
+   "topics": [
+    "Food innovation",
+    "Kitchen leadership",
+    "Sustainability",
+    "Dining culture"
+   ]
+  },
+  {
+   "name": "Chef Manuel Olveria",
+   "slug": "chef-manuel-olveria",
+   "category": "chefs",
+   "title": "Global Cuisine Specialist",
+   "bio": "Chef Manuel is an accomplished chef recognised for his mastery of international cuisines and refined culinary techniques. His sessions explore creativity, flavour balance, menu design and global food trends. As a speaker, he brings rich cross-cultural perspectives, motivating audiences to experiment boldly and elevate their culinary understanding.",
+   "photo": "Images/speakers/chef-manuel-olveria.jpg",
+   "topics": [
+    "Global cuisine",
+    "Menu design",
+    "Food trends",
+    "Creativity"
+   ]
+  },
+  {
+   "name": "Chef Ranveer Brar",
+   "slug": "chef-ranveer-brar",
+   "category": "chefs",
+   "title": "Celebrity Chef, Author & Culinary Explorer",
+   "bio": "Chef Ranveer Brar, one of India’s most loved chefs, is known for his television shows, restaurants and passionate storytelling about food heritage. As a speaker, he discusses creativity, culture, entrepreneurship and India’s culinary identity. His engaging presence inspires audiences to celebrate flavours, explore roots and build meaningful connections through food.",
+   "photo": "Images/speakers/chef-ranveer-brar.jpg",
+   "topics": [
+    "Food heritage",
+    "Creativity",
+    "Entrepreneurship",
+    "India’s culinary identity"
+   ]
+  },
+  {
+   "name": "Chef Guntas Sethi",
+   "slug": "chef-guntas-sethi",
+   "category": "chefs",
+   "title": "Pastry Artist & Food Educator",
+   "bio": "Chef Guntas Sethi is a renowned pastry chef celebrated for her elegant desserts and modern baking techniques. She speaks on creativity, innovation in patisserie, ingredient science and building culinary confidence. Her approachable style and artistic expertise inspire young chefs, home bakers and professionals to embrace precision and imagination.",
+   "photo": "Images/speakers/chef-guntas-sethi.jpg",
+   "topics": [
+    "Patisserie",
+    "Ingredient science",
+    "Creativity",
+    "Culinary confidence"
+   ]
+  },
+  {
+   "name": "Chef Garima Arora",
+   "slug": "chef-garima-arora",
+   "category": "chefs",
+   "title": "Michelin-Starred Chef & Culinary Visionary",
+   "bio": "Chef Garima Arora, India’s first Michelin-starred female chef, is globally recognised for her progressive Indian cuisine and bold, thoughtful flavours. As a speaker, she highlights culinary innovation, leadership, sustainability and reimagining tradition. Her journey empowers audiences to break barriers, pursue excellence and celebrate India’s gastronomic diversity.",
+   "photo": "Images/speakers/chef-garima-arora.jpg",
+   "topics": [
+    "Culinary innovation",
+    "Leadership",
+    "Sustainability",
+    "Reimagining tradition"
+   ]
+  },
+  {
+   "name": "Chef Himanshu Saini",
+   "slug": "chef-himanshu-saini",
+   "category": "chefs",
+   "title": "Modern Indian Cuisine Pioneer",
+   "bio": "Chef Himanshu Saini, the creative force behind Trèsind and winner of global acclaim, is known for redefining modern Indian gastronomy. His talks focus on innovation, technique, storytelling through food and elevating traditional flavours with modern artistry. His visionary approach inspires chefs and food lovers to push culinary boundaries courageously.",
+   "photo": "Images/speakers/chef-himanshu-saini.jpg",
+   "topics": [
+    "Modern Indian cuisine",
+    "Innovation",
+    "Technique",
+    "Storytelling through food"
+   ]
+  },
+  {
+   "name": "Sanjeev Kapoor",
+   "slug": "sanjeev-kapoor",
+   "category": "chefs",
+   "title": "Culinary Icon & Global Ambassador of Indian Cuisine",
+   "bio": "Sanjeev Kapoor is one of India’s most celebrated chefs, best known for hosting Khana Khazana, one of the longest-running cooking shows globally. A Padma Shri awardee, restaurateur, author, and entrepreneur, he has significantly influenced modern Indian cooking and brought Indian cuisine to international audiences.",
+   "photo": "Images/speakers/sanjeev-kapoor.jpg",
+   "topics": [
+    "Indian cuisine",
+    "Entrepreneurship",
+    "Building a food brand",
+    "Media & cooking"
+   ]
+  },
+  {
+   "name": "Kunal Kapoor",
+   "slug": "kunal-kapoor",
+   "category": "chefs",
+   "title": "Celebrity Chef & Culinary Innovator",
+   "bio": "Kunal Kapur is a renowned Indian chef, restaurateur, and television personality, widely recognised as a judge on MasterChef India. Known for blending traditional flavors with contemporary techniques, he is an author and entrepreneur passionate about reviving regional Indian cuisines and mentoring aspiring chefs nationwide.",
+   "photo": "Images/speakers/kunal-kapoor.jpg",
+   "topics": [
+    "Regional Indian cuisine",
+    "Mentoring chefs",
+    "Entrepreneurship",
+    "Modern technique"
+   ]
+  },
+  {
+   "name": "Sanjyot Keer",
+   "slug": "sanjyot-keer",
+   "category": "chefs",
+   "title": "Digital Culinary Creator & Modern Indian Food Expert",
+   "bio": "Sanjyot Keer is a popular chef and digital food content creator known for his innovative, easy-to-follow recipes. As the face behind Your Food Lab, he has transformed home cooking through engaging video content, making gourmet techniques accessible to millions across social media platforms.",
+   "photo": "Images/speakers/sanjyot-keer.jpg",
+   "topics": [
+    "Digital food content",
+    "Home cooking",
+    "Building an audience",
+    "Modern Indian food"
+   ]
+  },
+  {
+   "name": "Harpal Singh Sokhi",
+   "slug": "harpal-singh-sokhi",
+   "category": "chefs",
+   "title": "Celebrity Chef & Champion of Indian Flavours",
+   "bio": "Harpal Singh Sokhi is a vibrant chef and television personality known for his energetic style and deep love for Indian cuisine. Famous for his signature phrase “Namak Shamak,” he promotes regional Indian flavors through restaurants, cookbooks, and culinary shows worldwide.",
+   "photo": "Images/speakers/harpal-singh-sokhi.jpg",
+   "topics": [
+    "Indian flavours",
+    "Regional cuisine",
+    "Food entertainment",
+    "Entrepreneurship"
+   ]
+  },
+  {
+   "name": "Vikas Khanna",
+   "slug": "vikas-khanna",
+   "category": "chefs",
+   "title": "Michelin-Star Chef & Global Humanitarian",
+   "bio": "Vikas Khanna is an internationally acclaimed Michelin-starred chef, author, filmmaker, and humanitarian. Based in New York, he has elevated Indian cuisine globally while actively contributing to social causes. A MasterChef India judge, he is known for blending culinary artistry with culture, compassion, and storytelling.",
+   "photo": "Images/speakers/vikas-khanna.jpg",
+   "topics": [
+    "Indian cuisine on the world stage",
+    "Culture & compassion",
+    "Storytelling",
+    "Humanitarian work"
+   ]
+  }
+ ]
+}
