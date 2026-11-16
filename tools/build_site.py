@@ -129,10 +129,8 @@ def header(active):
     <ul class="nav-links" id="nav-links">
 {links}
       <li class="menu-cta"><a href="contact.html">Book a speaker →</a></li>
-      {('<li class="menu-social">' + social_links() + '</li>') if social_links() else ''}
     </ul>
     <div class="nav-right">
-      {social_links('social-links header-social')}
       <a class="btn btn-book nav-cta" href="contact.html">Book a speaker</a>
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
     </div>
