@@ -221,7 +221,9 @@ def page(path, title, desc, body, ld=(), og_image='Images/og-image.jpg', active=
   <meta name="twitter:title" content="{esc(title)}" />
   <meta name="twitter:description" content="{esc(desc)}" />
   <meta name="twitter:image" content="{SITE}/{og_image}" />
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="192x192" href="Images/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon.png" />
   <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
