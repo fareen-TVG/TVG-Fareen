@@ -89,6 +89,10 @@ GOOGLE_TAG = f"""  <script async src="https://www.googletagmanager.com/gtag/js?i
   </script>"""
 
 NAV = [('speakers.html', 'Speakers'), ('topics.html', 'Topics'), ('how-it-works.html', 'How it works'), ('contact.html', 'Contact')]
+# The Blog link appears once at least one published article exists.
+if any(not re.search(r'^draft:\s*true', open(f, encoding='utf-8').read(), re.M | re.I) or os.environ.get('SHOW_DRAFTS')
+       for f in __import__('glob').glob(os.path.join(ROOT, 'content', 'blog', '*.md'))):
+    NAV.insert(3, ('blog.html', 'Blog'))
 
 
 def esc(s):
@@ -161,6 +165,7 @@ def footer(forms):
           <h3>Company</h3>
           <ul>
             <li><a href="how-it-works.html">How it works</a></li>
+            {'<li><a href="blog.html">Blog</a></li>' if ('blog.html', 'Blog') in NAV else ''}
             <li><a href="join.html">Join our roster</a></li>
             <li><a href="privacy.html">Privacy policy</a></li>
           </ul>
@@ -911,6 +916,127 @@ page('privacy.html', 'Privacy Policy | TalentVerse Global', 'How TalentVerse Glo
 static = [('', '1.0', 'weekly'), ('speakers.html', '0.9', 'weekly'), ('topics.html', '0.8', 'monthly'), ('contact.html', '0.8', 'yearly'),
           ('how-it-works.html', '0.6', 'yearly'), ('join.html', '0.4', 'yearly'), ('privacy.html', '0.2', 'yearly')]
 urls = static + [(f'topics/{c}.html', '0.8', 'monthly') for c in CATS] + [(f"speakers/{s['slug']}.html", '0.7', 'monthly') for s in SPEAKERS]
+# ── BLOG ──
+# Articles live in content/blog/<slug>.md: a small header between --- lines
+# (title, date, description, image = a speaker slug, optional draft: true),
+# then the text. Supported: ## headings, paragraphs, - lists, **bold**,
+# [links](url), and [[speaker:slug]] on its own line for a speaker card.
+import glob, datetime
+BLOG_DIR = os.path.join(ROOT, 'content', 'blog')
+AUTHOR = 'TalentVerse Global Team'
+
+
+def inline_md(t):
+    t = esc(t)
+    t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
+    t = re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)', lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', t)
+    return t
+
+
+def speaker_card(slug):
+    sp = BY_SLUG[slug]
+    img = (f'<img src="{sp["photo"]}" alt="{esc(sp["name"])}" loading="lazy" />' if sp['photo']
+           else f'<div class="initials" aria-hidden="true">{esc(initials(sp["name"]))}</div>')
+    topics = ', '.join(esc(x) for x in sp['topics'][:3])
+    return (f'<a class="post-speaker" href="speakers/{slug}.html">{img}<span><h3>{esc(sp["name"])}</h3>'
+            f'<em>{esc(sp["title"])}</em><small>Speaks on: {topics}</small><b>View profile and enquire →</b></span></a>')
+
+
+def render_md(body):
+    out, para, items = [], [], []
+    def flush():
+        if para: out.append('<p>' + inline_md(' '.join(para)) + '</p>'); para.clear()
+        if items: out.append('<ul>' + ''.join(f'<li>{inline_md(i)}</li>' for i in items) + '</ul>'); items.clear()
+    for line in body.splitlines():
+        l = line.strip()
+        if not l: flush(); continue
+        m = re.fullmatch(r'\[\[speaker:([a-z0-9-]+)\]\]', l)
+        if m: flush(); out.append(speaker_card(m.group(1))); continue
+        if l.startswith('## '): flush(); out.append(f'<h2>{inline_md(l[3:])}</h2>'); continue
+        if l.startswith('### '): flush(); out.append(f'<h3>{inline_md(l[4:])}</h3>'); continue
+        if l.startswith('- '):
+            if para: flush()
+            items.append(l[2:]); continue
+        if items: flush()
+        para.append(l)
+    flush()
+    return '\n'.join(out)
+
+
+def load_posts():
+    posts = []
+    for f in sorted(glob.glob(os.path.join(BLOG_DIR, '*.md'))):
+        raw = open(f, encoding='utf-8').read()
+        _, head, body = raw.split('---', 2)
+        meta = dict(re.findall(r'^(\w+):\s*(.+?)\s*$', head, re.M))
+        if meta.get('draft', '').lower() == 'true' and not os.environ.get('SHOW_DRAFTS'):
+            continue
+        meta['slug'] = os.path.splitext(os.path.basename(f))[0]
+        meta['body'] = body
+        meta['words'] = len(re.sub(r'\[\[.*?\]\]', '', body).split())
+        posts.append(meta)
+    return sorted(posts, key=lambda x: x['date'], reverse=True)
+
+
+def nice_date(d):
+    return datetime.date.fromisoformat(d).strftime('%-d %B %Y')
+
+
+POSTS = load_posts()
+for po in POSTS:
+    cover = BY_SLUG[po['image']]['photo'] if po.get('image') in BY_SLUG else None
+    mins = max(1, round(po['words'] / 220))
+    art = f"""    <section class="page-header post-header">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="blog.html">Blog</a></nav>
+        <h1>{esc(po['title'])}</h1>
+        <p class="post-meta">{nice_date(po['date'])} · {AUTHOR} · {mins} min read</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:2rem">
+      <div class="wrap">
+        <article class="prose post-body">
+{render_md(po['body'])}
+        </article>
+      </div>
+    </section>
+{cta_band('Planning an event?', 'Tell us your date, audience and budget, and we will send you a free shortlist within 24 hours on working days.')}"""
+    ld = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": po['title'], "description": po['description'],
+          "datePublished": po['date'], "dateModified": po.get('updated', po['date']),
+          "author": {"@type": "Organization", "name": AUTHOR, "url": SITE + "/"},
+          "publisher": {"@id": SITE + "/#organization"},
+          "mainEntityOfPage": f"{SITE}/blog/{po['slug']}.html"}
+    if cover: ld["image"] = f"{SITE}/{cover}"
+    page(f"blog/{po['slug']}.html", f"{po['title']} | TalentVerse Global", po['description'], art,
+         ld=[ld, crumbs(('Home', ''), ('Blog', 'blog.html'), (po['title'], f"blog/{po['slug']}.html"))],
+         og_image=cover or 'Images/og-image.jpg', active='blog.html')
+
+cards = '\n'.join(
+    f"""        <a class="post-card" href="blog/{po['slug']}.html">
+          <div class="post-card-img">{f'<img src="{BY_SLUG[po["image"]]["photo"]}" alt="" loading="lazy" />' if po.get('image') in BY_SLUG and BY_SLUG[po['image']]['photo'] else ''}</div>
+          <div class="post-card-body"><span class="post-meta">{nice_date(po['date'])}</span><h2>{esc(po['title'])}</h2><p>{esc(po['description'])}</p><span class="roster-more">Read article →</span></div>
+        </a>""" for po in POSTS)
+blog_index = f"""    <section class="page-header">
+      <div class="wrap">
+        <span class="bubble">Blog</span>
+        <h1>Ideas for your next event</h1>
+        <p>Speaker ideas, occasion guides and tips for planning events your audience will remember.</p>
+      </div>
+    </section>
+    <section class="section" style="padding-top:2rem">
+      <div class="wrap">
+        <div class="post-grid">
+{cards or '        <p>New articles are on the way.</p>'}
+        </div>
+      </div>
+    </section>
+{cta_band('Need a speaker?', 'Tell us about your event and we will send you a free shortlist within 24 hours on working days.')}"""
+if POSTS:
+    page('blog.html', 'Blog: Speaker Ideas and Event Planning Tips | TalentVerse Global',
+         'Speaker roundups, occasion ideas and event planning tips from TalentVerse Global, the speaker bureau for corporate events in India.',
+         blog_index, ld=[crumbs(('Home', ''), ('Blog', 'blog.html'))], active='blog.html')
+    urls += [('blog.html', '0.7', 'weekly')] + [(f"blog/{po['slug']}.html", '0.7', 'monthly') for po in POSTS]
+
 # ── HOSTING FILES ──
 # GitHub Pages: custom domain, and serve files as-is (no Jekyll processing).
 open(os.path.join(ROOT, 'CNAME'), 'w').write(SITE.split('//')[1] + '\n')
