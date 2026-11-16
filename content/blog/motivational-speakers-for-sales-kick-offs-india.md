@@ -3,6 +3,10 @@ title: 10 Motivational Speakers for Your Sales Kick-Off in India
 date: 2026-11-16
 description: Planning a sales kick-off for 2027? Here are 10 motivational speakers in India, from cricket captains to founders, who can set the tone for a record year.
 image: anil-kumble
+cover_tag: Speaker roundup
+cover_title: 10 Motivational Speakers
+cover_subtitle: for your sales kick-off in India
+cover_speakers: anil-kumble, jonty-rhodes, aman-gupta
 ---
 A sales kick-off sets the tone for the whole year. Targets are new, teams are meeting in one room, and leaders want everyone to leave with energy and a plan. The right keynote speaker turns that moment into something people still talk about in June.
 
