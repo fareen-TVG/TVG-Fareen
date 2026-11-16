@@ -93,7 +93,12 @@ document.addEventListener('DOMContentLoaded', function () {
       new FormData(form).forEach(function (value, key) {
         if (key !== 'website') data[key] = value;
       });
+      // Send the phone under common template names too, and list it in the details.
+      if (data.contact_number) {
+        data.phone = data.phone_number = data.mobile = data.contact_number;
+      }
       var extra = [];
+      if (data.contact_number) extra.push('Phone: ' + data.contact_number);
       if (data.speaker) extra.push('Speaker of interest: ' + data.speaker);
       if (data.expertise) extra.push('Speaking topics: ' + data.expertise);
       if (data.profile_link) extra.push('Profile / showreel: ' + data.profile_link);
