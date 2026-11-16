@@ -31,6 +31,17 @@ Fees and locations from the internal roster sheet are deliberately **not** store
 | Join our roster | `join.html` |
 | Privacy policy | `privacy.html` |
 
+## Hosting
+
+The site is hosted on **GitHub Pages** from the `main` branch (root folder). The build script also writes:
+
+- `CNAME`: the custom domain, `talentverseglobal.com`.
+- `.nojekyll`: tells GitHub Pages to serve the files as they are.
+- `404.html`: shown for any missing page. Its links start with `/` so they work at any depth.
+- Forwarding pages for old URLs (`about.html`, `journal.html`, `navtej-sarna.html`). Add more in `REDIRECTS` in the build script.
+
+DNS at GoDaddy: four `A` records for `@` pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`, and a `CNAME` record for `www` pointing to `fareen-tvg.github.io`.
+
 ## Launch checklist
 
 1. **Domain** — canonical URLs, social tags, `sitemap.xml` and `robots.txt` assume `https://talentverseglobal.com` (`SITE` in the build script).

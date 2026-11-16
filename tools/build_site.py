@@ -873,6 +873,34 @@ page('privacy.html', 'Privacy Policy | TalentVerse Global', 'How TalentVerse Glo
 static = [('', '1.0', 'weekly'), ('speakers.html', '0.9', 'weekly'), ('topics.html', '0.8', 'monthly'), ('contact.html', '0.8', 'yearly'),
           ('how-it-works.html', '0.6', 'yearly'), ('join.html', '0.4', 'yearly'), ('privacy.html', '0.2', 'yearly')]
 urls = static + [(f'topics/{c}.html', '0.8', 'monthly') for c in CATS] + [(f"speakers/{s['slug']}.html", '0.7', 'monthly') for s in SPEAKERS]
+# ── HOSTING FILES ──
+# GitHub Pages: custom domain, and serve files as-is (no Jekyll processing).
+open(os.path.join(ROOT, 'CNAME'), 'w').write(SITE.split('//')[1] + '\n')
+open(os.path.join(ROOT, '.nojekyll'), 'w').write('')
+
+# Old URLs from the previous site, forwarded to their new homes.
+REDIRECTS = {
+    'about.html': 'how-it-works.html',
+    'journal.html': 'index.html',
+    'navtej-sarna.html': 'speakers/navtej-sarna.html',
+}
+for old, new in REDIRECTS.items():
+    open(os.path.join(ROOT, old), 'w').write(f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting… | TalentVerse Global</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="{SITE}/{'' if new == 'index.html' else new}" />
+  <meta http-equiv="refresh" content="0; url={new}" />
+  <script>location.replace('{new}' + location.search + location.hash);</script>
+</head>
+<body>
+  <p>This page has moved. <a href="{new}">Continue to the new page</a>.</p>
+</body>
+</html>
+""")
+
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
 sm += ''.join(f"  <url><loc>{SITE}/{u}</loc><changefreq>{c}</changefreq><priority>{p}</priority></url>\n" for u, p, c in urls)
 open(os.path.join(ROOT, 'sitemap.xml'), 'w').write(sm + '</urlset>\n')
