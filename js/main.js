@@ -108,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
       emailjs.send('service_0fo61ij', 'template_4clx5wl', data)
         .then(function () {
           if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_id: form.id });
-          if (window.dataLayer) window.dataLayer.push({ event: 'generate_lead', form_id: form.id });
           location.href = form.dataset.redirect || 'thank-you.html';
         })
         .catch(function (err) {

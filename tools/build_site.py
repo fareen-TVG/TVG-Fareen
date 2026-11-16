@@ -53,13 +53,14 @@ ORG = {
     "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": EMAIL, "telephone": PHONE, "areaServed": "IN", "availableLanguage": ["en", "hi"]},
 }
 
-# Google tag (Google Analytics), exactly as given in the Google Analytics setup screen.
-GOOGLE_TAG_ID = 'GTM-5MVJW4NV'
-GOOGLE_TAG = f"""  <script async src="https://www.googletagmanager.com/gtm.js?id={GOOGLE_TAG_ID}"></script>
+# Google Analytics 4 (gtag.js). Measurement ID from Admin → Data streams.
+GA4_ID = 'G-8Z79QEXPCV'
+GOOGLE_TAG = f"""  <script async src="https://www.googletagmanager.com/gtag/js?id={GA4_ID}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
+    gtag('config', '{GA4_ID}');
   </script>"""
 
 NAV = [('speakers.html', 'Speakers'), ('topics.html', 'Topics'), ('how-it-works.html', 'How it works'), ('contact.html', 'Contact')]
