@@ -658,7 +658,7 @@ contact = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">Book a speaker</span>
         <h1>Tell us about your event</h1>
-        <p>We usually reply within 24 hours on working days with speakers who fit, and availability and fees where we can confirm them.</p>
+        <p>We usually reply within 24 hours on working days with speakers who fit your brief, plus availability and fees where we can confirm them.</p>
       </div>
     </section>
     <section class="section">
