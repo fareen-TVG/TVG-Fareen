@@ -298,7 +298,7 @@ def enquiry_form(form_id, heading, intro, short=False):
           {HONEYPOT}
           <button class="btn btn-book btn-block" type="submit">Send enquiry →</button>
           {FORM_ERROR}
-          <p class="form-note">We usually reply within 24 hours. We only use your details to respond to this enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
+          <p class="form-note">We usually reply within 24 hours on working days. We only use your details to respond to this enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
         </form>
       </div>"""
 
@@ -319,13 +319,13 @@ def cta_band(title, text):
 
 STEPS = """      <div class="steps">
         <div class="step"><h3>Tell us about your event</h3><p>Share the date, audience and what you want people to take away, or the speaker you already have in mind.</p></div>
-        <div class="step"><h3>Get a shortlist</h3><p>We send a tailored list of speakers who fit your theme, audience and budget, usually within 24 hours, with availability and fees where we can confirm them.</p></div>
+        <div class="step"><h3>Get a shortlist</h3><p>We send a tailored list of speakers who fit your theme, audience and budget, usually within 24 hours on working days, with availability and fees where we can confirm them.</p></div>
         <div class="step"><h3>We handle the rest</h3><p>Contracts, briefing, travel and on-the-day support, so your speaker arrives prepared and your event runs smoothly.</p></div>
       </div>"""
 
 WHY = """      <div class="why-grid">
         <div class="why-card"><span class="why-icon" aria-hidden="true">★</span><h3>Any speaker, listed or not</h3><p>Choose from 100+ speakers on our roster, or name anyone you have in mind and we will approach them for you.</p></div>
-        <div class="why-card"><span class="why-icon" aria-hidden="true">✓</span><h3>A free shortlist, fast</h3><p>Tell us your brief and get speakers matched to your theme, audience and budget, usually within 24 hours.</p></div>
+        <div class="why-card"><span class="why-icon" aria-hidden="true">✓</span><h3>A free shortlist, fast</h3><p>Tell us your brief and get speakers matched to your theme, audience and budget, usually within 24 hours on working days.</p></div>
         <div class="why-card"><span class="why-icon" aria-hidden="true">₹</span><h3>Clear fees, no surprises</h3><p>We confirm availability and fees before you commit, so you can plan your budget with confidence.</p></div>
         <div class="why-card"><span class="why-icon" aria-hidden="true">✈</span><h3>One point of contact</h3><p>We handle contracts, briefing, travel and on-the-day support, here in India or anywhere in the world.</p></div>
       </div>"""
@@ -371,7 +371,7 @@ home = f"""    <section class="hero">
       <div class="wrap">
         <div>
           <h1>India’s <span class="accent">speakers</span>, booked for your stage, anywhere in the world</h1>
-          <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs. Tell us about your event and we will send you a free shortlist within 24 hours.</p>
+          <p class="hero-sub">From cricket legends and CEOs to diplomats, comedians and chefs. Tell us about your event and we will send you a free shortlist within 24 hours on working days.</p>
           <form class="hero-search" action="speakers.html" role="search">
             <label class="visually-hidden" for="hero-q">Search speakers</label>
             <input id="hero-q" type="search" name="q" placeholder="Search a name or topic" />
@@ -385,7 +385,7 @@ home = f"""    <section class="hero">
           <div class="hero-card">
 {hero_imgs}
           </div>
-          <div class="hero-note">Free shortlist within 24 hours<span>No obligation. Just tell us your brief.</span></div>
+          <div class="hero-note">Free shortlist within 24 hours on working days<span>No obligation. Just tell us your brief.</span></div>
         </div>
       </div>
     </section>
@@ -438,7 +438,7 @@ home = f"""    <section class="hero">
         <div class="cta-band"><div class="cta-inner">
           <div>
             <h2>Tell us about your event</h2>
-            <p>Share a few details and we will come back to you, usually within 24 hours, with speakers who fit your audience, theme and budget.</p>
+            <p>Share a few details and we will come back to you, usually within 24 hours on working days, with speakers who fit your audience, theme and budget.</p>
             <div class="btn-row" style="margin-top:1.5rem">
               <a class="btn btn-outline" href="tel:{PHONE}">Call {PHONE_DISPLAY}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
@@ -449,7 +449,7 @@ home = f"""    <section class="hero">
       </div>
     </section>"""
 page('index.html', 'Book Keynote Speakers in India | TalentVerse Global Speaker Bureau',
-     'Book keynote speakers, celebrities, sports legends, comedians and chefs for corporate events in India. Get a free speaker shortlist from TalentVerse Global within 24 hours.',
+     'Book keynote speakers, celebrities, sports legends, comedians and chefs for corporate events in India. Get a free speaker shortlist from TalentVerse Global within 24 hours on working days.',
      home, ld=[{"@context": "https://schema.org", "@type": "WebSite", "name": "TalentVerse Global", "url": SITE + "/",
                 "potentialAction": {"@type": "SearchAction", "target": SITE + "/speakers.html?q={search_term_string}", "query-input": "required name=search_term_string"}}],
      forms=True)
@@ -541,8 +541,8 @@ EVENT_TYPES = 'keynote speeches, corporate conferences, leadership summits, team
 
 def speaker_faqs(n):
     return [
-        (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and come back to you, usually within 24 hours.'),
-        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we will check {n}’s availability and send you a quote, usually within 24 hours.'),
+        (f'How do I book {n} as a speaker?', f'Send us your event date, city, audience and format through the enquiry form, WhatsApp or a call on {PHONE_DISPLAY}. We check {n}’s availability and come back to you, usually within 24 hours on working days.'),
+        (f'What is {n}’s speaking fee?', f'Speaker fees depend on the date, location, session length and format, so there is no fixed price. Share your brief and we will check {n}’s availability and send you a quote, usually within 24 hours on working days.'),
         (f'Is {n} available for virtual or hybrid events?', f'Many speakers on our roster present virtually as well as in person. Tell us your format and we will confirm the options with {n}’s team.'),
         (f'What kinds of events can {n} speak at?', f'{n} can be booked for {EVENT_TYPES}.'),
     ]
@@ -578,7 +578,7 @@ for s in SPEAKERS:
               <a class="btn btn-book" href="contact.html?speaker={q}">Book {esc(s['name'])}</a>
               <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
             </div>
-            <p class="reply-note">We usually get back to you on availability and fees within 24 hours.</p>
+            <p class="reply-note">We usually get back to you on availability and fees within 24 hours on working days.</p>
           </div>
         </div>
       </div>
@@ -658,7 +658,7 @@ contact = f"""    <section class="page-header">
       <div class="wrap">
         <span class="bubble">Book a speaker</span>
         <h1>Tell us about your event</h1>
-        <p>We usually reply within 24 hours with speakers who fit, and availability and fees where we can confirm them.</p>
+        <p>We usually reply within 24 hours on working days with speakers who fit, and availability and fees where we can confirm them.</p>
       </div>
     </section>
     <section class="section">
@@ -669,7 +669,7 @@ contact = f"""    <section class="page-header">
             <li><strong>Call</strong><a href="tel:{PHONE}">{PHONE_DISPLAY}</a></li>
             <li><strong>WhatsApp</strong><a href="{WHATSAPP}" rel="noopener">Message us on WhatsApp</a></li>
             <li><strong>Email</strong><a href="mailto:{EMAIL}">{EMAIL}</a></li>
-            <li><strong>Response time</strong>Usually within 24 hours</li>
+            <li><strong>Response time</strong>Usually within 24 hours on working days</li>
           </ul>
           <p>Are you a speaker? <a href="join.html">Apply to join our roster</a>.</p>
         </div>
@@ -722,14 +722,14 @@ thanks = f"""    <section class="section">
       <div class="wrap prose" style="text-align:center;margin:0 auto">
         <span class="bubble">Received</span>
         <h1>Thank you, we have received your enquiry</h1>
-        <p style="font-size:1.15rem;margin:1rem 0 2rem">We will be in touch, usually within 24 hours. If your event is urgent, call or WhatsApp us on <a href="tel:{PHONE}">{PHONE_DISPLAY}</a>.</p>
+        <p style="font-size:1.15rem;margin:1rem 0 2rem">We will be in touch, usually within 24 hours on working days. If your event is urgent, call or WhatsApp us on <a href="tel:{PHONE}">{PHONE_DISPLAY}</a>.</p>
         <div class="btn-row" style="justify-content:center">
           <a class="btn btn-primary" href="speakers.html">Keep browsing speakers</a>
           <a class="btn btn-outline" href="{WHATSAPP}" rel="noopener">WhatsApp us</a>
         </div>
       </div>
     </section>"""
-page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry. TalentVerse Global will be in touch, usually within 24 hours.', thanks, index=False)
+page('thank-you.html', 'Thank You | TalentVerse Global', 'Thanks for your enquiry. TalentVerse Global will be in touch, usually within 24 hours on working days.', thanks, index=False)
 
 # ── PRIVACY ──
 OWNER = '<mark class="todo">[OWNER NAME(S)]</mark>'
