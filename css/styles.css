@@ -85,6 +85,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .menu-toggle span::before { position: absolute; top: -6px; }
 .menu-toggle span::after { position: absolute; top: 6px; }
 .nav-links .menu-cta { display: none; }
+.nav-links .menu-social { display: none; }
+.nav-right .header-social { margin: 0 0.4rem 0 0; gap: 0.4rem; }
+.header-social a { width: 36px; height: 36px; }
+.header-social svg { width: 18px; height: 18px; }
 
 /* ── HERO ── */
 .hero { background: linear-gradient(180deg, var(--surface) 0%, #fff 100%); padding: clamp(40px, 7vw, 88px) 0 clamp(40px, 6vw, 72px); overflow: hidden; }
@@ -269,6 +273,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .nav-links.open .menu-cta { display: block; }
   .nav-links.open .menu-cta a { color: var(--purple); }
   .nav-cta { display: none; }
+  .header-social { display: none; }
+  .nav-links.open .menu-social { display: block; padding: 0.9rem var(--gutter); }
+  .nav-links.open .menu-social .social-links { margin: 0; }
+  .nav-links.open .menu-social a { padding: 0; border-bottom: 0; display: inline-flex; }
   .site-logo { height: 44px; }
   .action-bar {
     display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 0.5rem;
