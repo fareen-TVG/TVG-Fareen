@@ -6,7 +6,7 @@ image: anil-kumble
 cover_tag: Speaker roundup
 cover_title: 10 Motivational Speakers
 cover_subtitle: for your sales kick-off in India
-cover_speakers: anil-kumble, jonty-rhodes, aman-gupta
+cover_speakers: jonty-rhodes, aman-gupta, radhika-gupta
 ---
 A sales kick-off sets the tone for the whole year. Targets are new, teams are meeting in one room, and leaders want everyone to leave with energy and a plan. The right keynote speaker turns that moment into something people still talk about in June.
 
