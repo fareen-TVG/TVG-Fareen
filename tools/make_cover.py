@@ -62,24 +62,6 @@ def stage(w, h):
     return Image.fromarray(img.clip(0, 255).astype('uint8'), 'RGB')
 
 
-def feather(c):
-    """Fade the cut-out where the original photo frame cut through the person
-    (sides and bottom), so arms and shoulders melt into the stage instead of
-    ending in a hard straight line."""
-    w, h = c.size
-    a = np.asarray(c.split()[3]).astype(float)
-    x = np.arange(w)
-    side = int(w * 0.16)
-    ramp_x = np.clip(np.minimum(x, w - 1 - x) / side, 0, 1) ** 1.5
-    y = np.arange(h)
-    bottom = int(h * 0.22)
-    ramp_y = np.clip((h - 1 - y) / bottom, 0, 1) ** 1.3
-    a = a * ramp_x[None, :] * ramp_y[:, None]
-    out = c.copy()
-    out.putalpha(Image.fromarray(a.astype('uint8')))
-    return out
-
-
 def make(md_path):
     slug = os.path.splitext(os.path.basename(md_path))[0]
     text = open(md_path, encoding='utf-8').read()
@@ -102,7 +84,6 @@ def make(md_path):
         c = cutout(s, by[s]['photo'])
         h = int(H * 0.93 * scale)
         c = c.resize((int(c.width * h / c.height), h), Image.LANCZOS)
-        c = feather(c)
         if bright < 1:
             rgb = ImageEnhance.Brightness(c.convert('RGB')).enhance(bright)
             rgb.putalpha(c.split()[3])
