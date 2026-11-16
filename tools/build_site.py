@@ -37,6 +37,13 @@ def social_links(cls='social-links'):
     return f'<div class="{cls}">' + ''.join(items) + '</div>' if items else ''
 
 
+import hashlib
+def _ver(rel):
+    # Short content hash, so browsers fetch the new file whenever it changes.
+    return hashlib.md5(open(os.path.join(ROOT, rel), 'rb').read()).hexdigest()[:8]
+CSS_V = _ver('css/styles.css')
+JS_V = _ver('js/main.js')
+
 data = json.load(open(os.path.join(ROOT, 'data', 'speakers.json')))
 CATS = {c['slug']: c['name'] for c in data['categories']}
 SPEAKERS = data['speakers']
@@ -137,7 +144,7 @@ def header(active):
 def footer(forms):
     topic_links = '\n'.join(f'          <li><a href="topics/{c}.html">{esc(n)}</a></li>' for c, n in list(CATS.items())[:6])
     scripts = ('  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>\n' if forms else '')
-    scripts += '  <script src="js/main.js" defer></script>\n'
+    scripts += f'  <script src="js/main.js?v={JS_V}" defer></script>\n'
     return f"""  <footer class="site-footer">
     <div class="wrap">
       <div class="footer-grid">
@@ -216,7 +223,7 @@ def page(path, title, desc, body, ld=(), og_image='Images/og-image.jpg', active=
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v={CSS_V}" />
 {ld_html}
 </head>
 {header(active)}  <main id="main">
