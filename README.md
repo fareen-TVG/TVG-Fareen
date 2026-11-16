@@ -35,7 +35,7 @@ Fees and locations from the internal roster sheet are deliberately **not** store
 
 Articles live in `content/blog/<slug>.md`: a short header (`title`, `date`, `description`, `image` = a speaker slug, and `draft: true` to keep it off the live site), then the text. Put `[[speaker:slug]]` on its own line to show a speaker card.
 
-Make the cover collage from the speakers in an article, then rebuild:
+Make the cover image (logo, label, title and subtitle, set with `cover_tag`, `cover_title` and `cover_subtitle` in the header), then rebuild:
 
 ```
 python3 tools/make_cover.py content/blog/<slug>.md

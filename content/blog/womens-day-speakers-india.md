@@ -7,7 +7,6 @@ draft: true
 cover_tag: Women's Day 2027
 cover_title: 12 Inspiring Women Speakers
 cover_subtitle: for your 8 March event
-cover_speakers: radhika-gupta, mithali-raj, sania-mirza
 ---
 International Women's Day falls on Monday, 8 March 2027. For many companies, colleges and associations, it is one of the most important events of the year: a chance to celebrate the women in your organisation and spark real conversations about leadership, confidence and inclusion.
 
