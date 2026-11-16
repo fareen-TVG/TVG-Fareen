@@ -2,7 +2,7 @@
 
     python3 tools/make_cover.py content/blog/<slug>.md
 
-Full-width text design: dark background with a purple spotlight glow, the
+Centred text design: dark background with a purple spotlight glow, the
 logo, an orange label, a big title, a subtitle and the website address.
 Saves Images/blog/<slug>.jpg at 1200x630 (the size used for link previews).
 
@@ -42,8 +42,8 @@ def background():
     y, x = np.mgrid[0:H, 0:W].astype(float)
     base = np.array(INK, float)
     img = np.broadcast_to(base, (H, W, 3)).copy()
-    for cx, cy, rx, ry, col, k in [(1020, 60, 640, 560, (157, 59, 232), 0.95),
-                                   (1150, 640, 420, 300, (255, 140, 0), 0.22)]:
+    for cx, cy, rx, ry, col, k in [(600, -40, 820, 560, (157, 59, 232), 0.9),
+                                   (600, 700, 520, 260, (255, 140, 0), 0.18)]:
         r = np.sqrt(((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2)
         t = (np.clip(1 - r, 0, 1) ** 1.8 * k)[..., None]
         img = img + (np.array(col, float) - img) * t
@@ -57,43 +57,47 @@ def make(md_path):
 
     canvas = background()
     d = ImageDraw.Draw(canvas)
+    cx = W // 2
     hq = os.path.join(ROOT, 'Images', 'logo-hq.png')
     logo = Image.open(hq if os.path.exists(hq) else os.path.join(ROOT, 'Images', 'logo.webp')).convert('RGBA')
-    lh = 92
+    lh = 84
     logo = logo.resize((int(logo.width * lh / logo.height), lh), Image.LANCZOS)
-    canvas.paste(logo, (70, 56), logo)
 
     tag = meta.get('cover_tag', 'TalentVerse Global blog').upper()
     ft = font('Inter-Bold.otf', 21)
     tw = d.textlength(tag, font=ft)
-    y = 206
-    d.rounded_rectangle((70, y, 70 + tw + 38, y + 42), 21, fill=ORANGE)
-    d.text((89, y + 9), tag, font=ft, fill=INK)
 
     title = meta.get('cover_title', meta.get('title', '')).upper()
     size = 84
     while True:
         fh = font('InterDisplay-Black.otf', size)
-        lines = wrap(d, title, fh, 900)
+        lines = wrap(d, title, fh, 1000)
         if len(lines) <= 2 or size <= 48:
             break
         size -= 4
-    y += 70
-    for line in lines:
-        d.text((70, y), line, font=fh, fill=(255, 255, 255))
-        y += int(size * 1.04)
-
+    line_h = int(size * 1.04)
     sub = meta.get('cover_subtitle', '')
-    if sub:
-        fs = font('Inter-Medium.otf', 32)
-        y += 10
-        d.text((70, y), sub, font=fs, fill=(226, 212, 245))
-        y += 44
-    d.rounded_rectangle((70, y + 22, 70 + 140, y + 32), 5, fill=ORANGE)
+    fs = font('Inter-Medium.otf', 32)
 
-    fw = font('Inter-SemiBold.otf', 22)
-    site = 'talentverseglobal.com'
-    d.text((W - 70 - d.textlength(site, font=fw), H - 62), site, font=fw, fill=(226, 212, 245))
+    # total height of the stack, so it sits in the middle of the image
+    stack = lh + 30 + 42 + 26 + len(lines) * line_h + (14 + 40 if sub else 0) + 28 + 10
+    y = (H - stack) // 2 - 10
+    canvas.paste(logo, (cx - logo.width // 2, y), logo)
+    y += lh + 30
+    d.rounded_rectangle((cx - tw / 2 - 19, y, cx + tw / 2 + 19, y + 42), 21, fill=ORANGE)
+    d.text((cx, y + 21), tag, font=ft, fill=INK, anchor='mm')
+    y += 42 + 26
+    for line in lines:
+        d.text((cx, y), line, font=fh, fill=(255, 255, 255), anchor='ma')
+        y += line_h
+    if sub:
+        y += 14
+        d.text((cx, y), sub, font=fs, fill=(226, 212, 245), anchor='ma')
+        y += 40
+    d.rounded_rectangle((cx - 70, y + 28, cx + 70, y + 38), 5, fill=ORANGE)
+
+    fw = font('Inter-SemiBold.otf', 20)
+    d.text((cx, H - 34), 'talentverseglobal.com', font=fw, fill=(200, 184, 225), anchor='ms')
 
     out = os.path.join(ROOT, 'Images', 'blog', slug + '.jpg')
     canvas.save(out, quality=88, optimize=True, progressive=True)
