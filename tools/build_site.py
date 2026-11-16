@@ -151,7 +151,6 @@ def footer(forms):
         <div>
           <a href="index.html" aria-label="TalentVerse Global home"><img src="Images/logo.webp" alt="TalentVerse Global" class="site-logo" width="928" height="501" loading="lazy" /></a>
           <p>We book speakers for your event: keynotes, conferences, offsites and celebrations.</p>
-          {social_links()}
         </div>
         <div>
           <h3>Find speakers</h3>
@@ -175,6 +174,7 @@ def footer(forms):
             <li><a href="{WHATSAPP}" rel="noopener">WhatsApp us</a></li>
             <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
           </ul>
+          {social_links()}
         </div>
       </div>
       <p class="copyright">© 2026 TalentVerse Global. All rights reserved.</p>
