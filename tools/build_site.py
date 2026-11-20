@@ -65,7 +65,7 @@ TOPIC_INTROS = {
     'comedians': 'Stand-up comedians who bring clean, relatable humour to corporate events and celebrations.',
     'chefs': 'Celebrity and Michelin-starred chefs who speak on creativity, entrepreneurship and food culture.',
 }
-FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'shashi-tharoor', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'aman-gupta']
+FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'shashi-tharoor', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'vineeta-singh']
 HERO_PHOTOS = ['shashi-tharoor', 'dia-mirza', 'radhika-gupta', 'boman-irani']
 
 ORG = {
@@ -1058,6 +1058,7 @@ REDIRECTS = {
     'about.html': 'how-it-works.html',
     'journal.html': 'index.html',
     'navtej-sarna.html': 'speakers/navtej-sarna.html',
+    'speakers/aman-gupta.html': 'speakers.html',
 }
 for old, new in REDIRECTS.items():
     open(os.path.join(ROOT, old), 'w').write(f"""<!DOCTYPE html>

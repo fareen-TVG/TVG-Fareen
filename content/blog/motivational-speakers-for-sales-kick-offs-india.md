@@ -1,6 +1,7 @@
 ---
 title: 10 Motivational Speakers for Your Sales Kick-Off in India
 date: 2026-11-16
+updated: 2026-11-20
 description: Planning a sales kick-off for 2027? Here are 10 motivational speakers in India, from cricket captains to founders, who can set the tone for a record year.
 image: anil-kumble
 cover_tag: Speaker roundup
@@ -35,9 +36,9 @@ India's most influential badminton coach has built world-class athletes from scr
 
 Want your team to hear from people who have built brands customers love? These founders and marketers speak the language of growth.
 
-[[speaker:aman-gupta]]
+[[speaker:vineeta-singh]]
 
-The co-founder and CMO of boAt is one of India's best-known entrepreneurs and a Shark Tank India favourite. He speaks on consumer insight, disruptive marketing and scaling a business, with an energetic style that suits younger sales teams.
+The co-founder and CEO of Sugar Cosmetics and a Shark Tank India judge, Vineeta is celebrated for her grit, bold decisions and consumer-brand innovation. She speaks on entrepreneurship, disciplined execution and building modern Indian brands, which makes her a strong choice for teams with ambitious growth targets.
 
 [[speaker:harish-bhat]]
 
