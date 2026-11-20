@@ -65,7 +65,7 @@ TOPIC_INTROS = {
     'comedians': 'Stand-up comedians who bring clean, relatable humour to corporate events and celebrations.',
     'chefs': 'Celebrity and Michelin-starred chefs who speak on creativity, entrepreneurship and food culture.',
 }
-FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'shashi-tharoor', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'vineeta-singh']
+FEATURED = ['navtej-sarna', 'anil-kumble', 'anupam-kher', 'shashi-tharoor', 'jonty-rhodes', 'radhika-gupta', 'boman-irani', 'harish-bhat']
 HERO_PHOTOS = ['shashi-tharoor', 'dia-mirza', 'radhika-gupta', 'boman-irani']
 
 ORG = {
