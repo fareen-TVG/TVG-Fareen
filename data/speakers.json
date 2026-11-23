@@ -1825,6 +1825,34 @@
     "Storytelling",
     "Humanitarian work"
    ]
+  },
+  {
+   "name": "Srikanth Bolla",
+   "slug": "srikanth-bolla",
+   "category": "business-leadership",
+   "title": "Founder & Chairman, Bollant Industries",
+   "bio": "Srikanth Bolla, founder and chairman of Bollant Industries, is a visually impaired entrepreneur who became the first international blind student in Management Science at MIT’s Sloan School of Management. Backed by Ratan Tata, his company makes eco-friendly products and employs people with disabilities. His story inspired the film Srikanth, and he speaks on resilience, inclusion and building a business against the odds.",
+   "photo": null,
+   "topics": [
+    "Resilience",
+    "Inclusion",
+    "Entrepreneurship",
+    "Overcoming barriers"
+   ]
+  },
+  {
+   "name": "Revant Himatsingka",
+   "slug": "revant-himatsingka",
+   "category": "health-wellbeing",
+   "title": "Health Educator & Creator, FoodPharmer",
+   "bio": "Revant Himatsingka, known to millions as FoodPharmer, is a Wharton MBA and certified health coach who left a corporate consulting career to help Indians eat better. Through his Label Padhega India campaign, he teaches people to read food labels and spot hidden sugar, salt and unhealthy fats. He speaks on nutrition literacy, healthy habits and making informed choices as consumers.",
+   "photo": null,
+   "topics": [
+    "Nutrition literacy",
+    "Reading food labels",
+    "Healthy habits",
+    "Consumer awareness"
+   ]
   }
  ]
 }
